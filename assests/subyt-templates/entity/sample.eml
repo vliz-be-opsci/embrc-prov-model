@@ -1,0 +1,8 @@
+<!-- Sample entity -->
+<sample id=”...”>
+    <identifier>{{the identifier of the sample}}</identifier>
+    <name>{{the name of the sample}}</name>
+    <taxonomicName>{{taxonomic name associated with the sample}}</taxonomicName>
+    <envoTerm>{{envo term associated with the sample}}</envoTerm>
+    <volume>{{the size (volume, weight, …) of the sample}}</volume>
+</sample>

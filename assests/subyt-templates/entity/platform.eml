@@ -1,0 +1,6 @@
+<!-- Platform entity -->
+<platform id=”...”>
+    <identifier>{{the identifier of the platform, being a URL or code}}</identifier>
+    <type>{{the type of platform}}</type>
+    <name>{{the name of the platform}}</name>
+</platform>

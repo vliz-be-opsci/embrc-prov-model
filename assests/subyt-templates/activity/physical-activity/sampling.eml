@@ -1,0 +1,34 @@
+<!-- Sampling activity --> 
+<methods>
+    <sampling>
+        <samplingDescription>
+            {{description of the sampling activity}}
+            {{+optionally any other type of information that needs to be included}}
+        </samplingDescription>
+        <studyExtent></studyExtent>
+
+        <geographicCoverage>
+            {{Reference to the location or geographicCoverage of the physical activity}}
+        </geographicCoverage>
+
+        <temporalCoverage>
+            {{Reference to the temporal range of the physical activity, note: can be either <rangeOfDates> or <singleDateTime>}}
+        </temporalCoverage>
+
+        <associatedParty>
+            {{the agent that is associated with the activity}}
+        </associatedParty>
+
+        <permit>
+            {{Reference to the permit that is associated with the sampling activity}}
+        </permit>
+
+        <sample>
+            {{Reference to the sample that is generated in the sampling activity}}
+        </sample>
+
+        <samplingInstrumentation>
+            {{Reference to the device that is used in the sampling activity}}
+        </samplingInstrumentation>
+    </sampling>
+</methods>

@@ -1,0 +1,24 @@
+<!-- Data retrieval activity --> 
+<methods>
+    <methodStep>
+        <description>
+            DATA RETRIEVING
+            {{description of the data retrieving activity}}
+            {{+optionally any other type of information that needs to be included}}
+        </description>
+
+        <associatedParty>
+            {{the agent that is associated with the activity}}
+        </associatedParty>
+
+        <protocol>
+            {{A protocol or SOP that is associated with the activity}}
+        </protocol>
+
+        <dataSource>
+            {{A reference to the input used in the data retrieving activity. (with child elements that can hold information relating to: 
+                endpoint metadata ~ link to metadata relating to this activity,
+                endpoint-data ~ entry-point to retrieve/get to the data)}}
+        </dataSource>
+    </methodStep>
+</methods>

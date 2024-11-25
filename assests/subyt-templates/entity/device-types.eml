@@ -1,0 +1,31 @@
+<!-- Device entity --> 
+<instrumentation id=”...”>
+    <identifier>{{the identifier/code of the device}}</identifier>
+    <type>{{the type of device}}</type>
+    <name>{{the name of the device}}</name>
+    <settings>{{the settings of the device}}</settings>
+    <software>{{reference to the software that is used by the device}}</software>
+    <platform>{{reference to the platform on which the device is mounted/attached}}</platform>
+</instrumentation>
+
+
+<!-- Sampling device entity --> 
+<sampingInstrumentation id=”...”>
+    <identifier>{{the identifier/code of the device}}</identifier>
+    <type>{{the type of device}}</type>
+    <name>{{the name of the device}}</name>
+    <settings>{{the settings of the device}}</settings>
+    <software>{{reference to the software that is used by the device}}</software>
+    <platform>{{reference to the platform on which the device is mounted/attached}}</platform>
+</sampingInstrumentation>
+
+
+<!-- Observing device entity --> 
+<observingInstrumentation id=”...”>
+    <identifier>{{the identifier/code of the device}}</identifier>
+    <type>{{the type of device}}</type>
+    <name>{{the name of the device}}</name>
+    <settings>{{the settings of the device}}</settings>
+    <software>{{reference to the software that is used by the device}}</software>
+    <platform>{{reference to the platform on which the device is mounted/attached}}</platform>
+</observingInstrumentation>

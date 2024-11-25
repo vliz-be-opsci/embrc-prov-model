@@ -1,0 +1,12 @@
+<!-- Protocol entity -->
+<protocol id=”...”>
+    <identifier>{{identifier of the protocol}}</identifier>
+    <!-- though alternateIdentifier element already available in current EML schema could serve this purpose-->
+    <alternateIdentifier>{{identifier of the protocol}}</alternateIdentifier>
+    <title>{{name of the protocol}}</title>
+    <abstract>{{description of the protocol}}</abstract>
+    <distribution>{{where the protocol can be found and/or accessed}}</distribution>
+    <additionalInfo>
+    {{description of any deviations that occurred from the protocol}}
+    </additionalInfo>
+</protocol>

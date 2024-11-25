@@ -1,0 +1,11 @@
+<!-- Quality control case for a Software processing activity --> 
+<methods>
+    <qualityControl>
+        <description>
+            {{A description of the quality control activity - which is a type of software processing activity }}
+        </description>
+        <software>
+            {{Reference to the software used in the quality control activity}}
+        </software>
+    </qualityControl>
+</methods>

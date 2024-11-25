@@ -1,0 +1,35 @@
+<!-- Storing activity -->
+<methods>
+    <methodStep>
+        <description>
+            STORING
+            {{description of the storing activity, including the type of storage (e.g. biobanking, long term, etc.) and storing conditions}}
+            {{+optionally any other type of information that needs to be included}}
+        </description>
+
+        <geographicCoverage>
+            {{Reference to the location or geographicCoverage of the physical activity}}
+        </geographicCoverage>
+
+        <temporalCoverage>
+            {{Reference to the temporal range of the physical activity, note: can be either <rangeOfDates> or <singleDateTime>}}
+        </temporalCoverage>
+
+        <associatedParty>
+            {{the agent that is associated with the activity}}
+        </associatedParty>
+
+        <protocol>
+            {{A protocol or SOP that is associated with the activity}}
+        </protocol>
+
+        <sample>
+            {{Reference to the sample that served as the source in the storing activity, (with the child-element <alternateIdentifier> to hold the identifier of the sample/biomaterial-id)}}
+        </sample>
+
+        <instrumentation>
+            {{Reference to the device that was used in the storing activity}}
+        </instrumentation>
+    </methodStep>
+</methods>
+
