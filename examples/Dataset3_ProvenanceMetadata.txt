@@ -1,0 +1,70 @@
+###############################
+Explanation
+
+Example provenance metadata file for Dataset 3, which is described in XXXXX 
+  Please see that document to understand the context of these metadata
+Dataset 3 consists of a spreadsheet of plankton species names and numbers, produced by 
+ the FlowCam from the water sample.  
+This example uses the EMBRC provenance model to describe the activities and material that 
+ lead to Dataset 3. This file can then be used to provide the provenance metadata for the
+ species identifications, and for any data or scientific results that are derived from those.  
+This file is one of three examples we provide for Dataset 3: this is a plain text version, 
+ written for humans rather than machines to read; a version in Turtle, which is written for
+ machines, and a version using the EML metadata schema, which biodiversity databases use. 
+
+To make this file more compact and easier to read, we will first list the metadata for entities 
+ that occurr more than once or which have to be described with more than one value. We will 
+ then refer to them by their name or identifier when the activities are describeds.
+###############################
+
+
+
+## Agents
+name: J. Gerschwin
+identifier: https://orcid.org/0000-0001-0001-0002
+email: jg@somewhere.com
+organisation:
+  name: Nice Marine Station
+  identifier: https://edmo.seadatanet.org/report/00000
+
+
+## Locations
+name: Nice Marine Station
+address: NiceMarineStation Rd, Ostend, Belgium
+
+
+## Samples
+name: BigProject_belgium_water_25m_50um_r1  keyword: http://purl.obolibrary.org/obo/ENVO_00002150, NCBI:txid1874687 
+
+## Protocols
+name: FlowCam_seawater_sop 
+description: instructions for using FlowCam with seawater, including camera settings
+distribution: see file FlowCam_seawaterSOP.pdf 
+
+
+## Software
+name: VisualSpreadsheet FlowCam Micro software
+description: the software that comes with this FlowCam, bought in 2010
+
+
+## Devices 
+name: FlowCam Micro from CoolLabInstruments Corp., 2010
+identifier: NMS_flowcam_2010
+type: Flow imaging microscopy 
+settings: see file flowcam-settings.txt for software and hardware settings
+software: see "VisualSpreadsheet FlowCam Micro software"
+
+
+
+
+## The provenance metadata for the data processing activity
+activity-type: FlowCam species identification
+date: 2021-01-01
+agent: see J. Gerschwin
+role: lab technician
+name: FlowCam species identification
+description: identification of species on images from the FlowCam 
+input: sample BigProject_belgium_water_25m_50um_r1, settings in file flowcam-settings.txt, reference library FlowCam_ReferenceLibrary_2024 
+output: the set of images (JPG) which are the dataset this provenance metadata is describing
+used-software: see VisualSpreadsheet FlowCam Micro software
+
