@@ -1,0 +1,9 @@
+
+
+<>
+    prov:Entity , schema:Thing , sosa:Sample ; 
+    schema:identifier
+    schema:name
+    schema:description
+    schema:keywords
+.

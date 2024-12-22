@@ -1,0 +1,11 @@
+
+
+<>
+    a prov:Entity , schema:Thing ;
+    schema:identifier
+    schema:name
+    schema:description
+    schema:url
+    schema:accessibilitySummary
+    rdfs:comment
+.

@@ -2,7 +2,7 @@
 <methods>
     <methodStep>
         <description>
-            PROCESSING
+            MATERIAL PROCESSING
             {{description of the processing activity, including the materials (e.g. chemicals, etc.) that were used in the processing activity}}
             {{+optionally any other type of information that needs to be included}}
         </description>

@@ -1,0 +1,15 @@
+@prefix schema: <http://schema.org/>.
+
+# Organization agent
+<{{PersonURI}}> 
+    a prov:Agent , prov:Person , schema:Person ; 
+    schema:identifier {{An identifier of the agent}}^^xsd:string ; 
+    schema:name {{The name of the agent}}^^xsd:string ; 
+    schema:knowsAbout {{The domain(s) or levels of expertise of the agent}}^^xsd:string ; 
+    schema:mainEntityOfPage {{A website of the agent, e.g an organisational or a personal website}}^^xsd:anyURI ; 
+    schema:email {{The email address of the agent}}^^xsd:string ; 
+    schema:address {{The address of the agent}}^^xsd:string ; 
+    schema:telephone {{A telephone number of the agent}}^^xsd:string ; 
+
+    schema:affiliation <{{reference to the organisation that the person is affiliated with}}> ;
+.

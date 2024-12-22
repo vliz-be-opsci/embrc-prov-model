@@ -1,0 +1,26 @@
+
+
+<>
+    prov:Entity , schema:Thing , schema:creativeWork ; 
+    schema:name
+    schema:description
+    schema:version
+    schema:url
+.
+
+<>
+    a prov:Entity , schema:Thing , schema:creativeWork , schema:SoftwareApplication ;
+    schema:name
+    schema:description
+    schema:version
+    schema:downloadUrl
+    schema:featureList
+.
+
+<>
+    a prov:Entity , schema:Thing , schema:creativeWork , schema:SoftwareSourceCode ; 
+    schema:name
+    schema:description
+    schema:version
+    schema:codeRepository
+.

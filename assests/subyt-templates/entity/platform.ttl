@@ -1,0 +1,10 @@
+schema
+prov
+sosa
+
+<>
+    a prov:Entity , schema:Thing , sosa:Platform ; 
+    schema:identifier
+    dct:type
+    schema:name
+.

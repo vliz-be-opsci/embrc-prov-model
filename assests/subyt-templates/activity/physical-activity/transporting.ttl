@@ -1,0 +1,6 @@
+
+
+<>
+    a prov:Activity, schema:Action , schema:TransferAction ; 
+    dct:type "Transporting" ; 
+.

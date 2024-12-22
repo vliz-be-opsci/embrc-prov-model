@@ -1,0 +1,5 @@
+
+
+<>
+    a prov:Activity, schema:Action ;
+    dct:type “Data Acquiring” ; 

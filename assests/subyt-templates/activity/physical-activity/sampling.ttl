@@ -1,0 +1,6 @@
+
+
+<>
+    a prov:Activity , schema:Action , sosa:Sampling ; 
+    dct:type "Sampling" ; 
+.

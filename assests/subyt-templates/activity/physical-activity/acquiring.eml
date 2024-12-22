@@ -2,7 +2,7 @@
 <methods>
     <methodStep>
         <description>
-            ACQUIRING
+            MATERIAL ACQUIRING
             {{description of the acquiring activity}}
             {{+optionally any other type of information that needs to be included}}
         </description>

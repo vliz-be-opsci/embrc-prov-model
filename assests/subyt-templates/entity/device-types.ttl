@@ -1,0 +1,39 @@
+schema
+dct
+sosa
+prov 
+
+#Device
+<>
+    a prov:Entity , schema:Thing ; 
+    schema:identifier
+    dct:type
+    schema:name
+    schema:description
+    schema:wasInfluencedBy
+    sosa:isHostedBy
+.
+
+
+#ObservingDevice
+<>
+    a prov:Entity , schema:Thing , sosa:Sensor ; 
+    schema:identifier
+    dct:type
+    schema:name
+    schema:description
+    schema:wasInfluencedBy
+    sosa:isHostedBy
+.
+
+
+# SamplingDevice
+<>
+    a prov:Entity , schema:Thing , sosa:Sampler ;  
+    schema:identifier
+    dct:type
+    schema:name
+    schema:description
+    schema:wasInfluencedBy
+    sosa:isHostedBy
+.
