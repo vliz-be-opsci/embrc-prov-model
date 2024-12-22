@@ -1,8 +1,9 @@
-# Examples of the provenance model
+# Examples
 
-Files with the provenance information for the four datasets examples (see [docs](https://github.com/vliz-be-opsci/embrc-prov-model/tree/main/docs) for the documentation in which these datasets are described).
+This folder provides examples demonstrating how the provenance model is applied, featuring four example datasets which are described in the [documentation](https://github.com/vliz-be-opsci/embrc-prov-model/tree/main/docs).
 
-- Plain text files, aimed at a human-only audience
-- Turtle formatted files, aimed at a machine audience, being in RDF
-- EML formatted files, aimed at a machine audience, being in XML following the schema used by many biodiversity archives
 
+### Content: 
+- **Plain text files**: Human-readable, providing a simplified overview of the dataset's provenance.  
+- **EML files**: XML-formatted according to the schema widely used by biodiversity archives, designed for machine processing.  
+- **Turtle (TTL) files**: RDF-formatted for machine processing, enabling semantic interoperability. 
