@@ -15,7 +15,7 @@ This file is one of three examples we provide for Dataset 1: this is a plain tex
 
 To make this file more compact and easier to read, we will first list the metadata for entities 
  that occurr more than once or which have to be described with more than one value. We will 
- then refer to them by their name or identifier when the activities are describeds.
+ then refer to them by their name or identifier when the activities are described.
 ###############################
 
 
