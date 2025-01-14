@@ -55,7 +55,7 @@ software: see VisualSpreadsheet FlowCam Micro software
 
 #### The description of the provenance of the activties for this dataset
 
-## The provenance metadata for the material processing activity
+## The provenance metadata for the material processing activity (Step 4)
 activity-type: processing water sample through FlowCam and producing images
 spatial-coverage: 
   name: Nice Marine Station
