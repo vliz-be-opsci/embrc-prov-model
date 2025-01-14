@@ -42,7 +42,7 @@ name: FlowCam species identification
 description: identification of species on images from the FlowCam, using the FlowCam software 
 spatial-coverage: 2021-01-01
 agent: see J. Gerschwin
-input: raw images from /Users/NMSlab/flowcam/20210101/BigProject/raw, settings in file flowcam-settings.txt, and reference library FlowCam_ReferenceLibrary_2024 
+input: raw images from /Users/NMSlab/flowcam/20210101/BigProject/raw, settings in file flowcam-settings.txt (see dataset), and reference library used was  FlowCam_ReferenceLibrary_2024 
 output: images in zip file Plankton_species_image.zip, results in Plankton_species_numbers.csv 
 used-software: see VisualSpreadsheet FlowCam Micro software
 
