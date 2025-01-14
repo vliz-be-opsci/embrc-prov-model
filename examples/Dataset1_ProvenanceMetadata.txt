@@ -90,14 +90,14 @@ platform:
   type: https://vocab.nerc.ac.uk/collection/L05/31 (research vessel)
   name: RV OurBigShip
 
-name: RV_OurBigShip_fridge
+name: Johnson Fridge type XYZ
 type: samples fridge
 platform: 
   identifier IMO: 1234567
   type: https://vocab.nerc.ac.uk/collection/L05/31 (research vessel)
   name: RV OurBigShip 
 
-name: RV_OurBigShip_freezer
+name: Johnson Freezer type XYZ
 type: samples freezer
 platform: 
   identifier IMO: 1234567
@@ -172,6 +172,7 @@ agent: see F. Lee
 sample: see BigProject_belgium_water_10m_1000um_r1 
 storage-device: see RV_OurBigShip_fridge
 storage-conditions: +4 C
+type: short-term
 
 ## The provenance metadata for the storing activity (Step 3)
 activity-type: cold storage on-board
@@ -181,3 +182,4 @@ agent: see F. Lee
 sample: see BigProject_belgium_water_10m_1000um_r2_3um 
 storage-device: see RV_OurBigShip_freezer
 storage-conditions: -20 C
+type: short-term
