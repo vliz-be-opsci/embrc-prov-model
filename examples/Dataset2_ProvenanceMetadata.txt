@@ -3,7 +3,7 @@ Explanation
 
 Example provenance metadata file for Dataset 2, which is described in XXXXX 
   Please see that document to understand the context of these metadata
-Dataset 2 consists of the images produced by the FlowCam from the water sample.  
+Dataset 2 consists of the first set of images produced by the FlowCam from the water sample.  
 This example uses the EMBRC provenance model to describe the activities and material that 
  lead to Dataset 2. This file can then be used to provide the provenance metadata for the
  images, and for any data or scientific results that are derived from those images.  
@@ -21,65 +21,51 @@ To make this file more compact and easier to read, we will first list the metada
 name: J. Gerschwin
 identifier: https://orcid.org/0000-0001-0001-0002
 email: jg@somewhere.com
+role: lab technician
 organisation:
   name: Nice Marine Station
   identifier: https://edmo.seadatanet.org/report/00000
 
 
-## Locations
-name: Nice Marine Station
-address: NiceMarineStation Rd, Ostend, Belgium
-
-
 ## Samples
-name: BigProject_belgium_water_25m_50um_r1  keyword: http://purl.obolibrary.org/obo/ENVO_00002150, NCBI:txid1874687 
+name:  BigProject_belgium_water_10m_1000um_r1  
+description: water sample collected from 10m depth and filtered at 1000um
+keyword: http://purl.obolibrary.org/obo/ENVO_00002150, NCBI:txid1874687 
+
 
 ## Protocols
 name: FlowCam_seawater_sop 
 description: instructions for using FlowCam with seawater, including camera settings
-distribution: see file FlowCam_seawaterSOP.pdf 
+distribution: see file FlowCam_seawaterSOP.pdf which is part of this data package 
 
 
 ## Software
 name: VisualSpreadsheet FlowCam Micro software
 description: the software that comes with this FlowCam, bought in 2010
+settings: see file flowcam-settings.txt which is part of the data package
 
 
 ## Devices 
-name: FlowCam Micro from CoolLabInstruments Corp., 2010
 identifier: NMS_flowcam_2010
-type: Flow imaging microscopy 
+name: FlowCam Micro from CoolLabInstruments Corp., 2010
+type: https://vocab.nerc.ac.uk/collection/L05/current/LAB27, Flow imaging microscopy 
 settings: see file flowcam-settings.txt for software and hardware settings
-software: see "VisualSpreadsheet FlowCam Micro software"
+software: see VisualSpreadsheet FlowCam Micro software
 
 
-
-
+#### The description of the provenance of the activties for this dataset
 
 ## The provenance metadata for the material processing activity
-activity-type: processing water sample through FlowCam
-spatial-coverage: see Nice Marine Station 
-start-datetime: 2021-01-01 !!!--> may change
-end-datetime: 2021-01-01
+activity-type: processing water sample through FlowCam and producing images
+spatial-coverage: 
+  name: Nice Marine Station
+  address: NiceMarineStation Rd, Ostend, Belgium
+temporal-coverage: start: 2021-01-01, end: 2021-01-01
 agent: see J. Gerschwin
-role: lab technician
 protocol: see FlowCam_seawater_sop
-sample: see BigProject_belgium_water_25m_50um_r1
-result: XXX !!!---> TBD
+sample: see  BigProject_belgium_water_10m_1000um_r1
+result: the first set of images taken by the flowcam are stored in /Users/NMSlab/flowcam/20210101/BigProject/raw
 device: see NMS_flowcam_2010
 
-
-## The provenance metadata for the data processing activity
-activity-type: FlowCam imaging and identification
-spatial-coverage: see Nice Marine Station 
-start-datetime: 2021-01-01 !!!--> may change
-end-datetime: 2021-01-01
-agent: see J. Gerschwin
-role: lab technician
-name: FlowCam imaging and species identification
-description: producing images from the FlowCam 
-input: see BigProject_belgium_water_25m_50um_r1, settings in file flowcam-settings.txt 
-output: the set of images (JPG) which are the dataset this provenance metadata is describing
-used-software: see VisualSpreadsheet FlowCam Micro software
 
 
