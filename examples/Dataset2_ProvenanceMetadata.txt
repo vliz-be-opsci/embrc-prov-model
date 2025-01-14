@@ -4,6 +4,7 @@ Explanation
 Example provenance metadata file for Dataset 2, which is described in XXXXX 
   Please see that document to understand the context of these metadata
 Dataset 2 consists of the first set of images produced by the FlowCam from the water sample.  
+It also includes a protocol document and a software settings file.
 This example uses the EMBRC provenance model to describe the activities and material that 
  lead to Dataset 2. This file can then be used to provide the provenance metadata for the
  images, and for any data or scientific results that are derived from those images.  
