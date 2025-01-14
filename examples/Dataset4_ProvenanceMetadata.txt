@@ -1,0 +1,198 @@
+###############################
+Explanation
+
+Example provenance metadata file for Dataset 4, which is described in XXXXX 
+  Please see that document to understand the context of these metadata
+Dataset 4 consists of the 18S sequences produced by a sequencing centre from the sample collected 
+in Dataset 1.
+This example uses the EMBRC provenance model to describe the activities and material that 
+ lead to Dataset 4. This file can then be used to provide the provenance metadata for the
+ logsheets, for any material samples that still exist (e.g. replicates), and for any data 
+ or scientific results that are derived from that material and from the logsheets.  
+This file is one of three examples we provide for Dataset 4: this is a plain text version, 
+ written for humans rather than machines to read; a version in Turtle, which is written for
+ machines; and a version using the EML metadata schema, which biodiversity databases use. 
+
+To make this file more compact and easier to read, we will first list the metadata for entities 
+ that occurr more than once or which have to be described with more than one value. We will 
+ then refer to them by their name or identifier when the activities are described.
+###############################
+
+
+## Agents
+name: F. Lee
+identifier: https://orcid.org/0000-0001-0001-0002
+email: f.lee@somewhere.com
+role: laboratory technician
+organization:  
+  name: Nice Marine Station
+  identifier: https://edmo.seadatanet.org/report/00000
+
+name: SequencingIsUs HQ
+organization:
+  name: SequencingIsUs 
+  address: Paris, France
+
+name: DNA technician
+role: lab technician
+organization:
+  name: see SequencingIsUs 
+
+
+## Samples
+name: BigProject_belgium_water_10m_1000um_r2_3um 
+description: water sample collected from 10m depth and filtered between 3-1000um
+keyword: http://purl.obolibrary.org/obo/ENVO_00002150, NCBI:txid1874687
+
+name: SequencingIsUs_BigProject001_a 
+description: DNA extracted from filter
+
+name: SequencingIsUs_BigProject001_b 
+description: DNA extracted from filter after quantification
+
+name: SequencingIsUs_BigProject001_c
+description: DNA prepared for sequencing platform
+
+
+## Locations
+name: SequencingIsUs
+address: Paris, France
+
+
+
+#### The description of the provenance of the activties for this dataset
+
+## The provenance metadata for the sampling activity (Step 6)
+activity-type: cold storage 
+spatial-coverage: 
+  name: Nice Marine Station
+  address: NiceMarineStation Rd, Ostend, Belgium
+temporal-coverage: start: 2021-01-01, end: 2021-06-01 
+agent: see F. Lee
+protocol: 
+  name: BigProject_eDNAstorage   
+  description:  filters to be stored in tubes at -80 
+sample: see BigProject_belgium_water_10m_1000um_r2_3um
+type: medium-term
+storage-conditions: -80 C
+storage-device:
+  name: Johnson Freezer type XYZ
+  type: freezer
+
+
+## The provenance metadata for the transporting activity (Step 6)
+activity-type: transporting DNA filters to SequencingIsUs
+temporal-coverage: start: 2021-06-01, end: 2021-06-01 
+agent: see F. Lee
+storage-conditions: dry ice, -80 C
+source: see BigProject_belgium_water_10m_1000um_r2_3um 
+providing-location: 
+  name: Nice Marine Station
+  address: NiceMarineStation Rd, Ostend, Belgium
+receiving-location: see SequencingIsUs
+providing-agent: see F. Lee
+receiving-agent: see DNA technician
+
+
+## The provenance metadata for the material aquiring activity (Step 7)
+activity-type: receiving DNA filter-samples from NiceMarineStation
+temporal-coverage: 2021-06-01 
+source: see BigProject_belgium_water_10m_1000um_r2_3um 
+description: water sample collected from 10m depth and filtered between 3-1000um
+providing-location: 
+  name: Nice Marine Station
+  address: NiceMarineStation Rd, Ostend, Belgium
+receiving-location: see see SequencingIsUs
+providing-agent: see F. Lee 
+receiving-agent: see DNA technician 
+
+
+## The provenance metadata for the storing activity (Step 7)
+activity-type: long-term cold storage 
+spatial-coverage: see SequencingIsUs 
+temporal-coverage: start: 2021-06-01, end: 2021-10-08 
+agent: see DNA technician
+protocol:
+  description: instructions for storage of filter membranes until further processing 
+sample: see BigProject_belgium_water_10m_1000um_r2_3um 
+type: medium-term
+storage-conditions: -80 C
+storage-device:
+  type: Johnson Freezer type XYZ
+
+
+## The provenance metadata for a series of four material processing activities (Step 7)
+activity-type: DNA extraction
+spatial-coverage: see SequencingIsUs
+temporal-coverage: 2021-10-08
+agent: see DNA technician
+protocol:
+  description: Extraction of DNA from polycarbonate filters using the Alberti et al. (2017) protocol, followed by DNA purification using NucleoSpin RNA kits combined with the NucleoSpin RNA/DNA buffer set (Macherey-Nagel, Düren, Germany). 
+sample: see  BigProject_belgium_water_10m_1000um_r2_3um 
+result: see  SequencingIsUs_BigProject001_a 
+device:
+  name: centrifuge
+device:
+  name: cryogenic grinder
+
+
+activity-type: DNA quantification
+spatial-coverage: see SequencingIsUs
+temporal-coverage: 2021-10-08
+agent: see DNA technician
+protocol:
+  description: Quantification of the abundance of DNA using DNA-Binding Fluorescent Dyes: minimum threshold 4 ng (according to the Qubit dsDNA BR (Broad range) Assay kit (ThermoFisher Scientific, Waltham, MA)) 
+sample: see SequencingIsUs_BigProject001_a 
+result: see SequencingIsUs_BigProject001_b 
+device:
+  name: Qubit 4 Fluorometer 
+  type: https://vocab.nerc.ac.uk/collection/L05/current/113/
+
+
+activity-type: Library preparation (18S rRNA)
+spatial-coverage: see SequencingIsUs
+temporal-coverage: 2021-10-08
+agent: see DNA technician
+protocol:
+  name: amplicon library preparation
+  description: BID strategy, as described in Belser et al. (2023)
+sample: see SequencingIsUs_BigProject001_b 
+result: see SequencingIsUs_BigProject001_c 
+device:
+  name: T100 Thermal Cycler (BIORAD)
+  type: thermocycler
+
+
+activity-type: sequencing
+spatial-coverage: see SequencingIsUs
+temporal-coverage: 2021-10-08
+agent: see DNA technician 
+protocol:
+  name: NovaSeq 6000 Reagent Kit
+  description: SP Flowcell (Illumina, San Diego, CA, USA)
+  distribution: https://science-docs.illumina.com/documents/Instruments/novaseq-6000-spec-sheet-html-770-2016-025/Content/Source/Instruments/NovaSeq/novaseq-6000-spec-sheet-770-2016-025/novaseq-system-spec-sheet-html-770-2016-025.html
+not included: deviations (not applicable)
+sample: see SequencingIsUs_BigProject001_c 
+result:  digital sequences, ready for QC. Data available upon request to BigProject (in folder BigProject_2021/fromSequencer)
+device:
+  name: JARVIS
+  type: Illumina NovaSeq 6000
+  settings: Number of cycle = 150sxxx
+  software:
+    name: Real-Time Analysis (RTA) software
+    description: Build-in software operating during cycles of sequencing chemistry and imaging, providing base calls and associated quality scores representing the primary structure of DNA or RNA strands, and performing primary data analysis on Illumina sequencing systems automatically. See https://emea.illumina.com/informatics/sequencing-data-analysis.html for more information on the software from this device. Note that in the outputs the Optional sequencing summary metrics have been set to include the “percentage of PhiX”, the “percentage of aligned reads” - the percent of reads that are aligned to PhiX should be close to the percent of PhiX spiked in, the “percentage of clusters passing the filter” and the “cluster density”.
+
+
+## The provenance metadata for the final data processing activity (Step 7)
+activity-type: Illumina filter
+name: Illumina filtering 
+description: QC: filtering of raw data to remove unwanted clusters and produce the final 18s sequences
+spatial-coverage: 2021-10-12
+agent: see DNA technician
+input: raw digital sequences produced by the sequencing step. Data available upon request to BigProject (in folder BigProject_2021/fromSequencer) 
+output: filtered digital sequences produced by the filtering step. Data available upon request to BigProject (in folder BigProject_2021/QC/fromIllumina)
+used-software:
+  name: Illumina filtering with proprietary software
+  description: Filtering of raw data to remove clusters that have "too much" intensity corresponding to bases other than the called base. By default, the purity of the signal from each cluster is examined over the first 25 cycles and calculated as Chastity = Highest_Intensity / (Highest_Intensity + Next_Highest_Intensity) for each cycle. The default filtering implemented at the base calling stage allows at most one cycle that is less than the Chastity threshold (0,6).
+
+
