@@ -21,20 +21,20 @@ To make this file more compact and easier to read, we will first list the metada
 
 ## Agents
 name: Jane Smith
-identifier: https://orcid.org/0000-0001-0001-0001 
-email: jane.smith@somewhere.com 
+identifier: https://orcid.org/0000-0001-0001-0001
+email: jane.smith@somewhere.com
 role: field and laboratory technician
 organization: 
   name: BigHappyOrganisation
-  identifier: https://edmo.seadatanet.org/report/00000 
+  identifier: https://edmo.seadatanet.org/report/00000
 
 name: F. Lee
-identifier: https://orcid.org/0000-0001-0001-0002 
-email: f.lee@somewhere.com 
+identifier: https://orcid.org/0000-0001-0001-0002
+email: f.lee@somewhere.com
 role: field and laboratory technician
-organization:    
+organization:   
   name: BigHappyOrganisation
-  identifier: https://edmo.seadatanet.org/report/00000 
+  identifier: https://edmo.seadatanet.org/report/00000
 
 
 ## Locations
@@ -44,33 +44,33 @@ geography: latitude: 51.249995, longitude: 2.85327
 
 
 ## Samples
-name: BigProject_belgium_water_10m 
+name: BigProject_belgium_water_10m
 description: water sample to determine plankton community and extract DNA
-keyword: http://purl.obolibrary.org/obo/ENVO_00002150, NCBI:txid1874687  
+keyword: http://purl.obolibrary.org/obo/ENVO_00002150, NCBI:txid1874687 
 
-name: BigProject_belgium_water_10m_1000um_r1  
-description: water sample collected from 10m depth and filtered at 1000um
-keyword: http://purl.obolibrary.org/obo/ENVO_00002150, NCBI:txid1874687 
-
-name: BigProject_belgium_water_10m_1000um_r2  
+name: BigProject_belgium_water_10m_1000um_r1 
 description: water sample collected from 10m depth and filtered at 1000um
 keyword: http://purl.obolibrary.org/obo/ENVO_00002150, NCBI:txid1874687
 
-name: BigProject_belgium_water_10m_1000um_r2_3um  
+name: BigProject_belgium_water_10m_1000um_r2 
+description: water sample collected from 10m depth and filtered at 1000um
+keyword: http://purl.obolibrary.org/obo/ENVO_00002150, NCBI:txid1874687
+
+name: BigProject_belgium_water_10m_1000um_r2_3um 
 description: water sample collected from 10m depth and filtered at 1000um and again 3um
 keyword: http://purl.obolibrary.org/obo/ENVO_00002150, NCBI:txid1874687
 
 
 ## Protocols
-name: BigProject_WaterSamples  
-description: Collecting and pre-filtering (removal of larger particles) of water samples to be used later for FlowCam and eDNA work  
-distribution: https://www.protocols.io/BigProject_WaterSamples.pdf  
+name: BigProject_WaterSamples 
+description: Collecting and pre-filtering (removal of larger particles) of water samples to be used later for FlowCam and eDNA work 
+distribution: https://www.protocols.io/BigProject_WaterSamples.pdf 
 
-name: CTD_standard_procedure_2  
-description: instructions for using the CTD  
-distribution: https://www.mylab.eu/CTDinstructions.pdf  
+name: CTD_standard_procedure_2 
+description: instructions for using the CTD 
+distribution: https://www.mylab.eu/CTDinstructions.pdf 
 
-name: BigProject_eDNAfiltering  
+name: BigProject_eDNAfiltering 
 description: instructions for water samples filtering - to capture the biological material on the filter membrane which will be used for DNA extraction
 distribution: https://www.protocols.io/BigProject_eDNAfiltering.pdf 
 
