@@ -167,7 +167,7 @@ device:
   name: T100 Thermal Cycler (BIORAD)
   type: thermocycler
 
-<MaterialProcessing> SEQUENCING
+<MaterialProcessing> 
 activity-type: sequencing
 spatial-coverage: see SequencingIsUs
 temporal-coverage: 2021-10-08
@@ -177,14 +177,14 @@ protocol:
   description: SP Flowcell (Illumina, San Diego, CA, USA)
   distribution: https://science-docs.illumina.com/documents/Instruments/novaseq-6000-spec-sheet-html-770-2016-025/Content/Source/Instruments/NovaSeq/novaseq-6000-spec-sheet-770-2016-025/novaseq-system-spec-sheet-html-770-2016-025.html
 sample: see SequencingIsUs_BigProject001_c 
-result:  digital sequences, ready for QC. Data available upon request to BigProject (in folder BigProject_2021/fromSequencer)
+result: SequencingIsUs_BigProject001_c_data. Digital sequences, ready for QC. Data available upon request to BigProject (in folder BigProject_2021/fromSequencer). 
 device:
   name: JARVIS
   type: Illumina NovaSeq 6000
-  settings: Number of cycle = 150sxxx
+  settings: Number of cycles = 150
   software:
     name: Real-Time Analysis (RTA) software
-    description: Build-in software operating during cycles of sequencing chemistry and imaging, providing base calls and associated quality scores representing the primary structure of DNA or RNA strands, and performing primary data analysis on Illumina sequencing systems automatically. See https://emea.illumina.com/informatics/sequencing-data-analysis.html for more information on the software from this device. Note that in the outputs the Optional sequencing summary metrics have been set to include the “percentage of PhiX”, the “percentage of aligned reads” - the percent of reads that are aligned to PhiX should be close to the percent of PhiX spiked in, the “percentage of clusters passing the filter” and the “cluster density”.
+    description: Built-in software operating during cycles of sequencing chemistry and imaging, providing base calls and associated quality scores representing the primary structure of DNA or RNA strands, and performing primary data analysis on Illumina sequencing systems automatically. See https://emea.illumina.com/informatics/sequencing-data-analysis.html for more information on the software from this device. Note that in the outputs the Optional sequencing summary metrics have been set to include the “percentage of PhiX”, the “percentage of aligned reads” - the percent of reads that are aligned to PhiX should be close to the percent of PhiX spiked in, the “percentage of clusters passing the filter” and the “cluster density”.
 
 
 ## The provenance metadata for the final data processing activity (Step 7)
@@ -194,10 +194,10 @@ name: Illumina filtering
 description: QC: filtering of raw data to remove unwanted clusters and produce the final 18s sequences
 spatial-coverage: 2021-10-12
 agent: see DNA technician
-input: raw digital sequences produced by the sequencing step. See SEQUENCING. Data available upon request to BigProject (in folder BigProject_2021/fromSequencer) 
-output: filtered digital sequences produced by the filtering step. Data available upon request to BigProject (in folder BigProject_2021/QC/fromIllumina)
-used-software:
+input: Raw digital sequences SequencingIsUs_BigProject001_c_data. Data available upon request to BigProject (in folder BigProject_2021/fromSequencer) 
+output: Filtered digital sequences produced by the filtering step. Data available upon request to BigProject (in folder BigProject_2021/QC/fromIllumina)
+protocol:
   name: Illumina filtering with proprietary software
-  description: Filtering of raw data to remove clusters that have "too much" intensity corresponding to bases other than the called base. By default, the purity of the signal from each cluster is examined over the first 25 cycles and calculated as Chastity = Highest_Intensity / (Highest_Intensity + Next_Highest_Intensity) for each cycle. The default filtering implemented at the base calling stage allows at most one cycle that is less than the Chastity threshold (0,6).
+  description: Filtering of raw data to remove clusters that have "too much" intensity corresponding to bases other than the call-base. By default, the purity of the signal from each cluster is examined over the first 25 cycles and calculated as Chastity = Highest_Intensity / (Highest_Intensity + Next_Highest_Intensity) for each cycle. The default filtering implemented at the base calling stage allows at most one cycle that is less than the Chastity threshold (0,6).
 
 
