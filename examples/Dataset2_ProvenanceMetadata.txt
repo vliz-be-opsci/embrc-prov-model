@@ -62,7 +62,7 @@ activity-type: processing water sample through FlowCam and producing images
 spatial-coverage: 
   name: Nice Marine Station
   address: NiceMarineStation Rd, Ostend, Belgium
-temporal-coverage: start: 2021-01-01, end: 2021-01-01
+temporal-coverage: 2021-01-01
 agent: see J. Gerschwin
 protocol: see FlowCam_seawater_sop
 sample: see  BigProject_belgium_water_10m_1000um_r1
