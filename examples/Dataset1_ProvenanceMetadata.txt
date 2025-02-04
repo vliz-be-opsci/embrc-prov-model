@@ -126,7 +126,7 @@ sample: see BigProject_belgium_water_10m
 <Sampling>
 activity-type: water sampling from 10m depth
 location: see Belgian EEZ 
-temporal-coverage: start: 2021-01-01, end: 2021-01-01
+temporal-coverage: 2021-01-01
 agent: see Jane Smith
 protocol: see BigProject_WaterSamples
 result: see BigProject_belgium_water_10m
@@ -137,7 +137,7 @@ permit: see ABS permit
 <Observing>
 activity-type: in-situ measurement of water properties
 location: see Belgian EEZ 
-temporal-coverage: start: 2021-01-01, end: 2021-01-01
+temporal-coverage: 2021-01-01
 agent: see Jane Smith
 protocol: see CTD_standard_procedure_2 
 result: http://vocab.nerc.ac.uk/collection/P02/current/TEMP, http://vocab.nerc.ac.uk/collection/A05/current/EV_SALIN
@@ -146,7 +146,7 @@ result: http://vocab.nerc.ac.uk/collection/P02/current/TEMP, http://vocab.nerc.a
 <MaterialProcessing>
 activity-type: pre-filtering of water sample and creating two replicates
 location: RV OurBigShip on-board lab
-temporal-coverage: start: 2021-01-01, end: 2021-01-01
+temporal-coverage: 2021-01-01
 agent: see F. Lee
 protocol: see BigProject_WaterSamples 
 sample: see BigProject_belgium_water_10m
@@ -159,7 +159,7 @@ device:
 <MaterialProcessing>
 activity-type: fine filtering of water sample
 location: RV OurBigShip on-board lab
-temporal-coverage: start: 2021-01-01, end: 2021-01-01
+temporal-coverage: 2021-01-01
 agent: see F. Lee
 protocol: see BigProject_eDNAfiltering
 sample: see BigProject_belgium_water_10m_1000um_r2
@@ -172,7 +172,7 @@ device:
 <Storing>
 activity-type: cold storage on-board
 location: RV OurBigShip on-board lab
-temporal-coverage: start: 2021-01-01, end: 2021-01-01
+temporal-coverage: 2021-01-01
 agent: see F. Lee
 sample: see BigProject_belgium_water_10m_1000um_r1 
 storage-device: see RV_OurBigShip_fridge
@@ -183,7 +183,7 @@ type: short-term
 <Storing>
 activity-type: cold storage on-board
 location: RV OurBigShip on-board lab
-temporal-coverage: start: 2021-01-01, end: 2021-01-01
+temporal-coverage: 2021-01-01
 agent: see F. Lee
 sample: see BigProject_belgium_water_10m_1000um_r2_3um 
 storage-device: see RV_OurBigShip_freezer
