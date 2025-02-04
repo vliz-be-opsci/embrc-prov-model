@@ -1,0 +1,279 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "dct": "http://purl.org/dc/terms/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id":"https://orcid.org/0000-0001-0001-0001",
+      "name": "Jane Smith",
+      "identifier": "https://orcid.org/0000-0001-0001-0001",
+      "email": "jane.smith@somewhere.com",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "BigHappyOrganisation",
+        "identifier": "https://edmo.seadatanet.org/report/00000"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "F. Lee",
+      "identifier": "https://orcid.org/0000-0001-0001-0002",
+      "email": "f.lee@somewhere.com",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "BigHappyOrganisation",
+        "identifier": "https://edmo.seadatanet.org/report/00000"
+      }
+    },
+
+    {
+      "@type": "Place",
+      "@id": "http://marineregions.org/mrgid/3293",
+      "name": "Belgian EEZ",
+      "identifier": "http://marineregions.org/mrgid/3293",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.249995,
+        "longitude": 2.85327
+      }
+    },
+
+    {
+      "@type": ["Thins","prov:Entity","sosa:Sample"],
+      "@id":"_:BigProject_belgium_water_10m",
+      "name": "BigProject_belgium_water_10m",
+      "description": "Water sample to determine plankton community and extract DNA",
+      "keywords": [
+        "http://purl.obolibrary.org/obo/ENVO_00002150", 
+        "NCBI:txid1874687"
+      ]
+    },
+    {
+      "@type": ["Thins","prov:Entity","sosa:Sample"],
+      "@id":"_:BigProject_belgium_water_10m_1000um_r1",
+      "name": "BigProject_belgium_water_10m_1000um_r1",
+      "description": "water sample collected from 10m depth and filtered at 1000um",
+      "keywords": [
+        "http://purl.obolibrary.org/obo/ENVO_00002150", 
+        "NCBI:txid1874687"
+      ]
+    },
+    {
+      "@type": ["Thins","prov:Entity","sosa:Sample"],
+      "@id":"_:BigProject_belgium_water_10m_1000um_r2",
+      "name": "BigProject_belgium_water_10m_1000um_r2",
+      "description": "water sample collected from 10m depth and filtered at 1000um",
+      "keywords": [
+        "http://purl.obolibrary.org/obo/ENVO_00002150", 
+        "NCBI:txid1874687"
+      ]
+    },
+    {
+      "@type": ["Thins","prov:Entity","sosa:Sample"],
+      "@id":"_:BigProject_belgium_water_10m_1000um_r2_3um ",
+      "name": "BigProject_belgium_water_10m_1000um_r2_3um ",
+      "description": "water sample collected from 10m depth and filtered at 1000um and again 3um",
+      "keywords": [
+        "http://purl.obolibrary.org/obo/ENVO_00002150", 
+        "NCBI:txid1874687"
+      ]
+    },
+
+    {
+      "@type":["Thing","prov:Entity","CreativeWork"],
+      "@id":"_:BigProject_WaterSamples",
+      "name":"BigProject_WaterSamples",
+      "description":"Collecting and pre-filtering (removal of larger particles) of water samples to be used later for FlowCam and eDNA work",
+      "url":"https://www.protocols.io/BigProject_WaterSamples.pdf"
+    },
+    {
+      "@type":["Thing","prov:Entity","CreativeWork"],
+      "@id":"_:CTD_standard_procedure_2",
+      "name":"CTD_standard_procedure_2",
+      "description":"instructions for using the CTD",
+      "url":"https://www.mylab.eu/CTDinstructions.pdf"
+    },
+    {
+      "@type":["Thing","prov:Entity","CreativeWork"],
+      "@id":"_:BigProject_eDNAfiltering",
+      "name":"BigProject_eDNAfiltering",
+      "description":"instructions for water samples filtering - to capture the biological material on the filter membrane which will be used for DNA extraction",
+      "url":"https://www.protocols.io/BigProject_eDNAfiltering.pdf"
+    },
+
+    {
+      "@type": ["Thing","prov:Entity"],
+      "@id": "_:BigHappyOrganization_rosette#1",
+      "name": "BigHappyOrganization rosette#1",
+      "dct:type": "Niskin bottles on a Rosette sampler",
+      "sosa:isHostedBy": {"@id":"_:IMO_1234567"}
+    },
+    {
+      "@type": ["Thing","prov:Entity"],
+      "@id":"_:BigHappyOrganization_CTD#23",
+      "name": "BigHappyOrganization CTD#23",
+      "dct:type": "https://vocab.nerc.ac.uk/collection/L05/current/130",
+      "sosa:isHostedBy": {"@id":"_:IMO_1234567"}
+    },
+    {
+      "@type": ["Thing","prov:Entity"],
+      "@id":"_:Johnson_Fridge_type_XYZ",
+      "name": "Johnson Fridge type XYZ",
+      "dct:type": "samples fridge",
+      "sosa:isHostedBy": {"@id":"_:IMO_1234567"}
+    },
+    {
+      "@type": ["Thing","prov:Entity"],
+      "@id":"_:Johnson_Freezer_type_XYZ",
+      "name": "Johnson Freezer type XYZ",
+      "dct:type": "samples freezer",
+      "sosa:isHostedBy": {"@id":"_:IMO_1234567"}
+    },
+
+    {
+      "@type": ["Thing","prov:Entity","sosa:Platform"],
+      "@id":"_:IMO_1234567",
+      "identifier": "IMO:1234567",
+      "dct:type": "https://vocab.nerc.ac.uk/collection/L05/31",
+      "name": "RV OurBigShip"
+    },
+
+    {
+      "@type": ["Thing","prov:Entity","CreativeWork","Permit"],
+      "@id":"_:ABSPermit_ircc2345678",
+      "name": "ABS permit",
+      "description": "ABS permit for water sample for DNA analysis from project BigProject sampled from the Belgium EEZ on 2021-01-01",
+      "identifier": "ircc2345678",
+      "validIn": {"@id": "http://marineregions.org/mrgid/3293"},
+      "prov:wasAssociatedWith": {"@id": "https://orcid.org/0000-0001-0001-0001"},
+      "prov:qualifiedAttribution": {
+        "@type": "prov:Attribution",
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0001"},
+        "dcat:hadRole": "contact"
+      },
+      "issuer": {
+        "@type": "Organization",
+        "name": "Belgium ABS National Focal Point",
+        "url": "https://absch.cbd.int/en/countries/BE"
+      },
+      "validFrom": "2021-01-01",
+      "validUntil": "2022-01-01",
+      "prov:wasInfluencedBy": {"@id":"_:BigProject_belgium_water_10m"}
+    },
+
+    {
+      "@type": ["Action","prov:Activity","sosa:Sampling"],
+      "dct:type":"Sampling, water sampling from 10m depth",
+      "prov:location": {"@id":"http://marineregions.org/mrgid/3293"},
+      "startTime": "2021-01-01",
+      "endTime": "2021-01-01",
+      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0001"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0001"},
+        "dcat:hadRole":  "field and laboratory technician"
+      },
+      "prov:used": [
+        {"@id":"_:BigProject_WaterSamples"},
+        {"@id":"_:ABSPermit_ircc2345678"}
+      ],
+      "prov:generated": {"@id":"_:BigProject_belgium_water_10m"},
+      "sosa:madeBySampler": {"@id":"_:BigHappyOrganization_rosette#1"}
+    },
+    {
+      "@type": ["Action","prov:Activity"],
+      "dct:type":"Observing, in-situ measurement of water properties",
+      "prov:location": {"@id":"http://marineregions.org/mrgid/3293"},
+      "startTime": "2021-01-01",
+      "endTime": "2021-01-01",
+      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0001"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0001"},
+        "dcat:hadRole":  "field and laboratory technician"
+      },
+      "prov:used": {"@id":"_:CTD_standard_procedure_2"},
+      "prov:generated": [
+        {
+          "@type":"sosa:Observation",
+          "sosa:hasFeatureOfInterest":"http://vocab.nerc.ac.uk/collection/P02/current/TEMP"
+        },
+        {
+          "@type":"sosa:Observation",
+          "sosa:hasFeatureOfInterest":"http://vocab.nerc.ac.uk/collection/A05/current/EV_SALIN"
+        }
+      ]
+    },
+    {
+      "@type": ["Action","prov:Activity"],
+      "dct:type":"Material processing, pre-filtering of water sample and creating two replicates",
+      "prov:location": {
+        "@type": ["Place", "prov:Location"],
+        "name":"RV OurBigShip on-board lab"
+      },
+      "startTime": "2021-01-01",
+      "endTime": "2021-01-01",
+      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0002"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        "dcat:hadRole":  "field and laboratory technician"
+      },
+      "prov:used": [
+        {"@id":"_:BigProject_eDNAfiltering"},
+        {
+          "@type":["Thing","prov:Entity"],
+          "name":"Peristaltic pump",
+          "description":"including pump heads, appropriate silicone tubes, stainless steel filter holders",
+          "dct:type":"Masterflex - EW-07522-20"
+        }
+    ],
+      "prov:generated": [
+        {"@id":"_:BigProject_belgium_water_10m_1000um_r2"},
+        {"@id":"_:BigProject_belgium_water_10m_1000um_r2_3um"}
+      ]
+    },
+    {
+      "@type": ["Action","prov:Activity"],
+      "dct:type":"Storing, short term; cold storage on-board",
+      "prov:location": {
+        "@type": ["Place", "prov:Location"],
+        "name":"RV OurBigShip on-board lab"
+      },
+      "startTime": "2021-01-01",
+      "endTime": "2021-01-01",
+      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0002"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        "dcat:hadRole":  "field and laboratory technician"
+      },
+      "description":"+4 C",
+      "prov:used": {"@id":"_:Johnson_Fridge_type_XYZ"},
+      "object": {"@id":"_:BigProject_belgium_water_10m_1000um_r1"}
+    },
+    {
+      "@type": ["Action","prov:Activity"],
+      "dct:type":"Storing, short term; cold storage on-board",
+      "prov:location": {
+        "@type": ["Place", "prov:Location"],
+        "name":"RV OurBigShip on-board lab"
+      },
+      "startTime": "2021-01-01",
+      "endTime": "2021-01-01",
+      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0002"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        "dcat:hadRole":  "field and laboratory technician"
+      },
+      "description":"-20 C",
+      "prov:used": {"@id":"_:Johnson_Freezer_type_XYZ"},
+      "object": {"@id":"_:BigProject_belgium_water_10m_1000um_r2_3um"}
+    }
+  ]
+}

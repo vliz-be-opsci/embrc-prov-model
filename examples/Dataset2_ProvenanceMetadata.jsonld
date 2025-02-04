@@ -1,0 +1,88 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "dct": "http://purl.org/dc/terms/",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0000-0001-0001-0002",
+      "name": "J. Gerschwin",
+      "identifier": "https://orcid.org/0000-0001-0001-0002",
+      "email": "jg@somewhere.com",
+      "affiliation": {
+        "@type": "Organization",
+        "@id":"https://edmo.seadatanet.org/report/00000",
+        "name": "Nice Marine Station",
+        "identifier": "https://edmo.seadatanet.org/report/00000"
+      }
+    },
+
+    {
+      "@type": ["Thing", "prov:Entity", "sosa:Sample"],
+      "@id": "_:BigProject_belgium_water_10m_1000um_r1",
+      "name": "BigProject_belgium_water_10m_1000um_r1",
+      "description": "Water sample collected from 10m depth and filtered at 1000um",
+      "keywords": [
+        "http://purl.obolibrary.org/obo/ENVO_00002150",
+        "NCBI:txid1874687"
+      ]
+    },
+
+    {
+      "@type": ["Thing", "prov:Entity", "CreativeWork"],
+      "@id": "_:FlowCam_seawater_sop",
+      "name": "FlowCam_seawater_sop",
+      "description": "Instructions for using FlowCam with seawater, including camera settings",
+      "accessibilitySummary": "see file FlowCam_seawaterSOP.pdf which is part of this data package"
+    },
+
+    {
+      "@type": ["Thing", "prov:Entity", "SoftwareApplication"],
+      "@id": "_:VisualSpreadsheet_FlowCam",
+      "name": "VisualSpreadsheet FlowCam Micro software",
+      "description": "The software that comes with this FlowCam, bought in 2010",
+      "accessibilitySummary": "see file flowcam-settings.txt which is part of the data package"
+    },
+
+    {
+      "@type": ["Thing", "prov:Entity"],
+      "@id": "_:NMS_flowcam_2010",
+      "identifier": "NMS_flowcam_2010",
+      "name": "FlowCam Micro from CoolLabInstruments Corp., 2010",
+      "dct:type": "https://vocab.nerc.ac.uk/collection/L05/current/LAB27",
+      "description": "see file flowcam-settings.txt for software and hardware settings",
+      "software": {"@id": "_:VisualSpreadsheet_FlowCam"}
+    },
+
+    {
+      "@type": ["Action", "prov:Activity"],
+      "@id": "_:MaterialProcessing",
+      "dct:type": "Material Processing; Processing water sample through FlowCam and producing images",
+      "prov:location": {
+        "@type": ["Place", "prov:Location"],
+        "name": "Nice Marine Station",
+        "address": "NiceMarineStation Rd, Ostend, Belgium"
+      },
+      "startTime": "2021-01-01",
+      "endTime": "2021-01-01",
+      "prov:wasAssociatedWith": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        "dcat:hadRole":  "lab technician"
+      },
+      "prov:used": [
+        {"@id": "_:FlowCam_seawater_sop"},
+        {"@id": "_:NMS_flowcam_2010"}
+      ],
+      "object":  {"@id": "_:BigProject_belgium_water_10m_1000um_r1"},
+      "result": {
+        "@type": ["Thing", "Dataset"],
+        "description": "the first set of images taken by the flowcam are stored in /Users/NMSlab/flowcam/20210101/BigProject/raw"
+      }
+    }
+  ]
+}
