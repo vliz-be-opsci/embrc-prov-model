@@ -5,5 +5,5 @@ This folder provides examples demonstrating how the provenance model is applied,
 
 ### Content: 
 - **Plain text files**: Human-readable, providing a simplified overview of the dataset's provenance.  
-- **EML files**: XML-formatted according to the schema widely used by biodiversity archives, designed for machine processing.  
-- **Turtle (TTL) files**: RDF-formatted for machine processing, enabling semantic interoperability. 
+- **EML files**: XML-formatted according to the schema widely used by biodiversity archives, designed for machine processing.  TO COME
+- **JSON-LD files**: RDF-formatted for machine processing, enabling semantic interoperability. 
