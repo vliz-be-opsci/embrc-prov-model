@@ -46,20 +46,17 @@ geography: latitude: 51.249995, longitude: 2.85327
 ## Samples
 name: BigProject_belgium_water_10m
 description: water sample to determine plankton community and extract DNA
-keyword: http://purl.obolibrary.org/obo/ENVO_00002150, NCBI:txid1874687 
+keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
 
 name: BigProject_belgium_water_10m_1000um_r1 
 description: water sample collected from 10m depth and filtered at 1000um
-keyword: http://purl.obolibrary.org/obo/ENVO_00002150, NCBI:txid1874687
-
+keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
 name: BigProject_belgium_water_10m_1000um_r2 
 description: water sample collected from 10m depth and filtered at 1000um
-keyword: http://purl.obolibrary.org/obo/ENVO_00002150, NCBI:txid1874687
-
+keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
 name: BigProject_belgium_water_10m_1000um_r2_3um 
 description: water sample collected from 10m depth and filtered at 1000um and again 3um
-keyword: http://purl.obolibrary.org/obo/ENVO_00002150, NCBI:txid1874687
-
+keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
 
 ## Protocols
 name: BigProject_WaterSamples 
@@ -80,28 +77,28 @@ name: BigHappyOrganization rosette#1
 type: Niskin bottles on a Rosette sampler 
 platform: 
   identifier: IMO:1234567
-  type: https://vocab.nerc.ac.uk/collection/L05/31 (research vessel)
+  type: research vessel - https://vocab.nerc.ac.uk/collection/L05/31 
   name:  RV OurBigShip
 
 name: BigHappyOrganization CTD#23
-type: https://vocab.nerc.ac.uk/collection/L05/current/130 (CTD) 
+type: CTD - ttps://vocab.nerc.ac.uk/collection/L05/current/130 
 platform: 
   identifier IMO: 1234567
-  type: https://vocab.nerc.ac.uk/collection/L05/31 (research vessel)
+  type: research vessel - https://vocab.nerc.ac.uk/collection/L05/31 
   name: RV OurBigShip
 
 name: Johnson Fridge type XYZ
 type: samples fridge
 platform: 
   identifier IMO: 1234567
-  type: https://vocab.nerc.ac.uk/collection/L05/31 (research vessel)
+  type: research vessel - https://vocab.nerc.ac.uk/collection/L05/31 
   name: RV OurBigShip 
 
 name: Johnson Freezer type XYZ
 type: samples freezer
 platform: 
   identifier IMO: 1234567
-  type: https://vocab.nerc.ac.uk/collection/L05/31 (research vessel)
+  type: research vessel - https://vocab.nerc.ac.uk/collection/L05/31 
   name: RV OurBigShip 
 
 
