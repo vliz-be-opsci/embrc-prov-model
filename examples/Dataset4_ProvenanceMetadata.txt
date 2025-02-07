@@ -42,7 +42,7 @@ organization:
 ## Samples
 name: BigProject_belgium_water_10m_1000um_r2_3um 
 description: water sample collected from 10m depth and filtered between 3-1000um
-keyword: http://purl.obolibrary.org/obo/ENVO_00002150, NCBI:txid1874687
+keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
 
 name: SequencingIsUs_BigProject001_a 
 description: DNA extracted from filter
@@ -136,7 +136,7 @@ protocol:
 sample: see  BigProject_belgium_water_10m_1000um_r2_3um 
 result: see  SequencingIsUs_BigProject001_a 
 device:
-  name: centrifuge
+  name: centrifuge - https://vocab.nerc.ac.uk/collection/L05/current/83/ 
 device:
   name: cryogenic grinder
 
@@ -151,7 +151,7 @@ sample: see SequencingIsUs_BigProject001_a
 result: see SequencingIsUs_BigProject001_b 
 device:
   name: Qubit 4 Fluorometer 
-  type: https://vocab.nerc.ac.uk/collection/L05/current/113/
+  type: Fluorometer - https://vocab.nerc.ac.uk/collection/L05/current/113/
 
 <MaterialProcessing>
 activity-type: Library preparation (18S rRNA)
@@ -165,7 +165,7 @@ sample: see SequencingIsUs_BigProject001_b
 result: see SequencingIsUs_BigProject001_c 
 device:
   name: T100 Thermal Cycler (BIORAD)
-  type: thermocycler
+  type: Thermal Cycler - https://vocab.nerc.ac.uk/collection/L05/current/LAB50/
 
 <MaterialProcessing> 
 activity-type: sequencing
