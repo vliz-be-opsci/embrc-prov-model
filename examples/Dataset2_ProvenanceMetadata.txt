@@ -31,7 +31,7 @@ organisation:
 ## Samples
 name:  BigProject_belgium_water_10m_1000um_r1 
 description: water sample collected from 10m depth and filtered at 1000um
-keyword: http://purl.obolibrary.org/obo/ENVO_00002150, NCBI:txid1874687
+keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
 
 
 ## Protocols
@@ -49,7 +49,7 @@ settings: see file flowcam-settings.txt which is part of the data package
 ## Devices 
 identifier: NMS_flowcam_2010
 name: FlowCam Micro from CoolLabInstruments Corp., 2010
-type: https://vocab.nerc.ac.uk/collection/L05/current/LAB27, Flow imaging microscopy 
+type: Flow imaging microscopy - https://vocab.nerc.ac.uk/collection/L05/current/LAB27 
 settings: see file flowcam-settings.txt for software and hardware settings
 software: see VisualSpreadsheet FlowCam Micro software
 
