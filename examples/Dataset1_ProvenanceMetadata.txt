@@ -25,25 +25,25 @@ identifier: https://orcid.org/0000-0001-0001-0001
 email: jane.smith@somewhere.com
 role: field and laboratory technician
 organization: 
-  name: BigHappyOrganisation
+  name: Nice Marine Station
   identifier: https://edmo.seadatanet.org/report/00000
-  website: https://BigHappyOrganisation.eu
-  email: info@bighappyorganisation.eu
+  website: https://NiceMarineStation.eu
+  email: info@nicemarinestation.eu
 
 name: F. Lee
 identifier: https://orcid.org/0000-0001-0001-0002
 email: f.lee@somewhere.com
 role: field and laboratory technician
 organization:   
-  name: BigHappyOrganisation
+  name: Nice Marine Station
   identifier: https://edmo.seadatanet.org/report/00000
-  website: https://BigHappyOrganisation.eu
-  email: info@bighappyorganisation.eu
+  website: https://NiceMarineStation.eu
+  email: info@nicemarinestation.eu
 
-name: BigHappyOrganisation
-identifier: https://edmo.seadatanet.org/report/0000
-website: https://BigHappyOrganisation.eu
-email: info@bighappyorganisation.eu
+name: NiceMarineStation
+identifier: https://edmo.seadatanet.org/report/00000
+website: https://NiceMarineStation.eu
+email: info@nicemarinestation.eu
 
 ## Locations
 name: Belgian EEZ
@@ -81,15 +81,15 @@ distribution: https://www.protocols.io/BigProject_eDNAfiltering.pdf
 
 
 ## Devices 
-name: BigHappyOrganization rosette#1
+name: NiceMarineStation rosette#1
 type: Niskin bottles on a Rosette sampler 
 platform: 
   identifier: IMO:1234567
   type: research vessel - https://vocab.nerc.ac.uk/collection/L05/31 
   name:  RV OurBigShip
 
-name: BigHappyOrganization CTD#23
-type: CTD - ttps://vocab.nerc.ac.uk/collection/L05/current/130 
+name: NiceMarineStation CTD#23
+type: CTD - https://vocab.nerc.ac.uk/collection/L05/current/130 
 platform: 
   identifier IMO: 1234567
   type: research vessel - https://vocab.nerc.ac.uk/collection/L05/31 
@@ -117,7 +117,7 @@ ircc: ircc2345678
 spatial-coverage: 
   identifier: see Belgian EEZ 
 receiving-agent:  
-  identifier: see BigHappyOrganisation
+  identifier: see NiceMarineStation
 issuer: 
   name: Belgium ABS National Focal Point
   website: https://absch.cbd.int/en/countries/BE
@@ -135,7 +135,7 @@ temporal-coverage: 2021-01-01
 agent: see Jane Smith
 protocol: see BigProject_WaterSamples
 result: see BigProject_belgium_water_10m
-device: see BigHappyOrganization rosette#1
+device: see NiceMarineStation rosette#1
 permit: see ABS permit 
 
 ## The provenance metadata for the observing activity (Step 2)
