@@ -26,6 +26,8 @@ role: lab technician
 organisation:
   name: Nice Marine Station
   identifier: https://edmo.seadatanet.org/report/00000
+  website: https://NiceMarineStation.eu
+  email: info@nicemarinestation.eu
 
 
 ## Software
