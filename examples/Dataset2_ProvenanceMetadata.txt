@@ -26,8 +26,8 @@ role: lab technician
 organisation:
   name: Nice Marine Station
   identifier: https://edmo.seadatanet.org/report/00000
-  website: https://BigHappyOrganisation.eu
-  email: info@bighappyorganisation.eu
+  website: https://NiceMarineStation.eu
+  email: info@nicemarinestation.eu
 
 ## Samples
 name:  BigProject_belgium_water_10m_1000um_r1 
