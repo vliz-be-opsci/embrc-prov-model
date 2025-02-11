@@ -27,6 +27,8 @@ role: field and laboratory technician
 organization: 
   name: BigHappyOrganisation
   identifier: https://edmo.seadatanet.org/report/00000
+  website: https://BigHappyOrganisation.eu
+  email: info@bighappyorganisation.eu
 
 name: F. Lee
 identifier: https://orcid.org/0000-0001-0001-0002
@@ -35,7 +37,13 @@ role: field and laboratory technician
 organization:   
   name: BigHappyOrganisation
   identifier: https://edmo.seadatanet.org/report/00000
+  website: https://BigHappyOrganisation.eu
+  email: info@bighappyorganisation.eu
 
+name: BigHappyOrganisation
+identifier: https://edmo.seadatanet.org/report/0000
+website: https://BigHappyOrganisation.eu
+email: info@bighappyorganisation.eu
 
 ## Locations
 name: Belgian EEZ
@@ -108,8 +116,8 @@ description: ABS permit for water sample for DNA analysis from project BigProjec
 ircc: ircc2345678
 spatial-coverage: 
   identifier: see Belgian EEZ 
-contact:  
-  identifier: see Jane Smith
+receiving-agent:  
+  identifier: see BigHappyOrganisation
 issuer: 
   name: Belgium ABS National Focal Point
   website: https://absch.cbd.int/en/countries/BE
