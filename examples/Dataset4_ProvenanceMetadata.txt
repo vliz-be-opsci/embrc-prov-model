@@ -27,6 +27,8 @@ role: laboratory technician
 organization:  
   name: Nice Marine Station
   identifier: https://edmo.seadatanet.org/report/00000
+  website: https://NiceMarineStation.eu
+  email: info@nicemarinestation.eu
 
 name: SequencingIsUs HQ
 organization:
