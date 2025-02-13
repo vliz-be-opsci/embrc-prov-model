@@ -133,7 +133,7 @@ sample: see BigProject_belgium_water_10m
 <Sampling>
 name: water sampling
 activity-type: sampling
-location: see Belgian EEZ 
+spatial-coverage: see Belgian EEZ 
 temporal-coverage: 2021-01-01
 agent: see Jane Smith
 protocol: see BigProject_WaterSamples
@@ -145,7 +145,7 @@ permit: see ABS permit
 <Observing>
 name: in-situ measurement of water properties
 activity-type: observing
-location: see Belgian EEZ 
+spatial-coverage: see Belgian EEZ 
 temporal-coverage: 2021-01-01
 agent: see Jane Smith
 protocol: see CTD_standard_procedure_2 
@@ -155,7 +155,7 @@ result: http://vocab.nerc.ac.uk/collection/P02/current/TEMP, http://vocab.nerc.a
 <MaterialProcessing>
 name: pre-filtering
 activity-type: material processing
-location: RV OurBigShip on-board lab
+spatial-coverage: RV OurBigShip on-board lab
 temporal-coverage: 2021-01-01
 agent: see F. Lee
 protocol: see BigProject_WaterSamples 
@@ -169,7 +169,7 @@ device:
 <MaterialProcessing>
 name: fine filtering
 activity-type: material processing
-location: RV OurBigShip on-board lab
+spaitla-coverage: RV OurBigShip on-board lab
 temporal-coverage: 2021-01-01
 agent: see F. Lee
 protocol: see BigProject_eDNAfiltering
@@ -183,7 +183,7 @@ device:
 <Storing>
 name: cold storage subsample 1
 activity-type: storing
-location: RV OurBigShip on-board lab
+spatial-coverage: RV OurBigShip on-board lab
 temporal-coverage: 2021-01-01
 agent: see F. Lee
 sample: see BigProject_belgium_water_10m_1000um_r1 
@@ -195,7 +195,7 @@ type: short-term
 <Storing>
 name: cold storage subsample 2
 activity-type: storing
-location: RV OurBigShip on-board lab
+spatial-coverage: RV OurBigShip on-board lab
 temporal-coverage: 2021-01-01
 agent: see F. Lee
 sample: see BigProject_belgium_water_10m_1000um_r2_3um 
