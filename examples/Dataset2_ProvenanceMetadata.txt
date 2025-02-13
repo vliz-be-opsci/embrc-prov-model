@@ -30,7 +30,7 @@ organisation:
   email: info@nicemarinestation.eu
 
 ## Samples
-name:  BigProject_belgium_water_10m_1000um_r1 
+identifier:  BigProject_belgium_water_10m_1000um_r1 
 description: water sample collected from 10m depth and filtered at 1000um
 keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
 
