@@ -52,17 +52,19 @@ geography: latitude: 51.249995, longitude: 2.85327
 
 
 ## Samples
-name: BigProject_belgium_water_10m
+identifier: BigProject_belgium_water_10m
 description: water sample to determine plankton community and extract DNA
 keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
 
-name: BigProject_belgium_water_10m_1000um_r1 
+identifier: BigProject_belgium_water_10m_1000um_r1 
 description: water sample collected from 10m depth and filtered at 1000um
 keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
-name: BigProject_belgium_water_10m_1000um_r2 
+
+identifier: BigProject_belgium_water_10m_1000um_r2 
 description: water sample collected from 10m depth and filtered at 1000um
 keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
-name: BigProject_belgium_water_10m_1000um_r2_3um 
+
+identifier: BigProject_belgium_water_10m_1000um_r2_3um 
 description: water sample collected from 10m depth and filtered at 1000um and again 3um
 keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
 
@@ -112,8 +114,8 @@ platform:
 
 ## Permits
 name: ABS permit
-description: ABS permit for water sample for DNA analysis from project BigProject sampled from the Belgium EEZ on 2021-01-01
-ircc: ircc2345678
+scope:  Samples of sea water from the Belgian EEZ collected over the period 2021-01-01 to 2022-01-01; processed for environmental DNA for taxonomic classification purposes
+permit-code: ircc2345678
 spatial-coverage: 
   identifier: see Belgian EEZ 
 receiving-agent:  
@@ -121,7 +123,7 @@ receiving-agent:
 issuer: 
   name: Belgium ABS National Focal Point
   website: https://absch.cbd.int/en/countries/BE
-temporal-coverage: start: 2021-01-01, end: 2022-01-01
+temporal-coverage: start 2021-01-01, end 2022-01-01
 sample: see BigProject_belgium_water_10m
 
 
