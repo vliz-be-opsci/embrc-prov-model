@@ -1,7 +1,8 @@
 ###############################
 Explanation
 
-Example provenance metadata file for Dataset 3, which is described in XXXXX 
+Example provenance metadata file for Dataset 3, which is described in the documement 
+  https://github.com/vliz-be-opsci/embrc-prov-model/blob/main/docs/ProvenanceOfBiologicalMaterial_main.pdf
   Please see that document to understand the context of these metadata
 Dataset 3 consists of a spreadsheet of plankton species names and numbers, produced by 
  the FlowCam from the water sample.  It also includes a software settings file.
