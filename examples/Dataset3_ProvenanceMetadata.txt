@@ -29,11 +29,14 @@ organisation:
   website: https://NiceMarineStation.eu
   email: info@nicemarinestation.eu
 
-
 ## Software
 name: VisualSpreadsheet FlowCam Micro software
 description: the software that comes with this FlowCam, bought in 2010
 settings: file flowcam-settings.txt which comes with this dataset
+
+## Protocol
+name: classification QC
+description: Manual filtering of the flowcam outputs, to remove misidentifications. Method steps: (1) visual inspection of the classified images by a first plankton expert, who suggested reclassifications or removal of the images from the dataset (2) visual inspection and confirmation/rejection of suggestions by a second export (3) reclassification in the image metadata and the spreadsheet for those that both experts agreed on, and agreed rejected results removed from the dataset.  
 
 
 #### The description of the provenance of the activties for this dataset
@@ -48,4 +51,5 @@ agent: see J. Gerschwin
 input: raw images from /Users/NMSlab/flowcam/20210101/BigProject/raw, settings in file flowcam-settings.txt (see dataset), and reference library used was  FlowCam_ReferenceLibrary_2024 
 output: images in zip file Plankton_species_image.zip, results in Plankton_species_numbers.csv 
 software: see VisualSpreadsheet FlowCam Micro software
+protocol: see classification QC
 
