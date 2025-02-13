@@ -43,8 +43,8 @@ description: Manual filtering of the flowcam outputs, to remove misidentificatio
 
 ## The provenance metadata for the data processing activity (Step 5)
 <DataProcessing>
-activity-type: FlowCam species identification
 name: FlowCam species identification
+activity-type: data processing
 description: identification of species on images from the FlowCam, using the FlowCam software 
 temporal-coverage: 2021-01-01
 agent: see J. Gerschwin
