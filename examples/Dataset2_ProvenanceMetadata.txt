@@ -59,7 +59,8 @@ software: see VisualSpreadsheet FlowCam Micro software
 
 ## The provenance metadata for the material processing activity (Step 4)
 <MaterialProcessing>
-activity-type: processing water sample through FlowCam and producing images
+name: FlowCam imaging
+activity-type: material processing
 spatial-coverage: 
   name: Nice Marine Station
   address: NiceMarineStation Rd, Ostend, Belgium
