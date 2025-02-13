@@ -131,7 +131,8 @@ sample: see BigProject_belgium_water_10m
 
 ## The provenance metadata for the sampling activity (Step 1)
 <Sampling>
-activity-type: water sampling from 10m depth
+name: water sampling
+activity-type: sampling
 location: see Belgian EEZ 
 temporal-coverage: 2021-01-01
 agent: see Jane Smith
@@ -142,7 +143,8 @@ permit: see ABS permit
 
 ## The provenance metadata for the observing activity (Step 2)
 <Observing>
-activity-type: in-situ measurement of water properties
+name: in-situ measurement of water properties
+activity-type: observing
 location: see Belgian EEZ 
 temporal-coverage: 2021-01-01
 agent: see Jane Smith
@@ -151,7 +153,8 @@ result: http://vocab.nerc.ac.uk/collection/P02/current/TEMP, http://vocab.nerc.a
 
 ## The provenance metadata for the material processing activity (Step 3)
 <MaterialProcessing>
-activity-type: pre-filtering of water sample and creating two replicates
+name: pre-filtering
+activity-type: material processing
 location: RV OurBigShip on-board lab
 temporal-coverage: 2021-01-01
 agent: see F. Lee
@@ -164,7 +167,8 @@ device:
 
 ## The provenance metadata for the material processing activity (Step 3)
 <MaterialProcessing>
-activity-type: fine filtering of water sample
+name: fine filtering
+activity-type: material processing
 location: RV OurBigShip on-board lab
 temporal-coverage: 2021-01-01
 agent: see F. Lee
@@ -177,7 +181,8 @@ device:
 
 ## The provenance metadata for the storing activity (Step 3)
 <Storing>
-activity-type: cold storage on-board
+name: cold storage subsample 1
+activity-type: storing
 location: RV OurBigShip on-board lab
 temporal-coverage: 2021-01-01
 agent: see F. Lee
@@ -188,7 +193,8 @@ type: short-term
 
 ## The provenance metadata for the storing activity (Step 3)
 <Storing>
-activity-type: cold storage on-board
+name: cold storage subsample 2
+activity-type: storing
 location: RV OurBigShip on-board lab
 temporal-coverage: 2021-01-01
 agent: see F. Lee
