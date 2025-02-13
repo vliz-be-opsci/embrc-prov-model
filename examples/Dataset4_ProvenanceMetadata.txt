@@ -31,30 +31,35 @@ organization:
   email: info@nicemarinestation.eu
 
 name: SequencingIsUs HQ
-organization:
-  name: SequencingIsUs 
-  address: Paris, France
+address: Rue DNA 3311, Paris, France
 
 name: DNA technician
 role: lab technician
 organization:
-  name: see SequencingIsUs 
+  name: see SequencingIsUs HQ
 
+name: NiceMarineStation
+identifier: https://edmo.seadatanet.org/report/00000
+website: https://NiceMarineStation.eu
+email: info@nicemarinestation.eu
 
 ## Samples
-name: BigProject_belgium_water_10m_1000um_r2_3um 
+identifier: BigProject_belgium_water_10m_1000um_r2_3um 
 description: water sample collected from 10m depth and filtered between 3-1000um
 keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
 
-name: SequencingIsUs_BigProject001_a 
+identifier: SiU_BP_0001 
+description: water sample collected from 10m depth and filtered between 3-1000um. Note: is same as BigProject_belgium_water_10m_1000um_r2_3um 
+keyword: coastal sea water: http://purl.obolibrary.org/obo/ENVO_00002150, marine plankton metagenome: NCBI:txid1874687
+
+identifier: SiU_BP_0001_a 
 description: DNA extracted from filter
 
-name: SequencingIsUs_BigProject001_b 
+identifier: SiU_BP_0001_b 
 description: DNA extracted from filter after quantification
 
-name: SequencingIsUs_BigProject001_c
+identifier: SiU_BP_0001_c
 description: DNA prepared for sequencing platform
-
 
 ## Locations
 name: SequencingIsUs
@@ -64,8 +69,8 @@ address: Paris, France
 
 #### The description of the provenance of the activties for this dataset
 
-## The provenance metadata for the sampling activity (Step 6)
-<Sampling>
+## The provenance metadata for the storing activity (Step 6)
+<Storing>
 activity-type: cold storage 
 spatial-coverage: 
   name: Nice Marine Station
@@ -89,10 +94,8 @@ activity-type: transporting DNA filters to SequencingIsUs
 temporal-coverage: start: 2021-06-01, end: 2021-06-01 
 agent: see F. Lee
 storage-conditions: dry ice, -80 C
-source: see BigProject_belgium_water_10m_1000um_r2_3um 
-providing-location: 
-  name: Nice Marine Station
-  address: NiceMarineStation Rd, Ostend, Belgium
+sample: see BigProject_belgium_water_10m_1000um_r2_3um 
+providing-location: see NiceMarineStation
 receiving-location: see SequencingIsUs
 providing-agent: see F. Lee
 receiving-agent: see DNA technician
@@ -102,25 +105,21 @@ receiving-agent: see DNA technician
 <MaterialAcquiring>
 activity-type: receiving DNA filter-samples from NiceMarineStation
 temporal-coverage: 2021-06-01 
-source: see BigProject_belgium_water_10m_1000um_r2_3um 
-description: water sample collected from 10m depth and filtered between 3-1000um
-providing-location: 
-  name: Nice Marine Station
-  address: NiceMarineStation Rd, Ostend, Belgium
-receiving-location: see see SequencingIsUs
+sample: see BigProject_belgium_water_10m_1000um_r2_3um 
 providing-agent: see F. Lee 
 receiving-agent: see DNA technician 
 
+## NOTE: the sample with identifier BigProject_belgium_water_10m_1000um_r2_3um was given a new, internal identifier SiU_BP_0001
 
 ## The provenance metadata for the storing activity (Step 7)
 <Storing>
-activity-type: long-term cold storage 
+activity-type: medium-term cold storage 
 spatial-coverage: see SequencingIsUs 
 temporal-coverage: start: 2021-06-01, end: 2021-10-08 
 agent: see DNA technician
 protocol:
-  description: instructions for storage of filter membranes until further processing 
-sample: see BigProject_belgium_water_10m_1000um_r2_3um 
+  description: storing filter membranes in dry freezer at -80Cuntil further processing 
+sample: see SiU_BP_0001  
 type: medium-term
 storage-conditions: -80 C
 storage-device:
@@ -135,8 +134,8 @@ temporal-coverage: 2021-10-08
 agent: see DNA technician
 protocol:
   description: Extraction of DNA from polycarbonate filters using the Alberti et al. (2017) protocol, followed by DNA purification using NucleoSpin RNA kits combined with the NucleoSpin RNA/DNA buffer set (Macherey-Nagel, Düren, Germany). 
-sample: see  BigProject_belgium_water_10m_1000um_r2_3um 
-result: see  SequencingIsUs_BigProject001_a 
+sample: see  SiU_BP_0001 
+result: see  SiU_BP_0001_a 
 device:
   name: centrifuge - https://vocab.nerc.ac.uk/collection/L05/current/83/ 
 device:
@@ -149,8 +148,8 @@ temporal-coverage: 2021-10-08
 agent: see DNA technician
 protocol:
   description: Quantification of the abundance of DNA using DNA-Binding Fluorescent Dyes: minimum threshold 4 ng (according to the Qubit dsDNA BR (Broad range) Assay kit (ThermoFisher Scientific, Waltham, MA)) 
-sample: see SequencingIsUs_BigProject001_a 
-result: see SequencingIsUs_BigProject001_b 
+sample: see SiU_BP_0001_a 
+result: see SiU_BP_0001_b 
 device:
   name: Qubit 4 Fluorometer 
   type: Fluorometer - https://vocab.nerc.ac.uk/collection/L05/current/113/
@@ -163,8 +162,8 @@ agent: see DNA technician
 protocol:
   name: amplicon library preparation
   description: BID strategy, as described in Belser et al. (2023)
-sample: see SequencingIsUs_BigProject001_b 
-result: see SequencingIsUs_BigProject001_c 
+sample: see SiU_BP_0001_b 
+result: see SiU_BP_0001_c 
 device:
   name: T100 Thermal Cycler (BIORAD)
   type: Thermal Cycler - https://vocab.nerc.ac.uk/collection/L05/current/LAB50/
@@ -178,8 +177,8 @@ protocol:
   name: NovaSeq 6000 Reagent Kit
   description: SP Flowcell (Illumina, San Diego, CA, USA)
   distribution: https://science-docs.illumina.com/documents/Instruments/novaseq-6000-spec-sheet-html-770-2016-025/Content/Source/Instruments/NovaSeq/novaseq-6000-spec-sheet-770-2016-025/novaseq-system-spec-sheet-html-770-2016-025.html
-sample: see SequencingIsUs_BigProject001_c 
-result: SequencingIsUs_BigProject001_c_data. Digital sequences, ready for QC. Data available upon request to BigProject (in folder BigProject_2021/fromSequencer). 
+sample: see SiU_BP_0001_c 
+result: SiU_BP_0001_c_data. Digital sequences, ready for QC. Data available upon request to BigProject (in folder BigProject_2021/fromSequencer). 
 device:
   name: JARVIS
   type: Illumina NovaSeq 6000
@@ -196,7 +195,7 @@ name: Illumina filtering
 description: QC: filtering of raw data to remove unwanted clusters and produce the final 18s sequences
 spatial-coverage: 2021-10-12
 agent: see DNA technician
-input: Raw digital sequences SequencingIsUs_BigProject001_c_data. Data available upon request to BigProject (in folder BigProject_2021/fromSequencer) 
+input: Raw digital sequences SiU_BP_0001_c_data. Data available upon request to BigProject (in folder BigProject_2021/fromSequencer) 
 output: Filtered digital sequences produced by the filtering step. Data available upon request to BigProject (in folder BigProject_2021/QC/fromIllumina)
 protocol:
   name: Illumina filtering with proprietary software
