@@ -1,7 +1,8 @@
 ###############################
 Explanation
 
-Example provenance metadata file for Dataset 4, which is described in XXXXX 
+Example provenance metadata file for Dataset 4, which is described in the document 
+  https://github.com/vliz-be-opsci/embrc-prov-model/blob/main/docs/ProvenanceOfBiologicalMaterial_main.pdf
   Please see that document to understand the context of these metadata
 Dataset 4 consists of the 18S sequences produced by a sequencing centre from the sample collected 
 in Dataset 1.
@@ -71,17 +72,18 @@ address: Paris, France
 
 ## The provenance metadata for the storing activity (Step 6)
 <Storing>
-activity-type: cold storage 
+name: cold storage at Nice Marine Station
+activity-type: storing 
 spatial-coverage: 
   name: Nice Marine Station
   address: NiceMarineStation Rd, Ostend, Belgium
 temporal-coverage: start: 2021-01-01, end: 2021-06-01 
 agent: see F. Lee
+type: medium-term
 protocol: 
   name: BigProject_eDNAstorage   
   description:  filters to be stored in tubes at -80 
 sample: see BigProject_belgium_water_10m_1000um_r2_3um
-type: medium-term
 storage-conditions: -80 C
 storage-device:
   name: Johnson Freezer type XYZ
@@ -90,8 +92,9 @@ storage-device:
 
 ## The provenance metadata for the transporting activity (Step 6)
 <Transporting>
-activity-type: transporting DNA filters to SequencingIsUs
-temporal-coverage: start: 2021-06-01, end: 2021-06-01 
+name: transporting DNA filters 
+activity-type: transporting
+temporal-coverage: 2021-06-01 
 agent: see F. Lee
 storage-conditions: dry ice, -80 C
 sample: see BigProject_belgium_water_10m_1000um_r2_3um 
@@ -103,7 +106,8 @@ receiving-agent: see DNA technician
 
 ## The provenance metadata for the material aquiring activity (Step 7)
 <MaterialAcquiring>
-activity-type: receiving DNA filter-samples from NiceMarineStation
+name: transferring ownership of DNA filter
+activity-type: material acquiring
 temporal-coverage: 2021-06-01 
 sample: see BigProject_belgium_water_10m_1000um_r2_3um 
 providing-agent: see F. Lee 
@@ -113,7 +117,8 @@ receiving-agent: see DNA technician
 
 ## The provenance metadata for the storing activity (Step 7)
 <Storing>
-activity-type: medium-term cold storage 
+nane: cold storage at SequencingIsUs
+activity-type: storing 
 spatial-coverage: see SequencingIsUs 
 temporal-coverage: start: 2021-06-01, end: 2021-10-08 
 agent: see DNA technician
@@ -128,7 +133,8 @@ storage-device:
 
 ## The provenance metadata for a series of four material processing activities (Step 7)
 <MaterialProcessing>
-activity-type: DNA extraction
+name: DNA extraction
+activity-type: material processing
 spatial-coverage: see SequencingIsUs
 temporal-coverage: 2021-10-08
 agent: see DNA technician
@@ -142,7 +148,8 @@ device:
   name: cryogenic grinder
 
 <MaterialProcessing>
-activity-type: DNA quantification
+name: DNA quantification
+activity-type: material processing
 spatial-coverage: see SequencingIsUs
 temporal-coverage: 2021-10-08
 agent: see DNA technician
@@ -155,7 +162,8 @@ device:
   type: Fluorometer - https://vocab.nerc.ac.uk/collection/L05/current/113/
 
 <MaterialProcessing>
-activity-type: Library preparation (18S rRNA)
+name: Library preparation (18S rRNA)
+activity-type: material processing
 spatial-coverage: see SequencingIsUs
 temporal-coverage: 2021-10-08
 agent: see DNA technician
@@ -169,7 +177,8 @@ device:
   type: Thermal Cycler - https://vocab.nerc.ac.uk/collection/L05/current/LAB50/
 
 <MaterialProcessing> 
-activity-type: sequencing
+name: sequencing
+activity-type: material processing
 spatial-coverage: see SequencingIsUs
 temporal-coverage: 2021-10-08
 agent: see DNA technician 
@@ -190,8 +199,8 @@ device:
 
 ## The provenance metadata for the final data processing activity (Step 7)
 <DataProcessing>
-activity-type: Illumina filter
-name: Illumina filtering 
+name: Illumina filtering
+activity-type: material processing
 description: QC: filtering of raw data to remove unwanted clusters and produce the final 18s sequences
 spatial-coverage: 2021-10-12
 agent: see DNA technician
