@@ -12,12 +12,15 @@
       "name": "J. Gerschwin",
       "identifier": "https://orcid.org/0000-0001-0001-0002",
       "email": "jg@somewhere.com",
-      "affiliation": {
-        "@type": "Organization",
-        "@id": "https://edmo.seadatanet.org/report/00000",
-        "name": "Nice Marine Station",
-        "identifier": "https://edmo.seadatanet.org/report/00000"
-      }
+      "affiliation":{"@id":"https://edmo.seadatanet.org/report/00000"}
+    },
+    {
+      "@type": "Organization",
+      "@id":"https://edmo.seadatanet.org/report/00000",
+      "name": "Nice Marine Station",
+      "mainEntityOfPage":"https://NiceMarineStation.eu",
+      "email":"info@nicemarinestation.eu",
+      "identifier": "https://edmo.seadatanet.org/report/00000"
     },
     
     {
@@ -26,6 +29,12 @@
       "name": "VisualSpreadsheet FlowCam Micro software",
       "description": "The software that comes with this FlowCam, bought in 2010",
       "accessibilitySummary": "file flowcam-settings.txt which comes with this dataset"
+    },
+    {
+      "@type":["Thing","prov:Entity","CreativeWork"],
+      "@id":"_:classification_QC",
+      "name":"classification QC",
+      "description":"Manual filtering of the flowcam outputs, to remove misidentifications. Method steps: (1) visual inspection of the classified images by a first plankton expert, who suggested reclassifications or removal of the images from the dataset (2) visual inspection and confirmation/rejection of suggestions by a second export (3) reclassification in the image metadata and the spreadsheet for those that both experts agreed on, and agreed rejected results removed from the dataset."
     },
 
     {
@@ -36,6 +45,11 @@
       "description": "Identification of species on images from the FlowCam, using the FlowCam software",
       "startTime": "2021-01-01",
       "prov:wasAssociatedWith": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        "dcat:hadRole":  "lab technician"
+      },
       "object":{
         "@type":"MediaObject",
         "description":"raw images from /Users/NMSlab/flowcam/20210101/BigProject/raw, settings in file flowcam-settings.txt (see dataset), and reference library used was  FlowCam_ReferenceLibrary_2024"
@@ -45,7 +59,8 @@
         "description":"images in zip file Plankton_species_image.zip, results in Plankton_species_numbers.csv"
       },
       "prov:used": [
-        {"@id": "_:VisualSpreadsheet_FlowCam"}
+        {"@id": "_:VisualSpreadsheet_FlowCam"},
+        {"@id":"_:classification_QC"}
       ]
     }
   ]

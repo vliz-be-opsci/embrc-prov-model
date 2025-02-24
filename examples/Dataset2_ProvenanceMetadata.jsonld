@@ -12,12 +12,15 @@
       "name": "J. Gerschwin",
       "identifier": "https://orcid.org/0000-0001-0001-0002",
       "email": "jg@somewhere.com",
-      "affiliation": {
-        "@type": "Organization",
-        "@id":"https://edmo.seadatanet.org/report/00000",
-        "name": "Nice Marine Station",
-        "identifier": "https://edmo.seadatanet.org/report/00000"
-      }
+      "affiliation": {"@id":"https://edmo.seadatanet.org/report/00000"}
+    },
+    {
+      "@type": "Organization",
+      "@id":"https://edmo.seadatanet.org/report/00000",
+      "name": "Nice Marine Station",
+      "mainEntityOfPage":"https://NiceMarineStation.eu",
+      "email":"info@nicemarinestation.eu",
+      "identifier": "https://edmo.seadatanet.org/report/00000"
     },
 
     {
@@ -26,8 +29,8 @@
       "name": "BigProject_belgium_water_10m_1000um_r1",
       "description": "Water sample collected from 10m depth and filtered at 1000um",
       "keywords": [
-        "http://purl.obolibrary.org/obo/ENVO_00002150",
-        "NCBI:txid1874687"
+        {"@id":"http://purl.obolibrary.org/obo/ENVO_00002150"}, 
+        {"@id":"_:NCBI_txid1874687"} 
       ]
     },
 
@@ -54,13 +57,16 @@
       "name": "FlowCam Micro from CoolLabInstruments Corp., 2010",
       "dct:type": "https://vocab.nerc.ac.uk/collection/L05/current/LAB27",
       "description": "see file flowcam-settings.txt for software and hardware settings",
-      "software": {"@id": "_:VisualSpreadsheet_FlowCam"}
+      "prov:wasInfluencedBy": {
+        "@id": "_:VisualSpreadsheet_FlowCam",
+        "accessibilitySummary": "see file flowcam-settings.txt for software and hardware settings"
+      }
     },
 
     {
       "@type": ["Action", "prov:Activity"],
       "@id": "_:MaterialProcessing",
-      "dct:type": "Material Processing; Processing water sample through FlowCam and producing images",
+      "dct:type": "Material Processing; FlowCam imaging",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
         "name": "Nice Marine Station",
@@ -83,6 +89,19 @@
         "@type": ["Thing", "Dataset"],
         "description": "the first set of images taken by the flowcam are stored in /Users/NMSlab/flowcam/20210101/BigProject/raw"
       }
-    }
+    },
+
+    {
+      "@type":"DefinedTerm",
+      "@id":"http://purl.obolibrary.org/obo/ENVO_00002150",
+      "name": "coastal sea water",
+      "termCode":"ENVO_00002150"
+    }, 
+    {
+      "@type":"DefinedTerm",
+      "@id":"_:NCBI_txid1874687",
+      "name": "marine plaknton metagenome",
+      "termCode":"NCBI:txid1874687"
+    } 
   ]
 }
