@@ -1,6 +1,28 @@
+@prefix schema: <http://schema.org/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix dct: <http://purl.org/dc/terms/>.
 
-
-<>
-    a prov:Activity, schema:Action , schema:TransferAction ; 
+# Transporting
+<{{Transporting ID}}>
+    a prov:Activity , schema:Action ; 
     dct:type "Transporting" ; 
+
+    schema:identifier {{identifier of the Transporting activity}} ;
+    schema:name {{name of the Transporting activity}}^^xsd:string ;
+    prov:wasAssociatedWith {{reference to the agent associated with the Transporting activity}} ;
+    prov:qualifiedAssociation {{reference to the description of the agent' role in the Transporting activity}} ;
+    schema:startTime {{start of the Transporting activity}}^^xsd:datetime ;
+    schema:endTime {{end of the Transporting activity}}^^xsd:datetime ;
+    
+    schema:object {{reference to the sample transported}} ; 
+    schema:description {{description of the transporting activity}}^^xsd:string ;
+
+    schema:toLocation {{reference of the Location from where the sample is transported}} ;
+    schema:fromLocation {{reference of the Location to which the sample is transported}} ;
+
+    prov:wasAssociatedWith {{reference to the agent providing the sample transported}} ;
+    prov:qualifiedAssociation {{reference to the description of the providing agent' role in the transporting activity}} ;
+    
+    prov:wasAssociatedWith {{reference to the agent requesting the sample transported}} ;
+    prov:qualifiedAssociation {{reference to the description of the requesting agent' role in the transporting activity}} ;
 .

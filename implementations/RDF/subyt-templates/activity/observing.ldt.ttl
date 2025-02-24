@@ -1,6 +1,22 @@
+@prefix schema: <http://schema.org/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
 
-
-<>
-    a prov:Activity , schema:Action ;
+# Observing
+<{{observing activity ID}}>
+    a prov:Activity , schema:Action ; 
     dct:type "Observing" ; 
+
+    schema:identifier {{identifier of the observing activity}} ;
+    schema:name {{name of the observing activity}}^^xsd:string ;
+    prov:wasAssociatedWith {{reference to the agent associated with the observing activity}} ;
+    prov:qualifiedAssociation {{reference to the description of the agent' role in the observing activity}} ;
+    schema:startTime {{start of the observing activity}}^^xsd:datetime ;
+    schema:endTime {{end of the observing activity}}^^xsd:datetime ;
+    
+    sosa:madeBySampler {{reference to the observing device used}} ; 
+    prov:generated {{reference to the resulting sample}} ;
+    prov:used {{reference to the permit used}} ; 
+    prov:used {{reference to the protocol used}} ;
 .

@@ -1,6 +1,0 @@
-
-
-# Software processing
-<>
-    a prov:Activity, schema:Action ;
-    dct:type “Software Processing” ; 

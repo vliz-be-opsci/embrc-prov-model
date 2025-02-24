@@ -1,0 +1,24 @@
+@prefix schema: <http://schema.org/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+
+# Material Acquiring
+<{{Material acquiring ID}}>
+    a prov:Activity , schema:Action , schema:TransferAction ; 
+    dct:type "Material acquiring" ; 
+
+    schema:identifier {{identifier of the material acquiring activity}} ;
+    schema:name {{name of the material acquiring activity}}^^xsd:string ;
+    prov:wasAssociatedWith {{reference to the agent associated with the material acquiring activity}} ;
+    prov:qualifiedAssociation {{reference to the description of the agent' role in the material acquiring activity}} ;
+    schema:startTime {{start of the material acquiring activity}}^^xsd:datetime ;
+    schema:endTime {{end of the material acquiring activity}}^^xsd:datetime ;
+    
+    schema:object {{reference to the sample acquired}} ; 
+
+    prov:wasAssociatedWith {{reference to the requesting agent associated with the material acquiring activity}} ;
+    prov:qualifiedAssociation {{reference to the description of the requesting agent' role in the material acquiring activity}} ;
+    
+    prov:wasAssociatedWith {{reference to the providing agent associated with the material acquiring activity}} ;
+    prov:qualifiedAssociation {{reference to the description of the providing agent' role in the material acquiring activity}} ;
+.

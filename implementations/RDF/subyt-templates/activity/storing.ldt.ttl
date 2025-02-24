@@ -1,6 +1,0 @@
-
-
-<>
-    a prov:Activity , schema:Action ; 
-    dct:type "Storing" ; 
-.

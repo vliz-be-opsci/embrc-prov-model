@@ -1,0 +1,39 @@
+@prefix schema: <http://schema.org/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+
+# Storing
+<{{storing activity ID}}>
+    a prov:Activity , schema:Action ; 
+    dct:type "Storing" ; 
+    schema:additionalType {{type of storage}}^^xsd:string ; 
+
+    schema:identifier {{identifier of the Storing activity}} ;
+    schema:name {{name of the Storing activity}}^^xsd:string ;
+    prov:wasAssociatedWith {{reference to the agent associated with the Storing activity}} ;
+    prov:qualifiedAssociation {{reference to the description of the agent' role in the Storing activity}} ;
+    schema:startTime {{start of the Storing activity}}^^xsd:datetime ;
+    schema:endTime {{end of the Storing activity}}^^xsd:datetime ;
+    
+    schema:object {{reference to the sample stored}} ;
+    prov:used {{reference to the device used}} ;
+    prov:used {{reference to the protocol used}} ;
+.
+
+# Biobanking
+<{{Biobanking activity ID}}>
+    a prov:Activity , schema:Action ; 
+    dct:type "Biobanking" ; 
+    schema:additionalType {{type of bio-banking}}^^xsd:string ; 
+
+    schema:identifier {{identifier of the Biobanking activity}} ;
+    schema:name {{name of the Biobanking activity}}^^xsd:string ;
+    prov:wasAssociatedWith {{reference to the agent associated with the Biobanking activity}} ;
+    prov:qualifiedAssociation {{reference to the description of the agent' role in the Biobanking activity}} ;
+    schema:startTime {{start of the Biobanking activity}}^^xsd:datetime ;
+    schema:endTime {{end of the Biobanking activity}}^^xsd:datetime ;
+    
+    schema:object {{reference to the sample biobanked}} ;
+    prov:used {{reference to the device used}} ;
+    prov:used {{reference to the protocol used}} ;
+.

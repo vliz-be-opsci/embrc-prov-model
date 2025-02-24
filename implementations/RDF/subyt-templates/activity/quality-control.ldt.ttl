@@ -1,6 +1,0 @@
-
-
-# Software processing, Quality control case
-<>
-    a prov:Activity, schema:Action ;
-    dct:type “Software Processing” ; 

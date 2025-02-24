@@ -1,0 +1,17 @@
+@prefix schema: <http://schema.org/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+
+
+<{{Data acquiring ID}}>
+    a prov:Activity, schema:Action ;
+    dct:type “Data Acquiring” ; 
+    schema:identifier {{identifier of the data acquiring activity}} ;
+    schema:name {{name of the data acquiring activity}}^^xsd:string ;
+    prov:wasAssociatedWith {{reference to the agent associated with the data acquiring activity}} ;
+    prov:qualifiedAssociation {{reference to the description of the agent' role in the data acquiring activity}} ;
+    schema:startTime {{start of the data acquiring activity}}^^xsd:datetime ;
+    schema:endTime {{end of the data acquiring activity}}^^xsd:datetime ;
+    schema:url {{url of the metadata of the data acquired}} ;
+    schema:target {{endpoint of the data acquired}} ; 
+.

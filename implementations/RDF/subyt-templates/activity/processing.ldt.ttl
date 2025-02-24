@@ -1,7 +1,0 @@
-
-
-# (Material) Processing
-<>
-    a prov:Activity , schema:Action ;
-    dct:type "Material processing" ; 
-.

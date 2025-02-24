@@ -1,0 +1,21 @@
+@prefix schema: <http://schema.org/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+
+
+# Data processing
+<{{Data processing ID}}>
+    a prov:Activity, schema:Action ;
+    dct:type “Data Processing” ; 
+    schema:identifier {{identifier of the data processing activity}} ;
+    schema:name {{name of the data processing activity}}^^xsd:string ;
+    schema:description {{description of the data processing activity}}^^xsd:string ;
+    prov:wasAssociatedWith {{reference to the agent associated with the data processing activity}} ;
+    prov:qualifiedAssociation {{reference to the description of the agent' role in the data processing activity}} ;
+    schema:startTime {{start of the data processing activity}}^^xsd:datetime ;
+    schema:endTime {{end of the data processing activity}}^^xsd:datetime ;
+    schema:object {{reference to the sample used }}
+    schema:result {{result of the data processing activity}} ; 
+    prov:used {{reference to the software used in the data processing activity}} ; 
+    prov:used {{reference to the protocol used in the data processing activity}} ; 
+.
