@@ -1,0 +1,11 @@
+@prefix schema: <http://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+# Location
+<{{LocationID}}>
+    a prov:Location , schema:Place ;
+    schema:identifier {{An identifier of the Location}} ;
+    schema:name {{A name for the Location}}^^xsd:string ;
+    schema:geo {{Reference to the GeoCoordinates or GeoShape of the Location, if appplicable}} ;
+    schema:address {{The address of the Location, if appplicable}}^^xsd:string ;
+. 

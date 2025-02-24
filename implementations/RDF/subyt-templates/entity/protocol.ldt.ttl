@@ -1,11 +1,14 @@
+@prefix schema: <http://schema.org/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 
-
-<>
-    a prov:Entity , schema:Thing ;
-    schema:identifier
-    schema:name
-    schema:description
-    schema:url
-    schema:accessibilitySummary
-    rdfs:comment
+# Protocol
+<{{Protocol ID}}>
+    a prov:Entity , schema:Thing, schema:CreativeWork ;
+    schema:identifier {{identifier of the protocol}}^^xsd:string ;
+    schema:name {{name of the protocol}}^^xsd:string ;
+    schema:description {{description of the protocol}}^^xsd:string ; 
+    schema:url {{download URL of the protocol}} ; 
+    schema:accessibilitySummary {{summary of how the protocol can be accessed, in case no download URL is avaialble}} ; 
+    rdfs:comment {{description of the occurence of any deviations of the protocol}}^^xsd:string ; 
 .

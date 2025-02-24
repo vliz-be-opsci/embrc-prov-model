@@ -1,39 +1,37 @@
-schema
-dct
-sosa
-prov 
-
-#Device
-<>
-    a prov:Entity , schema:Thing ; 
-    schema:identifier
-    dct:type
-    schema:name
-    schema:description
-    schema:wasInfluencedBy
-    sosa:isHostedBy
-.
-
+@prefix schema: <http://schema.org/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
+@prefix dct: <http://purl.org/dc/terms/>.
 
 #ObservingDevice
-<>
+<{{Observing device ID}}>
     a prov:Entity , schema:Thing , sosa:Sensor ; 
-    schema:identifier
-    dct:type
-    schema:name
-    schema:description
-    schema:wasInfluencedBy
-    sosa:isHostedBy
+    schema:identifier {{identifier of the device}} ;
+    schema:name {{name of the device}}^^xsd:string ; 
+    dct:type {{type of device}} ; 
+    schema:description {{description of the device}}^^xsd:string ;
+    schema:wasInfluencedBy {{reference to the software used by the device}} ;
+    sosa:isHostedBy {{reference to the platform on which the device is hosted}} ;
 .
 
-
 # SamplingDevice
-<>
+<{{Sampling device ID}}>
     a prov:Entity , schema:Thing , sosa:Sampler ;  
-    schema:identifier
-    dct:type
-    schema:name
-    schema:description
-    schema:wasInfluencedBy
-    sosa:isHostedBy
+    schema:identifier {{identifier of the device}} ;
+    schema:name {{name of the device}}^^xsd:string ; 
+    dct:type {{type of device}} ; 
+    schema:description {{description of the device}}^^xsd:string ;
+    schema:wasInfluencedBy {{reference to the software used by the device}} ;
+    sosa:isHostedBy {{reference to the platform on which the device is hosted}} ;
+.
+
+# Device, when it is neither an ObservingDevice, nor SamplingDevice
+<{{Device ID}}>
+    a prov:Entity , schema:Thing ; 
+    schema:identifier {{identifier of the device}} ;
+    schema:name {{name of the device}}^^xsd:string ; 
+    dct:type {{type of device}} ; 
+    schema:description {{description of the device}}^^xsd:string ;
+    schema:wasInfluencedBy {{reference to the software used by the device}} ;
+    sosa:isHostedBy {{reference to the platform on which the device is hosted}} ;
 .

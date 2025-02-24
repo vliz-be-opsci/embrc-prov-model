@@ -1,10 +1,11 @@
-schema
-prov
-sosa
+@prefix schema: <http://schema.org/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix sosa: <http://www.w3.org/ns/sosa/>.
 
-<>
+# Platform
+<{{Platform ID}}>
     a prov:Entity , schema:Thing , sosa:Platform ; 
-    schema:identifier
-    dct:type
-    schema:name
+    schema:identifier {{An identifier of the Platform}} ; 
+    schema:name {{A name for the Platform}}^^xsd:string ; 
+    dct:type {{The type of Platform}}^^xsd:string ; 
 .

@@ -1,4 +1,4 @@
-# Implemantations
+# Implementations
 
 This folder contains various materials to support the use and application of the model.
 

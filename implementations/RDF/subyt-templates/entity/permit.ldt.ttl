@@ -1,0 +1,19 @@
+@prefix schema: <http://schema.org/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+
+# Permit
+<{{Permit ID}}>
+    a prov:Entity , schema:Thing , schema:CreativeWork, schema:Permit ; 
+    schema:identifier {{IRCC code, when available, or other identifier of the permit}} ; 
+    schema:name {{name of the permit}}^^xsd:string ; 
+    schema:description {{description of the permit}}^^xsd:string ;
+    schema:about {{description of the due-diligence of the permit}}^^xsd:string ;
+    schema:validIn {{reference to the Location in which the Permit is valid}} ;
+    schema:validFor {{date range when the permit applies}} ; 
+    schema:validFrom {{start date when the permit applies}} ; 
+    schema:validUntil {{end date when the permit applies}} ; 
+    prov:wasAttributedTo {{reference to the associated agent}} ;  
+    prov:qualifiedAssociation {{reference to the description of the Attribution}} ; 
+    schema:issuedBy {{reference to the organization that issued the permit}} ;
+    prov:wasInfluencedBy {{reference to the sample associated to this permit}} ;
+.

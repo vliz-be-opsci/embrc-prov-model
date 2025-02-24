@@ -1,9 +1,14 @@
+@prefix schema: <http://schema.org/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/>.
 
-
-<>
+<{{Sample ID}}>
     prov:Entity , schema:Thing , sosa:Sample ; 
-    schema:identifier
-    schema:name
-    schema:description
-    schema:keywords
+    schema:identifier {{Identifier of the sample}} ;
+    schema:name {{Name of the sample}}^^xsd:string ;
+    schema:description {{Description of the sample}}^^xsd:string ;
+    dwc:scientificName {{The scientific name of species associated with the sample}} ;
+    dwc:taxonID {{The taxon ID of species associated with the sample}} ;
+    dwc:taxonRank {{The taxonomic rank of species associated with the sample}} ;
+    schema:keywords {{Listing of keywords associated with the sample}} ;
 .

@@ -1,26 +1,31 @@
+@prefix schema: <http://schema.org/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
 
 
-<>
-    prov:Entity , schema:Thing , schema:creativeWork ; 
-    schema:name
-    schema:description
-    schema:version
-    schema:url
+# Software Application
+<{{Software ID}}>
+    a prov:Entity , schema:Thing , schema:CreativeWork , schema:SoftwareApplication ;
+    schema:name {{Name of the software application}}^^xsd:string ;
+    schema:description {{Description of the software application}}^^xsd:string ;
+    schema:version {{version of the software application}}^^xsd:string ;
+    schema:downloadUrl {{If the file can be downloaded, URL to download the binary}} ;
+    schema:featureList {{features or modules provided by the software application}} ; 
 .
 
-<>
-    a prov:Entity , schema:Thing , schema:creativeWork , schema:SoftwareApplication ;
-    schema:name
-    schema:description
-    schema:version
-    schema:downloadUrl
-    schema:featureList
+# Software Source Code
+<{{Software ID}}>
+    a prov:Entity , schema:Thing , schema:CreativeWork , schema:SoftwareSourceCode ; 
+    schema:name {{Name of the software source code}}^^xsd:string ;
+    schema:description {{Description of the software source code}}^^xsd:string ;
+    schema:version {{version of the software application}}^^xsd:string ;
+    schema:codeRepository {{reference to the repository where the un-compiled, human readable code and related code is located}} ; 
 .
 
-<>
-    a prov:Entity , schema:Thing , schema:creativeWork , schema:SoftwareSourceCode ; 
-    schema:name
-    schema:description
-    schema:version
-    schema:codeRepository
+# Software; when neither SoftwareApplication, nor SoftwareSourceCode apply
+<{{Software ID}}>
+    prov:Entity , schema:Thing , schema:CreativeWork ; 
+    schema:name {{Name of the software}}^^xsd:string ;
+    schema:description {{Description of the software}}^^xsd:string ;
+    schema:version {{version of the software application}}^^xsd:string ;
+    schema:url {{Endpoint of the software}} ; 
 .

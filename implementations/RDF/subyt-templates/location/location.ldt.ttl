@@ -1,7 +1,0 @@
-
-<Location>
-    a prov:Location , schema:Place ;
-    schema:identifier {{}} ; 
-    schema:geo {{}} ; 
-    schema:address {{}} ; 
-. 
