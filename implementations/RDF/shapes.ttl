@@ -1,0 +1,287 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix schema: <http://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+## LOCATION SHAPES
+<#LocationShape>
+    a sh:NodeShape ;
+    sh:targetClass prov:Location ;
+    sh:property [
+        sh:path schema:identifier ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path schema:geo ;
+        sh:or (
+            [ sh:class schema:GeoCoordinates ]
+            [ sh:class schema:GeoShape ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path schema:name , schema:address ;
+        sh:datatype xsd:string ;
+    ] ;
+.
+
+
+## AGENT SHAPES
+
+<#PersonShape>
+    a sh:NodeShape ;
+    sh:targetClass prov:Person , schema:Person ;
+    sh:property [
+        sh:path schema:identifier ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path schema:name , schema:knowsAbout , schema:email , schema:address , schema:telephone ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path schema:mainEntityOfPage ;
+        sh:datatype xsd:anyURI ;
+    ] ;
+    sh:property [
+        sh:path schema:affiliation ;
+        sh:or (
+            [ sh:class schema:Organization ]
+            [ sh:class prov:Organization ]
+        ) ;
+    ] ;
+.
+
+<#OrganizationShape>
+    a sh:NodeShape ;
+    sh:targetClass prov:Organization , schema:Organization ;
+    sh:property [
+        sh:path schema:identifier ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path schema:name , schema:knowsAbout , schema:email , schema:address , schema:telephone ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path schema:mainEntityOfPage ;
+        sh:datatype xsd:anyURI ;
+    ] ;
+
+## ENTITY SHAPES
+
+<#DeviceShape>
+    a sh:NodeShape ;
+    sh:targetClass sosa:Sensor , sosa:Sampler ;
+    sh:property [
+        sh:path schema:identifier , dct:type ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path schema:name , schema:description ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path schema:wasInfluencedBy ;
+        sh:or (
+            [ sh:class schema:CreativeWork ]
+            [ sh:class schema:SoftwareApplication ]
+            [ sh:class schema:SoftwareSourceCode ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path sosa:isHostedBy ;
+        sh:class sosa:Platform ;
+    ] ;
+.
+
+
+<#PermitShape>
+    a sh:NodeShape ;
+    sh:targetClass schema:Permit ;
+    sh:property [
+        sh:path schema:identifier ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    
+    sh:property [
+        sh:path schema:name , schema:description , schema:about ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path schema:validIn ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:path schema:validFor ;
+    ] ;
+    
+    sh:property [
+        sh:path schema:validFrom , schema:validUntil ;
+        sh:datatype xsd:date ;
+    ] ;
+    sh:property [
+        sh:path prov:wasAttributedTo ;
+        sh:or (
+            [ sh:class schema:Organization ]
+            [ sh:class schema:Person ]
+            [ sh:class prov:Organization ]
+            [ sh:class prov:Person ]
+            [ sh:nodeKind sh:IRI ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path prov:qualifiedAssociation ;
+        sh:class prov:Association ;
+    ] ;
+    sh:property [
+        sh:path schema:issuedBy ;
+        sh:or (
+            [ sh:class schema:Organization ]
+            [ sh:class prov:Organization ]
+            [ sh:nodeKind sh:IRI ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path prov:wasInfluencedBy ;
+        sh:or (
+            [ sh:class sosa:Sample ]
+            [ sh:nodeKind sh:IRI ]
+        ) ;
+    ] .
+
+<#PlatformShape>
+    a sh:NodeShape ;
+    sh:targetClass sosa:Platform ;
+    sh:property [
+        sh:path schema:identifier , dct:type ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path schema:name ;
+        sh:datatype xsd:string ;
+    ] ;
+.
+
+<#ProtocolShape>
+    a sh:NodeShape ;
+    sh:targetClass schema:CreativeWork ;
+    sh:property [
+        sh:path schema:identifier ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path schema:name , schema:description , schema:accessibilitySummary , rdfs:comment ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path schema:url ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+.
+
+
+<#SampleShape>
+    a sh:NodeShape ;
+    sh:targetClass sosa:Sample ;
+    sh:property [
+        sh:path schema:identifier , schema:keywords ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path schema:name , schema:description ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path dwc:scientificName , dwc:taxonID , dwc:taxonRank ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+.
+
+<#SoftwareShape>
+    a sh:NodeShape ;
+    sh:targetClass schema:CreativeWork ;
+    sh:property [
+        sh:path schema:identifier ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path schema:name , schema:description , schema:version ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path schema:url ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+.
+
+<#SoftwareSourceCodeShape>
+    a sh:NodeShape ;
+    sh:targetClass schema:SoftwareSourceCode ;
+    sh:property [
+        sh:path schema:identifier ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path schema:name , schema:description , schema:version ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path schema:codeRepository ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+.
+
+<#SoftwareApplicationShape>
+    a sh:NodeShape ;
+    sh:targetClass schema:SoftwareApplication ;
+    sh:property [
+        sh:path schema:identifier , schema:featureList ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path schema:name , schema:description , schema:version ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path schema:downloadUrl ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+.
+
+## ACTIVITY SHAPES
