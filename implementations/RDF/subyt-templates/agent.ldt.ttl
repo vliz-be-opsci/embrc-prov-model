@@ -3,7 +3,7 @@
 
 # Person agent 
 <{{PersonURI}}>
-    a prov:Agent , prov:Organization , schema:Organization ; 
+    a prov:Agent , prov:Person , schema:Person ; 
     schema:identifier {{An identifier of the agent}}^^xsd:string ; 
     schema:name {{The name of the agent}}^^xsd:string ; 
     schema:knowsAbout {{The domain(s) or levels of expertise of the agent}}^^xsd:string ; 
