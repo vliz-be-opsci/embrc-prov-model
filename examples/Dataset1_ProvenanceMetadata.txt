@@ -188,7 +188,7 @@ spatial-coverage: RV OurBigShip on-board lab
 temporal-coverage: 2021-01-01
 agent: see F. Lee
 sample: see BigProject_belgium_water_10m_1000um_r1 
-storage-device: see RV_OurBigShip_fridge
+storage-device: see Johnson Fridge type XYZ
 storage-conditions: +4 C
 type: short-term
 
@@ -200,6 +200,6 @@ spatial-coverage: RV OurBigShip on-board lab
 temporal-coverage: 2021-01-01
 agent: see F. Lee
 sample: see BigProject_belgium_water_10m_1000um_r2_3um 
-storage-device: see RV_OurBigShip_freezer
+storage-device: see Johnson Freezer type XYZ
 storage-conditions: -20 C
 type: short-term
