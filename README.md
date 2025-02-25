@@ -3,8 +3,8 @@
 This repository contains resources for the **EMBRC provenance model**, developed under the **EOSC-Life project** and later utilized in **Marco-Bolo**. It includes documentation, examples, and additional materials to support the understanding and application of the model.
 
 - **[./docs](https://github.com/vliz-be-opsci/embrc-prov-model/tree/main/docs)**  
-provides detailed explanations of the provenance model.  
+provides detailed explanations of the agnostic provenance model.  
 - **[./examples](https://github.com/vliz-be-opsci/embrc-prov-model/tree/main/examples)**  
-  provides examples demonstrating how the model can be applied.
-- **[./resources](https://github.com/vliz-be-opsci/embrc-prov-model/tree/main/assets)**  
-  provides materials to help in the application of the model.
+demonstrates how the provenance model can be applied, based on 4 example datasets.
+- **[./implementations](https://github.com/vliz-be-opsci/embrc-prov-model/tree/main/implementations)**  
+implmentations of the agnostic provenenance model following various syntaxes.
