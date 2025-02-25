@@ -5,6 +5,7 @@
 # Software Application
 <{{Software ID}}>
     a prov:Entity , schema:Thing , schema:CreativeWork , schema:SoftwareApplication ;
+    schema:identifier {{identifier of the software application}} ;
     schema:name {{Name of the software application}}^^xsd:string ;
     schema:description {{Description of the software application}}^^xsd:string ;
     schema:version {{version of the software application}}^^xsd:string ;
@@ -15,6 +16,7 @@
 # Software Source Code
 <{{Software ID}}>
     a prov:Entity , schema:Thing , schema:CreativeWork , schema:SoftwareSourceCode ; 
+    schema:identifier {{identifier of the software source code}} ;
     schema:name {{Name of the software source code}}^^xsd:string ;
     schema:description {{Description of the software source code}}^^xsd:string ;
     schema:version {{version of the software application}}^^xsd:string ;
@@ -24,6 +26,7 @@
 # Software; when neither SoftwareApplication, nor SoftwareSourceCode apply
 <{{Software ID}}>
     prov:Entity , schema:Thing , schema:CreativeWork ; 
+    schema:identifier {{identifier of the software}} ; 
     schema:name {{Name of the software}}^^xsd:string ;
     schema:description {{Description of the software}}^^xsd:string ;
     schema:version {{version of the software application}}^^xsd:string ;
