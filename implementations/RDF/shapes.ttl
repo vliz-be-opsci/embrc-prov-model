@@ -1,7 +1,13 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix schema: <http://schema.org/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix schema: <http://schema.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+
+@base <http://https://data.emobon.embrc.eu/ns/shapes/> .
 
 ## LOCATION SHAPES
 <#LocationShape>
@@ -75,6 +81,7 @@
         sh:path schema:mainEntityOfPage ;
         sh:datatype xsd:anyURI ;
     ] ;
+. 
 
 ## ENTITY SHAPES
 
@@ -285,3 +292,436 @@
 .
 
 ## ACTIVITY SHAPES
+
+<#DataAcquiringShape> 
+    a sh:NodeShape ;
+    sh:targetClass prov:Activity , schema:Action ;
+    sh:property [
+        sh:path dct:type ;
+        sh:datatype xsd:string ;
+        sh:hasValue "Data Acquiring" ;
+    ] ;
+    sh:property [
+        sh:path schema:identifier ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path schema:name ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path prov:wasAssociatedWith ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:path prov:qualifiedAssociation ;
+        sh:class prov:Association ;
+    ] ;
+    sh:property [
+        sh:path schema:startTime , schema:endTime ;
+        sh:datatype xsd:dateTime ;
+    ] ;
+    sh:property [
+        sh:path schema:url , schema:target ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+.
+
+<#DataProcessingShape> 
+    a sh:NodeShape ;
+    sh:targetClass prov:Activity , schema:Action ;
+    sh:property [
+        sh:path dct:type ;
+        sh:datatype xsd:string ;
+        sh:hasValue "Data Processing" ;
+    ] ;
+    sh:property [
+        sh:path schema:identifier , schema:result ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path schema:name , schema:description ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path prov:wasAssociatedWith ;
+        sh:nodeKind sh:IRI ;
+        sh:or (
+            [ sh:node <#PersonShape> ]
+            [ sh:node <#OrganizationShape> ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path prov:qualifiedAssociation ;
+        sh:nodeKind sh:IRI ;
+        sh:class prov:Association ;
+    ] ;
+    sh:property [
+        sh:path schema:startTime , schema:endTime ;
+        sh:datatype xsd:dateTime ;
+    ] ;
+    sh:property [
+        sh:path schema:object ;
+        sh:nodeKind sh:IRI ;
+        sh:node <#SampleShape> ;
+    ] ;
+    sh:property [
+        sh:path prov:used ;
+        sh:nodeKind sh:IRI ;
+        sh:or (
+            [ sh:node <#ProtocolShape> ]
+            [ sh:node <#SoftwareShape> ]
+            [ sh:node <#SoftwareSourceCodeShape> ]
+            [ sh:node <#SoftwareApplicationShape> ]
+        ) ;
+    ] ;
+.
+
+
+<#MaterialAcquiringShape> 
+    a sh:NodeShape ;
+    sh:targetClass prov:Activity , schema:Action , schema:TransferAction ;
+    sh:property [
+        sh:path dct:type ;
+        sh:datatype xsd:string ;
+        sh:hasValue "Material acquiring" ;
+    ] ;
+    sh:property [
+        sh:path schema:identifier ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path schema:name ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path prov:wasAssociatedWith ;
+        sh:nodeKind sh:IRI ;
+        sh:or (
+            [ sh:node <#PersonShape> ]
+            [ sh:node <#OrganizationShape> ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path prov:qualifiedAssociation ;
+        sh:nodeKind sh:IRI ;
+        sh:class prov:Association ;
+    ] ;
+    sh:property [
+        sh:path schema:startTime , schema:endTime ;
+        sh:datatype xsd:dateTime ;
+    ] ;
+    sh:property [
+        sh:path schema:object ;
+        sh:nodeKind sh:IRI ;
+        sh:node <#SampleShape> ;
+    ] ;
+.
+
+<#MaterialProcessingShape> 
+    a sh:NodeShape ;
+    sh:targetClass prov:Activity , prov:Activity , schema:Action ;
+    sh:property [
+        sh:path dct:type ;
+        sh:datatype xsd:string ;
+        sh:hasValue "Material processing" ;
+    ] ;
+    sh:property [
+        sh:path schema:identifier , schema:result ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path schema:name ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path prov:wasAssociatedWith ;
+        sh:nodeKind sh:IRI ;
+        sh:or (
+            [ sh:node <#PersonShape> ]
+            [ sh:node <#OrganizationShape> ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path prov:qualifiedAssociation ;
+        sh:nodeKind sh:IRI ;
+        sh:class prov:Association ;
+    ] ;
+    sh:property [
+        sh:path schema:startTime , schema:endTime ;
+        sh:datatype xsd:dateTime ;
+    ] ;
+    sh:property [
+        sh:path schema:object ;
+        sh:nodeKind sh:IRI ;
+        sh:node <#SampleShape> ;
+    ] ;
+    sh:property [
+        sh:path prov:used ;
+        sh:or (
+            [ sh:node <#DeviceShape> ]
+            [ sh:node <#ProtocolShape> ]
+        ) ;
+    ] .
+
+
+<#ObservingShape> 
+    a sh:NodeShape ;
+    sh:targetClass prov:Activity , prov:Activity , schema:Action ;
+    sh:property [
+        sh:path dct:type ;
+        sh:datatype xsd:string ;
+        sh:hasValue "Observing" ;
+    ] ;
+    sh:property [
+        sh:path schema:identifier ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path schema:name ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path prov:wasAssociatedWith ;
+        sh:or (
+            [ sh:node <#PersonShape> ]
+            [ sh:node <#OrganizationShape> ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path prov:qualifiedAssociation ;
+        sh:class prov:Association ;
+    ] ;
+    
+    sh:property [
+        sh:path schema:startTime , schema:endTime ;
+        sh:datatype xsd:dateTime ;
+    ] ;
+    sh:property [
+        sh:path sosa:madeBySampler ;
+        sh:nodeKind sh:IRI ;
+        sh:node <#DeviceShape> ;
+    ] ;
+    sh:property [
+        sh:path prov:generated ;
+        sh:nodeKind sh:IRI ;
+        sh:node <#SampleShape> ;
+    ] ;
+    sh:property [
+        sh:path prov:used ;
+        sh:nodeKind sh:IRI ;
+        sh:or (
+            [ sh:node <#PermitShape> ]
+            [ sh:node <#ProtocolShape> ]
+        ) ;
+    ] ;
+.
+
+<#SamplingShape> 
+    a sh:NodeShape ;
+    sh:targetClass prov:Activity , schema:Action , sosa:Sampling ;
+    sh:property [
+        sh:path dct:type ;
+        sh:datatype xsd:string ;
+        sh:hasValue "Sampling" ;
+    ] ;
+    sh:property [
+        sh:path schema:identifier ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path schema:name ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path prov:wasAssociatedWith ;
+        sh:or (
+            [ sh:node <#PersonShape> ]
+            [ sh:node <#OrganizationShape> ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path prov:qualifiedAssociation ;
+        sh:class prov:Association ;
+    ] ;
+    sh:property [
+        sh:path schema:startTime , schema:endTime ;
+        sh:datatype xsd:dateTime ;
+    ] ;
+    sh:property [
+        sh:path sosa:madeBySampler ;
+        sh:nodeKind sh:IRI ;
+        sh:node <#DeviceShape> ;
+    ] ;
+    sh:property [
+        sh:path prov:generated ;
+        sh:nodeKind sh:IRI ;
+        sh:node <#SampleShape> ;
+    ] ;
+    sh:property [
+        sh:path prov:used ;
+        sh:nodeKind sh:IRI ;
+        sh:or (
+            [ sh:node <#PermitShape> ]
+            [ sh:node <#ProtocolShape> ]
+        ) ;
+    ] ;
+.
+
+<#StoringShape> 
+    a sh:NodeShape ;
+    sh:targetClass prov:Activity , schema:Action ;
+    sh:property [
+        sh:path dct:type ;
+        sh:datatype xsd:string ;
+        sh:hasValue "Storing" ;
+    ] ;
+    sh:property [
+        sh:path schema:additionalType , schema:name ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path schema:identifier ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path prov:wasAssociatedWith ;
+        sh:or (
+            [ sh:node <#PersonShape> ]
+            [ sh:node <#OrganizationShape> ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path prov:qualifiedAssociation ;
+        sh:class prov:Association ;
+    ] ;
+    sh:property [
+        sh:path schema:startTime , schema:endTime ;
+        sh:datatype xsd:dateTime ;
+    ] ;
+    sh:property [
+        sh:path schema:object ;
+        sh:node <#SampleShape> ;
+    ] ;
+    sh:property [
+        sh:path prov:used ;
+        sh:or (
+            [ sh:node <#DeviceShape> ]
+            [ sh:node <#ProtocolShape> ]
+        ) ;
+    ] ;
+.
+
+<#BiobankingShape> 
+    a sh:NodeShape ;
+    sh:targetClass prov:Activity , schema:Action ;
+    sh:property [
+        sh:path dct:type ;
+        sh:datatype xsd:string ;
+        sh:hasValue "Biobanking" ;
+    ] ;
+    sh:property [
+        sh:path schema:additionalType , schema:name ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path schema:identifier ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path prov:wasAssociatedWith ;
+        sh:or (
+            [ sh:node <#PersonShape> ]
+            [ sh:node <#OrganizationShape> ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path prov:qualifiedAssociation ;
+        sh:class prov:Association ;
+    ] ;
+    sh:property [
+        sh:path schema:startTime , schema:endTime ;
+        sh:datatype xsd:dateTime ;
+    ] ;
+    sh:property [
+        sh:path schema:object ;
+        sh:node <#SampleShape> ;
+    ] ;
+    sh:property [
+        sh:path prov:used ;
+        sh:or (
+            [ sh:node <#DeviceShape> ]
+            [ sh:node <#ProtocolShape> ]
+        ) ;
+    ] ;
+.
+
+
+<#TransportingShape> 
+    a sh:NodeShape ;
+    sh:targetClass prov:Activity , schema:Action ;
+    sh:property [
+        sh:path dct:type ;
+        sh:datatype xsd:string ;
+        sh:hasValue "Transporting" ;
+    ] ;
+    sh:property [
+        sh:path schema:identifier ;
+        sh:or (
+            [ sh:nodeKind sh:IRI ]
+            [ sh:datatype xsd:string ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path schema:name , schema:description ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path prov:wasAssociatedWith ;
+        sh:or (
+            [ sh:node <#PersonShape> ]
+            [ sh:node <#OrganizationShape> ]
+        ) ;
+    ] ;
+    sh:property [
+        sh:path prov:qualifiedAssociation ;
+        sh:class prov:Association ;
+    ] ;
+    sh:property [
+        sh:path schema:startTime , schema:endTime ;
+        sh:datatype xsd:dateTime ;
+    ] ;
+    sh:property [
+        sh:path schema:object ;
+        sh:nodeKind sh:IRI ;
+        sh:node <#SampleShape> ;
+    ] ;
+    sh:property [
+        sh:path schema:toLocation , schema:fromLocation ;
+        sh:node <#LocationShape> ;
+    ] ;
+.
