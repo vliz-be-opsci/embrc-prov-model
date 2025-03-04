@@ -1,17 +1,12 @@
 ###############################
 Explanation
 
-Example provenance metadata file for Dataset 3, which is described in the documement 
-  https://github.com/vliz-be-opsci/embrc-prov-model/blob/main/docs/ProvenanceOfBiologicalMaterial_main.pdf
-  Please see that document to understand the context of these metadata
+Example provenance metadata file for Dataset 3, introduced during the EMBRC FAIR data course in 2025
 Dataset 3 consists of a spreadsheet of plankton species names and numbers, produced by 
  the FlowCam from the water sample.  It also includes a software settings file.
-This example uses the EMBRC provenance model to describe the activities and material that 
+This example uses an EMBRC provenance model to describe the activities and material that 
  lead to Dataset 3. This file can then be used to provide the provenance metadata for the
  species identifications, and for any data or scientific results that are derived from those.  
-This file is one of three examples we provide for Dataset 3: this is a plain text version, 
- written for humans rather than machines to read; a version in Turtle, which is written for
- machines, and a version using the EML metadata schema, which biodiversity databases use. 
 
 To make this file more compact and easier to read, we will first list the metadata for entities 
  that occurr more than once or which have to be described with more than one value. We will 
@@ -20,15 +15,24 @@ To make this file more compact and easier to read, we will first list the metada
 
 
 ## Agents
-name: J. Gerschwin
-identifier: https://orcid.org/0000-0001-0001-0002
-email: jg@somewhere.com
-role: lab technician
-organisation:
-  name: Nice Marine Station
-  identifier: https://edmo.seadatanet.org/report/00000
-  website: https://NiceMarineStation.eu
-  email: info@nicemarinestation.eu
+name: Katrina Exter
+identifier: https://orcid.org/0000-0002-5911-1536
+email: katrina.exter@vliz.com
+role: field and laboratory technician; taxonomic expert
+organization: 
+  name: VLIZ
+  identifier: https://edmo.seadatanet.org/report/422
+  website: https://vliz.be/en
+  email: info@vliz.be
+
+name: Christina Pavloudi
+identifier: https://orcid.org/0000-0001-5106-6067
+email: christina.pvlaoudi@embrc.com
+role: taxonomic expert
+organization: 
+  name: EMBRC
+  identifier: https://edmo.seadatanet.org/report/5669
+  website: https://www.embrc.eu 
 
 ## Software
 name: VisualSpreadsheet FlowCam Micro software
@@ -39,18 +43,33 @@ settings: file flowcam-settings.txt which comes with this dataset
 name: classification QC
 description: Manual filtering of the flowcam outputs, to remove misidentifications. Method steps: (1) visual inspection of the classified images by a first plankton expert, who suggested reclassifications or removal of the images from the dataset (2) visual inspection and confirmation/rejection of suggestions by a second export (3) reclassification in the image metadata and the spreadsheet for those that both experts agreed on, and agreed rejected results removed from the dataset.  
 
+name: FlowCam_seawater_sop 
+description: instructions for using FlowCam with seawater, including camera settings
+distribution: see file FlowCam_seawaterSOP.pdf which is part of this data package 
+
 
 #### The description of the provenance of the activties for this dataset
 
-## The provenance metadata for the data processing activity (Step 5)
+## The provenance metadata for the material processing activity
 <DataProcessing>
 name: FlowCam species identification
 activity-type: data processing
 description: identification of species on images from the FlowCam, using the FlowCam software 
-temporal-coverage: 2021-01-01
-agent: see J. Gerschwin
-input: raw images from /Users/NMSlab/flowcam/20210101/BigProject/raw, settings in file flowcam-settings.txt (see dataset), and reference library used was  FlowCam_ReferenceLibrary_2024 
-output: images in zip file Plankton_species_image.zip, results in Plankton_species_numbers.csv 
+temporal-coverage: 2024-06-01
+agent: see Katrina Exter
+input: raw images from /Users/NMSlab/flowcam/20210101/BigProject/raw, reference library FlowCam_ReferenceLibrary_2024 
+output: images in zip file Plankton_species_images.zip, results in Plankton_species_numbers.csv 
 software: see VisualSpreadsheet FlowCam Micro software
+protocol: see FlowCam_seawater_sop and the settings in file flowcam-settings.txt (included in this dataset)
+
+## The provenance metadata for the data processing activity
+<DataProcessing>
+name: QC on species identifications 
+activity-type: data processing
+description: QC on the species identifications from the FlowCam automatic software 
+temporal-coverage: 2024-06-01
+agent: see Katrina Exter, Christina Pavloudi
+input: images in zip file Plankton_species_images.zip, results in Plankton_species_numbers.csv 
+output: images in zip file Plankton_species_images_QC.zip, results in Plankton_species_numbers_QC.csv
 protocol: see classification QC
 
