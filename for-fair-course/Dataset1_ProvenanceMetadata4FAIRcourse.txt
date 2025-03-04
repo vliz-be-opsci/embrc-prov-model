@@ -21,30 +21,20 @@ To make this file more compact and easier to read, we will first list the metada
 
 
 ## Agents
-name: Jane Smith
-identifier: https://orcid.org/0000-0001-0001-0001
-email: jane.smith@somewhere.com
+name: Katrina Exter
+identifier: https://orcid.org/0000-0002-5911-1536
+email: katrina.exter@vliz.com
 role: field and laboratory technician
 organization: 
-  name: Nice Marine Station
-  identifier: https://edmo.seadatanet.org/report/00000
-  website: https://NiceMarineStation.eu
-  email: info@nicemarinestation.eu
+  name: VLIZ
+  identifier: https://edmo.seadatanet.org/report/422
+  website: https://vliz.be/en
+  email: info@vliz.be
 
-name: F. Lee
-identifier: https://orcid.org/0000-0001-0001-0002
-email: f.lee@somewhere.com
-role: field and laboratory technician
-organization:   
-  name: Nice Marine Station
-  identifier: https://edmo.seadatanet.org/report/00000
-  website: https://NiceMarineStation.eu
-  email: info@nicemarinestation.eu
-
-name: NiceMarineStation
-identifier: https://edmo.seadatanet.org/report/00000
-website: https://NiceMarineStation.eu
-email: info@nicemarinestation.eu
+name: VLIZ
+identifier: https://edmo.seadatanet.org/report/422
+website: https://vliz.be/en
+email: info@vliz.be
 
 ## Locations
 name: Belgian EEZ
@@ -71,27 +61,23 @@ keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marin
 
 ## Protocols
 name: BigProject_WaterSamples 
-description: Collecting and pre-filtering (removal of larger particles) of water samples to be used later for FlowCam and eDNA work 
+description: Collecting and pre-filtering (removal of larger particles) of water samples to be used later for FlowCam and additionall filtering to be used for eDNA
 distribution: https://www.protocols.io/BigProject_WaterSamples.pdf 
 
 name: CTD_standard_procedure_2 
 description: instructions for using the CTD 
 distribution: https://www.mylab.eu/CTDinstructions.pdf 
 
-name: BigProject_eDNAfiltering 
-description: instructions for water samples filtering - to capture the biological material on the filter membrane which will be used for DNA extraction
-distribution: https://www.protocols.io/BigProject_eDNAfiltering.pdf 
-
 
 ## Devices 
-name: NiceMarineStation rosette#1
+name: VLIZ rosette#1
 type: Niskin bottles on a Rosette sampler 
 platform: 
   identifier: IMO:1234567
   type: research vessel - https://vocab.nerc.ac.uk/collection/L05/31 
   name:  RV OurBigShip
 
-name: NiceMarineStation CTD#23
+name: VLIZ CTD#23
 type: CTD - https://vocab.nerc.ac.uk/collection/L05/current/130 
 platform: 
   identifier IMO: 1234567
