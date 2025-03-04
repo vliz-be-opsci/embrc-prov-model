@@ -75,8 +75,8 @@
     },
     {
       "@type": ["Thing","prov:Entity","sosa:Sample"],
-      "@id":"_:BigProject_belgium_water_10m_1000um_r2_3um ",
-      "name": "BigProject_belgium_water_10m_1000um_r2_3um ",
+      "@id":"_:BigProject_belgium_water_10m_1000um_r2_3um",
+      "name": "BigProject_belgium_water_10m_1000um_r2_3um",
       "description": "water sample collected from 10m depth and filtered at 1000um and again 3um",
       "keywords": [
         {"@id":"http://purl.obolibrary.org/obo/ENVO_00002150"}, 
@@ -150,7 +150,7 @@
       "description": "Samples of sea water from the Belgian EEZ collected over the period 2021-01-01 to 2022-01-01; processed for environmental DNA for taxonomic classification purposes",
       "identifier": "ircc2345678",
       "validIn": {"@id": "http://marineregions.org/mrgid/3293"},
-      "prov:wasAssociatedWith": {"@id": "https://edmo.seadatanet.org/report/00000"},
+      "prov:wasAttributedTo": {"@id": "https://edmo.seadatanet.org/report/00000"},
       "prov:qualifiedAttribution": {
         "@type": "prov:Attribution",
         "prov:agent": {"@id": "https://edmo.seadatanet.org/report/00000"},
