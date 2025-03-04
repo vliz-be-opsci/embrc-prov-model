@@ -99,7 +99,7 @@ temporal-coverage: start 2024-01-01, end 20254-01-01
 sample: see BigProject_belgium_water_10m
 
 
-#### The description of the provenance of the activties for this dataset
+#### The description of the provenance of the activities for this dataset
 
 ## The provenance metadata for the sampling activity 
 <Sampling>
