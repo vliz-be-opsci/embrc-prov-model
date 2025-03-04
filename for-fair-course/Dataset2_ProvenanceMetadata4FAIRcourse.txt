@@ -59,7 +59,7 @@ name: Johnson Fridge type XYZ
 type: mid-term storage fridge
 
 
-#### The description of the provenance of the activties for this dataset
+#### The description of the provenance of the activities for this dataset
 
 ## The provenance metadata for the material processing activity
 <MaterialProcessing>
