@@ -39,7 +39,7 @@ geography: latitude: 51.249995, longitude: 2.85327
 
 ## Samples
 identifier: BigProject_belgium_water_10m
-description: water sample to determine plankton community and extract DNA
+description: water sample to determine plankton community
 keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
 
 identifier: BigProject_belgium_water_10m_1000um_r1 
@@ -50,13 +50,10 @@ identifier: BigProject_belgium_water_10m_1000um_r2 
 description: water sample collected from 10m depth and filtered at 1000um
 keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
 
-identifier: BigProject_belgium_water_10m_1000um_r2_3um 
-description: water sample collected from 10m depth and filtered at 1000um and again 3um
-keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
 
 ## Protocols
 name: BigProject_WaterSamples 
-description: Collecting and pre-filtering (removal of larger particles) of water samples to be used later for FlowCam and additionall filtering to be used for eDNA
+description: Collecting and pre-filtering (removal of larger particles) of water samples to be used later for FlowCam analysis
 distribution: https://www.protocols.io/BigProject_WaterSamples.pdf 
 
 name: CTD_standard_procedure_2 
@@ -86,17 +83,10 @@ platform:
   type: research vessel - https://vocab.nerc.ac.uk/collection/L05/31 
   name: RV Simon Stevin 
 
-name: Johnson Freezer type XYZ
-type: samples freezer
-platform: 
-  identifier IMO: 9622681
-  type: research vessel - https://vocab.nerc.ac.uk/collection/L05/31 
-  name: RV Simon Stevin 
-
 
 ## Permits
 name: ABS permit
-scope:  Samples of sea water from the Belgian EEZ collected over the period 2024-01-01 to 2025-01-01; processed for environmental DNA for taxonomic classification purposes
+scope:  Samples of sea water from the Belgian EEZ collected over the period 2024-01-01 to 2025-01-01; processed for plankton community identification work
 permit-code: ircc2345678
 spatial-coverage: 
   identifier: see Belgian EEZ 
@@ -137,42 +127,16 @@ device:
   name: 1000 mesh
   type: nylon mesh of 1000 um pore size 
 
-## The provenance metadata for the material processing activity 
-<MaterialProcessing>
-name: fine filtering
-activity-type: material processing
-spaitla-coverage: RV OurBigShip on-board lab
-temporal-coverage: 2024-06-01
-agent: see Katrina Exter
-protocol: see BigProject_eDNAfiltering
-sample: see BigProject_belgium_water_10m_1000um_r2
-result: see BigProject_belgium_water_10m_1000um_r2_3um 
-device: 
-  name: Peristaltic pump (including pump heads, appropriate silicone tubes, stainless steel filter holders)
-  type: Masterflex - EW-07522-20
-
 ## The provenance metadata for the storing activity (Step 3)
 <Storing>
-name: cold storage subsample 1
+name: cold storage subsamples
 activity-type: storing
 spatial-coverage: RV Simon Stevin on-board lab
 temporal-coverage: 2024-06-01
 agent: see Katrina Exter
-sample: see BigProject_belgium_water_10m_1000um_r1 
+sample: see BigProject_belgium_water_10m_1000um_r1, BigProject_belgium_water_10m_1000um_r2 
 storage-device: see Johnson Fridge type XYZ
 storage-conditions: +4 C
-type: short-term
-
-## The provenance metadata for the storing activity (Step 3)
-<Storing>
-name: cold storage subsample 2
-activity-type: storing
-spatial-coverage: RV Simon Stevin on-board lab
-temporal-coverage: 2024-06-01
-agent: see Katrina Exter
-sample: see BigProject_belgium_water_10m_1000um_r2_3um 
-storage-device: see Johnson Freezer type XYZ
-storage-conditions: -20 C
 type: short-term
 
 ## The provenance metadata for the observing activity 
