@@ -1,0 +1,76 @@
+###############################
+Explanation
+
+Example provenance metadata file for Dataset 2, which is described in the document 
+  https://github.com/vliz-be-opsci/embrc-prov-model/blob/main/docs/ProvenanceOfBiologicalMaterial_main.pdf
+  Please see that document to understand the context of these metadata
+Dataset 2 consists of the first set of images produced by the FlowCam from the water sample.  
+It also includes a protocol document and a software settings file.
+This example uses the EMBRC provenance model to describe the activities and material that 
+ lead to Dataset 2. This file can then be used to provide the provenance metadata for the
+ images, and for any data or scientific results that are derived from those images.  
+This file is one of three examples we provide for Dataset 2: this is a plain text version, 
+ written for humans rather than machines to read; a version in Turtle, which is written for
+ machines, and a version using the EML metadata schema, which biodiversity databases use. 
+
+To make this file more compact and easier to read, we will first list the metadata for entities 
+ that occurr more than once or which have to be described with more than one value. We will 
+ then refer to them by their name or identifier when the activities are described.
+###############################
+
+
+## Agents
+name: J. Gerschwin
+identifier: https://orcid.org/0000-0001-0001-0002
+email: jg@somewhere.com
+role: lab technician
+organisation:
+  name: Nice Marine Station
+  identifier: https://edmo.seadatanet.org/report/00000
+  website: https://NiceMarineStation.eu
+  email: info@nicemarinestation.eu
+
+## Samples
+identifier:  BigProject_belgium_water_10m_1000um_r1 
+description: water sample collected from 10m depth and filtered at 1000um
+keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
+
+
+## Protocols
+name: FlowCam_seawater_sop 
+description: instructions for using FlowCam with seawater, including camera settings
+distribution: see file FlowCam_seawaterSOP.pdf which is part of this data package 
+
+
+## Software
+name: VisualSpreadsheet FlowCam Micro software
+description: the software that comes with this FlowCam, bought in 2010
+settings: see file flowcam-settings.txt which is part of the data package
+
+
+## Devices 
+identifier: NMS_flowcam_2010
+name: FlowCam Micro from CoolLabInstruments Corp., 2010
+type: Flow imaging microscopy - https://vocab.nerc.ac.uk/collection/L05/current/LAB27 
+settings: see file flowcam-settings.txt for software and hardware settings
+software: see VisualSpreadsheet FlowCam Micro software
+
+
+#### The description of the provenance of the activties for this dataset
+
+## The provenance metadata for the material processing activity (Step 4)
+<MaterialProcessing>
+name: FlowCam imaging
+activity-type: material processing
+spatial-coverage: 
+  name: Nice Marine Station
+  address: NiceMarineStation Rd, Ostend, Belgium
+temporal-coverage: 2021-01-01
+agent: see J. Gerschwin
+protocol: see FlowCam_seawater_sop
+sample: see  BigProject_belgium_water_10m_1000um_r1
+result: the first set of images taken by the flowcam are stored in /Users/NMSlab/flowcam/20210101/BigProject/raw
+device: see NMS_flowcam_2010
+
+
+
