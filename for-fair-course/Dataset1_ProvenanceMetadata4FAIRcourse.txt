@@ -127,7 +127,7 @@ device:
   name: 1000 mesh
   type: nylon mesh of 1000 um pore size 
 
-## The provenance metadata for the storing activity (Step 3)
+## The provenance metadata for the storing activity
 <Storing>
 name: cold storage subsamples
 activity-type: storing
