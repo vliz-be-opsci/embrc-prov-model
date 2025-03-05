@@ -26,6 +26,11 @@ organization:
   website: https://vliz.be/en
   email: info@vliz.be
 
+name: VLIZ Marine Station lab
+identifier: https://edmo.seadatanet.org/report/422
+website: https://vliz.be/en
+email: info@vliz.be
+
 ## Samples
 identifier:  BigProject_belgium_water_10m_1000um_r1 
 description: water sample collected from 10m depth and filtered at 1000um
@@ -65,11 +70,7 @@ type: mid-term storage fridge
 <MaterialProcessing>
 name: FlowCam imaging
 activity-type: material processing
-spatial-coverage: 
-  name: VLIZ Marine Station lab
-  identifier: https://edmo.seadatanet.org/report/422
-  website: https://vliz.be/en
-  email: info@vliz.be
+spatial-coverage: VLIZ Marine Station lab
 temporal-coverage: 2024-06-01
 agent: see Katrina Exter
 protocol: see FlowCam_seawater_sop
