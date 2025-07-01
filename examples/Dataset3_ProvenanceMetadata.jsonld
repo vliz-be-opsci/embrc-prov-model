@@ -13,7 +13,21 @@
       "name": "J. Gerschwin",
       "identifier": "https://orcid.org/0000-0001-0001-0002",
       "email": "jg@somewhere.com",
-      "affiliation":{"@id":"https://edmo.seadatanet.org/report/00000"}
+      "affiliation": {"@id":"https://edmo.seadatanet.org/report/00000"}
+    },
+    {
+      "@type": "Person",
+      "@id": "https://orcid.org/0000-0001-0001-0002",
+      "name": "F. Lee",
+      "identifier": "https://orcid.org/0000-0001-0001-0003",
+      "email": "f.lee@somewhere.com",
+      "affiliation": {"@id":"https://edmo.seadatanet.org/report/00000"}
+    },
+    {
+      "@type": "Person",
+      "@id": "_:DNATechnicianPerson",
+      "name": "DNA technician",
+      "affiliation": {"@id": "_:SequencingIsUsHQ"}
     },
     {
       "@type": "Organization",
@@ -21,48 +35,477 @@
       "name": "Nice Marine Station",
       "mainEntityOfPage":"https://NiceMarineStation.eu",
       "email":"info@nicemarinestation.eu",
-      "identifier": "https://edmo.seadatanet.org/report/00000"
-    },
-    
-    {
-      "@type": ["Thing", "prov:Entity", "SoftwareApplication"],
-      "@id": "_:VisualSpreadsheet_FlowCam",
-      "name": "VisualSpreadsheet FlowCam Micro software",
-      "description": "The software that comes with this FlowCam, bought in 2010",
-      "accessibilitySummary": "file flowcam-settings.txt which comes with this dataset"
+      "identifier": "https://edmo.seadatanet.org/report/00000",	 
+	  "address": {"@type": "PostalAddress",
+	    "addressLocality": "Ostend, Belgium",
+	    "streetAddress": "NiceMarineStation Rd"
+	  }
     },
     {
-      "@type":["Thing","prov:Entity","CreativeWork"],
-      "@id":"_:classification_QC",
-      "name":"classification QC",
-      "description":"Manual filtering of the flowcam outputs, to remove misidentifications. Method steps: (1) visual inspection of the classified images by a first plankton expert, who suggested reclassifications or removal of the images from the dataset (2) visual inspection and confirmation/rejection of suggestions by a second export (3) reclassification in the image metadata and the spreadsheet for those that both experts agreed on, and agreed rejected results removed from the dataset."
+      "@type": "Organization",
+      "@id": "_:SequencingIsUsHQ",
+      "name": "SequencingIsUs HQ",
+      "address": "@type": "PostalAddress",
+	    "addressLocality": "Paris, France",
+	    "streetAddress": "Rue DNA 3311"
     },
+	
+    {
+      "@type": ["Thing","prov:Entity","sosa:Sample"],
+      "@id":"_:BigProject_belgium_water_10m",
+      "name": "BigProject_belgium_water_10m",
+      "description": "Water sample to determine plankton community and extract DNA",
+      "keywords": [
+        {"@id":"http://purl.obolibrary.org/obo/ENVO_00002150"}, 
+        {"@id":"_:NCBI_txid1874687"} 
+      ]
+    },
+	{
+      "@type": ["Thing","prov:Entity","sosa:Sample"],
+      "@id":"_:BigProject_belgium_water_10m_1000um_r2",
+      "name": "BigProject_belgium_water_10m_1000um_r2",
+      "description": "water sample collected from 10m depth and filtered at 1000um",
+      "keywords": [
+        {"@id":"http://purl.obolibrary.org/obo/ENVO_00002150"}, 
+        {"@id":"_:NCBI_txid1874687"} 
+      ]
+    },
+    {
+      "@type": ["Thing", "prov:Entity", "sosa:Sample"],
+      "@id": "_:BigProject_belgium_water_10m_1000um_r2_3um",
+      "name":  "BigProject_belgium_water_10m_1000um_r2_3um",
+      "description": "Water sample collected from 10m depth and filtered again between 3-1000um",
+      "keywords": [
+        {"@id":"http://purl.obolibrary.org/obo/ENVO_00002150"}, 
+        {"@id":"_:NCBI_txid1874687"} 
+      ],
+	  "identifier" : {
+	    "@id": "_:SiU_BP_0001",
+		"@type": "PropertyValue",
+		"propertyID" : "SequencingIsUs.localSampleID",
+		"value" : "SiU_BP_0001"
+	  }
+    },
+    {
+      "@type": ["Thing", "prov:Entity", "sosa:Sample"],
+      "@id": "_:SiU_BP_0001_a",
+      "name": "SiU_BP_0001_a",
+      "description": "DNA extracted from filter"
+    },
+    {
+      "@type": ["Thing", "prov:Entity", "sosa:Sample"],
+      "@id": "_:SiU_BP_0001_b",
+      "name": "SiU_BP_0001_b",
+      "description": "DNA extracted from filter after quantification"
+    },
+    {
+      "@type": ["Thing", "prov:Entity", "sosa:Sample"],
+      "@id": "_:SiU_BP_0001_c",
+      "name": "SiU_BP_0001_c",
+      "description": "DNA prepared for sequencing platform"
+    },
+	
+    {
+      "@type":["Thing","prov:Entity","CreativeWork","Howto"],
+      "@id":"_:BigProject_WaterSamples",
+      "name":"BigProject_WaterSamples",
+      "description":"Collecting and pre-filtering (removal of larger particles) of water samples to be used later for FlowCam and eDNA work",
+      "url":"https://www.protocols.io/BigProject_WaterSamples.pdf"
+    },	
+    {
+      "@type":["Thing","prov:Entity","CreativeWork","Howto"],
+      "@id":"_:BigProject_eDNAfiltering",
+      "name":"BigProject_eDNAfiltering",
+      "description":"instructions for water samples filtering - to capture the biological material on the filter membrane which will be used for DNA extraction",
+      "url":"https://www.protocols.io/BigProject_eDNAfiltering.pdf"
+    },
+	
+    {
+      "@type": ["Place", "prov:Location"],
+      "@id": "_:SequencingIsUsPlace",
+      "name": "SequencingIsUs",
+      "address": "@type": "PostalAddress",
+	    "addressLocality": "Paris, France",
+	    "streetAddress": "Rue DNA 3311"
+    },    },
+	
+	{
+      "@type":"DefinedTerm",  
+      "@id":"http://purl.obolibrary.org/obo/ENVO_00002150",
+      "name": "coastal sea water",
+      "termCode":"ENVO_00002150"
+    }, 
+    {
+      "@type":"DefinedTerm",
+      "@id":"_:NCBI_txid1874687",
+      "name": "marine plankton metagenome",
+      "termCode":"NCBI:txid1874687"
+    },	
+	{
+      "@type": ["Thing","prov:Entity","ssn:System"],
+      "@id":"_:Johnson_Freezer_onboard",
+      "name": "Johnson Samples Freezer (on-board)",
+      "sosa:isHostedBy": {"@id":"_:IMO_1234567"}
+    },
+	{
+      "@type": ["Thing","prov:Entity","ssn:System"],
+      "@id":"_:Johnson_Freezer_lab",
+      "name": Johnson Samples Freezer (lab)",
+    },	
+	
+	
+	
+	
+    {
+      "@type": ["Action","prov:Activity"],
+	  "identifier": "prefiltering_2",
+      "dct:type":"material processing",
+	  "name":"pre-filtering Jan 2021 water samples",
+      "prov:location": {
+        "@type": ["Place", "prov:Location"],
+        "name":"RV OurBigShip on-board lab"
+      },
+      "startTime": "2021-01-01",
+      "endTime": "2021-01-01",
+      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0002"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        "dcat:hadRole":  "field and laboratory technician"
+      },
+      "prov:used": [
+        {"@id":"_:BigProject_WaterSamples"},
+        {
+          "@type":["Thing","prov:Entity","ssn:System"],
+          "name":"1000 mesh",
+          "dct:type":"nylon mesh of 1000 um pore size"
+        }
+      ],
+      "object":{"@id":"_:BigProject_belgium_water_10m"},
+      "generated": {"@id":"_:BigProject_belgium_water_10m_1000um_r2"}
+    },	
+	
+    {
+      "@type": ["Action","prov:Activity"],
+	  "identifier": "finefiltering",
+      "dct:type":"material processing",
+	  "name":"second, fine filtering Jan 2021 water for sequencing",
+      "prov:location": {
+        "@type": ["Place", "prov:Location"],
+        "name":"RV OurBigShip on-board lab"
+      },
+      "startTime": "2021-01-01",
+      "endTime": "2021-01-01",
+      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0002"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        "dcat:hadRole":  "field and laboratory technician"
+      },
+      "prov:used": [
+        {"@id":"_:BigProject_eDNAfiltering"},
+		{
+          "@type":["Thing","prov:Entity","ssn:System"],
+          "name":"Peristaltic pump (including pump heads, appropriate silicone tubes, stainless steel filter holders)",
+          "dct:type":"Masterflex - EW-07522-20"
+		},
+        {
+          "@type":["Thing","prov:Entity","ssn:System"],
+          "name":"membrane filter",
+          "dct:type":"polycarbonate membrane filter of 3 um pore size"
+        }
+      ],
+      "object":{"@id":"_:BigProject_belgium_water_10m_1000um_r2"},
+      "generated":{"@id":"_:BigProject_belgium_water_10m_1000um_r2_3um"}
+    },	
+	
+    {
+      "@type": ["Action","prov:Activity"],
+	  "identifier":"storing_onboard_2",
+      "dct:type":"storing",
+      "prov:location": {
+        "@type": ["Place", "prov:Location"],
+        "name":"RV OurBigShip on-board lab"
+      },
+      "startTime": "2021-01-01",
+      "endTime": "2021-01-01",
+      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0002"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        "dcat:hadRole":  "field and laboratory technician"
+      },
+      "description":"-20 C",
+      "prov:used": {"@id":"_:Johnson_Freezer_onboard"},
+      "object": {"@id":"_:BigProject_belgium_water_10m_1000um_r2_3um"}
+    },	
 
     {
       "@type": ["Action", "prov:Activity"],
-      "@id": "_:FlowCamSpeciesIdentification",
-      "dct:type": "Data Processing, FlowCam species identification",
-      "name": "FlowCam species identification",
-      "description": "Identification of species on images from the FlowCam, using the FlowCam software",
+      "identifier": "storing_lab",
+      "dct:type": "storing",
+	  "name":"cold storage at Nice Marine Station Jan 2021 samples",
+      "additionalType":"medium-term storage",
+      "prov:location": {
+        "@type": ["Place", "prov:Location"],
+        "name": "Nice Marine Station",
+        "address": "NiceMarineStation Rd, Ostend, Belgium"
+      },
       "startTime": "2021-01-01",
+      "endTime": "2021-06-01",
       "prov:wasAssociatedWith": {"@id": "https://orcid.org/0000-0001-0001-0002"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
         "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
-        "dcat:hadRole":  "lab technician"
+        "dcat:hadRole":  "laboratory technician"
       },
-      "object":{
-        "@type":"MediaObject",
-        "description":"raw images from /Users/NMSlab/flowcam/20210101/BigProject/raw, settings in file flowcam-settings.txt (see dataset), and reference library used was  FlowCam_ReferenceLibrary_2024"
+      "prov:used": {
+          "@type": ["Thing","prov:Entity","CreativeWork","Howto"],
+          "name":"BigProject_eDNAstorage",
+          "description": "protocol for filters to be stored in tubes at -80"
+        },
+      "object": {"@id": "_:BigProject_belgium_water_10m_1000um_r2_3um"},
+      "descriptions": "-80 C",
+      "prov:used": {"@id":"_:Johnson_Freezer_lab"},
+    },
+	
+    {
+      "@type": ["Action", "prov:Activity"],
+      "identifier": "transporting_DNAfilter",
+      "dct:type": "transporting",
+	  "name":"transporting DNA filters from Jan 2021 samples",
+      "startTime": "2021-06-01",
+      "endTime": "2021-06-01",
+      "object": {"@id": "_:BigProject_belgium_water_10m_1000um_r2_3um"},
+      "description": "dry ice, -80 C",
+      "prov:wasAssociatedWith": [
+        {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        {"@id": "_:DNATechnicianPerson"}
+      ],
+      "prov:qualifiedAssociation":[
+        {
+          "@type": "prov:Association",
+          "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+          "dcat:hadRole":  laboratory technician"
+        },
+        {
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        "dcat:hadRole":  "providing agent"
+        },
+        {
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "_:DNATechnicianPerson"},
+        "dcat:hadRole":  "receiving agent"
+        }
+      ],
+      "fromLocation": {
+        "@type": ["Place", "prov:Location"],
+        "name": "Nice Marine Station",
+        "address": "NiceMarineStation Rd, Ostend, Belgium"
       },
-      "result":{
-        "@type":"MediaObject",
-        "description":"images in zip file Plankton_species_image.zip, results in Plankton_species_numbers.csv"
-      },
-      "prov:used": [
-        {"@id": "_:VisualSpreadsheet_FlowCam"},
-        {"@id":"_:classification_QC"}
+      "toLocation": {"@id": "_:SequencingIsUsPlace"}
+    },
+	
+    {
+      "@type": ["Action", "prov:Activity"],
+      "identifier": "transferring_DNAfilter",
+      "dct:type": "material acquiring",
+	  "name":" Transferring ownership of DNA filter Jan 2021 samples"
+      "startTime": "2021-06-01",
+      "endTime": "2021-06-01",
+      "object": {"@id": "_:BigProject_belgium_water_10m_1000um_r2_3um"},
+      "prov:wasAssociatedWith": [
+        {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        {"@id": "_:DNATechnicianPerson"}
+      ],
+      "prov:qualifiedAssociation":[
+        {
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        "dcat:hadRole":  "providing agent"
+        },
+        {
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "_:DNATechnicianPerson"},
+        "dcat:hadRole":  "receiving agent"
+        }
       ]
+    },
+	
+    {
+      "@type": ["Action", "prov:Activity"],
+      "identifier": "storing_sequenceingcentre",
+      "dct:type": "storing",
+	  "name":"Cold storage at SequencingIsUs Jan 2021 samples"
+      "additionalType": "medium-term storage",
+      "prov:location": {"@id": "_:SequencingIsUsPlace"},
+      "startTime": "2021-01-01",
+      "endTime": "2021-10-08",
+      "prov:wasAssociatedWith": {"@id": "_:DNATechnicianPerson"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "_:DNATechnicianPerson"},
+        "dcat:hadRole":  "laboratory technician"
+      },
+      "prov:used": {
+          "@type": ["Thing","prov:Entity","CreativeWork","Howto"],
+          "description": "storing filter membranes in dry freezer at -80C until further processing "
+        },
+      "object": {"@id": "_:BigProject_belgium_water_10m_1000um_r2_3um"},
+      "descriptions": "-80 C",
+      "storageDevice": {
+        "name": "SiU samples freezer #1", 
+        "type": "freezer"
+      }
+    },
+	
+    {
+      "@type": ["Action", "prov:Activity"],
+      "identifier": "DNA_extraction",
+      "dct:type": "material processing"
+	  "name":"DNA extraction 2021 samples",
+      "prov:location": {"@id": "_:SequencingIsUsPlace"},
+      "startTime": "2021-10-08",
+      "endTime": "2021-10-08",
+      "prov:wasAssociatedWith": {"@id": "_:DNATechnicianPerson"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "_:DNATechnicianPerson"},
+        "dcat:hadRole":  "laboratory technician"
+      },
+      "prov:used": [{
+          "@type": ["Thing","prov:Entity","CreativeWork","Howto"],
+          "description": "Extraction of DNA from polycarbonate filters using the Alberti et al. (2017) protocol, followed by DNA purification using NucleoSpin RNA kits combined with the NucleoSpin RNA/DNA buffer set (Macherey-Nagel, Düren, Germany)."
+        },
+        {
+          "@type": ["Thing", "prov:Entity","ssn:System"],
+          "name": "centrifuge",
+		  "dct:type":"https://vocab.nerc.ac.uk/collection/L05/current/83/"
+        },
+        {
+          "@type": ["Thing", "prov:Entity"],
+          "name": "cryogenic grinder"
+        }
+      ],
+      "object": {"@id": "_:SiU_BP_0001"},
+      "generated": {"@id": "_:SiU_BP_0001_a"}
+    },
+	
+    {
+      "@type": ["Action", "prov:Activity"],
+      "identifier": "DNA_quantification",
+      "dct:type": "material processing",
+	  "name":"DNA quantification Jan 2021 samples",
+      "prov:location": {"@id": "_:SequencingIsUsPlace"},
+      "startTime": "2021-10-08",
+      "endTime": "2021-10-08",
+      "prov:wasAssociatedWith": {"@id": "_:DNATechnicianPerson"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "_:DNATechnicianPerson"},
+        "dcat:hadRole":  "laboratory technician"
+      },
+      "prov:used": [{
+          "@type": ["Thing","prov:Entity","CreativeWork","Howto"],
+          "description": "Quantification of the abundance of DNA using DNA-Binding Fluorescent Dyes: minimum threshold 4 ng (according to the Qubit dsDNA BR (Broad range) Assay kit (ThermoFisher Scientific, Waltham, MA))"
+        },
+        {
+          "@type": ["Thing", "prov:Entity", "ssn:System"],
+          "name": "Qubit 4 Fluorometer",
+          "dct:type": "https://vocab.nerc.ac.uk/collection/L05/current/113/"
+        }
+      ],
+      "object": {"@id": "_:SiU_BP_0001_a"},
+      "generated": {"@id": "_:SiU_BP_0001_b"}
+    },
+	
+    {
+      "@type": ["Action", "prov:Activity"],
+      "identifier": "library_preparation",
+      "dct:type": "material processing", 
+	  "name":"Library preparation (18S rRNA) Jan 2021 samples",
+      "prov:location": {"@id": "_:SequencingIsUsPlace"},
+      "startTime": "2021-10-08",
+      "endTime": "2021-10-08",
+      "prov:wasAssociatedWith": {"@id": "_:DNATechnicianPerson"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "_:DNATechnicianPerson"},
+        "dcat:hadRole":  "laboratory technician"
+      },
+      "prov:used": [{
+          "@type": ["Thing","prov:Entity","CreativeWork","Howto"],
+          "name": "amplicon library preparation",
+          "description": "BID strategy, as described in Belser et al. (2023)"
+        },
+        {
+          "@type": ["Thing", "prov:Entity, "ssn:System""],
+          "name": "T100 Thermal Cycler (BIORAD)",
+          "dct:type": "https://vocab.nerc.ac.uk/collection/L05/current/LAB50/"
+        }
+      ],
+      "object": {"@id": "_:SiU_BP_0001_b"},
+      "generated": {"@id": "_:SiU_BP_0001_c"}
+    },
+	
+    {
+      "@type": ["Action", "prov:Activity"],
+      "identifier: "sequencing",
+      "dct:type": "material processing", 
+	  "name":"sequencing Jan 2021 samples",
+      "prov:location": {"@id": "_:SequencingIsUsPlace"},
+      "startTime": "2021-10-08",
+      "endTime": "2021-10-08",
+      "prov:wasAssociatedWith": {"@id": "_:DNATechnicianPerson"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "_:DNATechnicianPerson"},
+        "dcat:hadRole":  "laboratory technician"
+      },
+      "prov:used": [{
+          "@type": ["Thing","prov:Entity","CreativeWork","Howto"],
+          "name": "NovaSeq 6000 Reagent Kit",
+          "description": "SP Flowcell (Illumina, San Diego, CA, USA)",
+          "url": "https://science-docs.illumina.com/documents/Instruments/novaseq-6000-spec-sheet-html-770-2016-025/Content/Source/Instruments/NovaSeq/novaseq-6000-spec-sheet-770-2016-025/novaseq-system-spec-sheet-html-770-2016-025.html"
+        },
+        {
+          "@type": ["Thing", "prov:Entity", "ssn:System"],
+          "name": "JARVIS",
+          "dct:type": "Illumina NovaSeq 6000",
+          "description":"Number of cycle = 150sxxx",
+          "prov:wasInfluencedBy": {
+            "@type":"SoftwareApplication",
+            "name":"Real-Time Analysis (RTA) software",
+            "description":"Build-in software operating during cycles of sequencing chemistry and imaging, providing base calls and associated quality scores representing the primary structure of DNA or RNA strands, and performing primary data analysis on Illumina sequencing systems automatically. See https://emea.illumina.com/informatics/sequencing-data-analysis.html for more information on the software from this device. Note that in the outputs the Optional sequencing summary metrics have been set to include the 'percentage of PhiX', the 'percentage of aligned reads' - the percent of reads that are aligned to PhiX should be close to the percent of PhiX spiked in, the 'percentage of clusters passing the filter' and the 'cluster density'."
+          }
+        }
+      ],
+      "object": {"@id": "_:SiU_BP_0001_c"},
+      "generated": "SiU_BP_0001_c_data. Digital sequences, ready for QC. Data available upon request to BigProject (in folder BigProject_2021/fromSequencer)"
+    },
+	
+    {
+      "@type": ["Action", "prov:Activity"],
+      "identifier": "illumina_filter",
+      "dct:type": "data processing",
+      "name": "Illumina filter Jan 2021 samples",
+      "description": "QC: filtering of raw data to remove unwanted clusters and produce the final 18s sequences",
+      "startTime": "2021-10-12",
+      "endTime": "2021-10-12",
+      "prov:wasAssociatedWith": {"@id": "_:DNATechnicianPerson"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "_:DNATechnicianPerson"},
+        "dcat:hadRole":  "laboratory technician"
+      },
+      "prov:used": {
+          "@type": ["Thing","prov:Entity","CreativeWork","Howto"],
+          "name": "Illumina filtering with proprietary software",
+          "description": "Filtering of raw data to remove clusters that have 'too much' intensity corresponding to bases other than the called base. By default, the purity of the signal from each cluster is examined over the first 25 cycles and calculated as Chastity = Highest_Intensity / (Highest_Intensity + Next_Highest_Intensity) for each cycle. The default filtering implemented at the base calling stage allows at most one cycle that is less than the Chastity threshold (0,6)."
+        },
+      "object": "Raw digital sequences produced by the sequencing step. See SEQUENCING. Data available upon request to BigProject (in folder BigProject_2021/fromSequencer)",
+      "generated": "Filtered digital sequences produced by the filtering step. Data available upon request to BigProject (in folder BigProject_2021/QC/fromIllumina)"
     }
   ]
 }

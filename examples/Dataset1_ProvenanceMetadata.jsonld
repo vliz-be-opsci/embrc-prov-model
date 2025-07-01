@@ -16,22 +16,17 @@
       "affiliation": { "@id": "https://edmo.seadatanet.org/report/00000" }
     },
     {
-      "@type": "Person",
-      "@id": "https://orcid.org/0000-0001-0001-0002",
-      "name": "F. Lee",
-      "identifier": "https://orcid.org/0000-0001-0001-0002",
-      "email": "f.lee@somewhere.com",
-      "affiliation": { "@id": "https://edmo.seadatanet.org/report/00000" }
-    },
-    {
       "@type": "Organization",
-      "@id": "https://edmo.seadatanet.org/report/00000",
+      "@id":"https://edmo.seadatanet.org/report/00000",
       "name": "Nice Marine Station",
-      "mainEntityOfPage": "https://NiceMarineStation.eu",
+      "mainEntityOfPage":"https://NiceMarineStation.eu",
       "email":"info@nicemarinestation.eu",
-      "identifier": "https://edmo.seadatanet.org/report/00000"
-    },
-
+      "identifier": "https://edmo.seadatanet.org/report/00000",
+	  "address": {"@type": "PostalAddress",
+	    "addressLocality": "Ostend, Belgium",
+	    "streetAddress": "NiceMarineStation Rd"
+	  }
+	},
     {
       "@type": "Place",
       "@id": "http://marineregions.org/mrgid/3293",
@@ -43,7 +38,6 @@
         "longitude": 2.85327
       }
     },
-
     {
       "@type": ["Thing","prov:Entity","sosa:Sample"],
       "@id":"_:BigProject_belgium_water_10m",
@@ -54,85 +48,34 @@
         {"@id":"_:NCBI_txid1874687"} 
       ]
     },
+ 
     {
-      "@type": ["Thing","prov:Entity","sosa:Sample"],
-      "@id":"_:BigProject_belgium_water_10m_1000um_r1",
-      "name": "BigProject_belgium_water_10m_1000um_r1",
-      "description": "water sample collected from 10m depth and filtered at 1000um",
-      "keywords": [
-        {"@id":"http://purl.obolibrary.org/obo/ENVO_00002150"}, 
-        {"@id":"_:NCBI_txid1874687"} 
-      ]
-    },
-    {
-      "@type": ["Thing","prov:Entity","sosa:Sample"],
-      "@id":"_:BigProject_belgium_water_10m_1000um_r2",
-      "name": "BigProject_belgium_water_10m_1000um_r2",
-      "description": "water sample collected from 10m depth and filtered at 1000um",
-      "keywords": [
-        {"@id":"http://purl.obolibrary.org/obo/ENVO_00002150"}, 
-        {"@id":"_:NCBI_txid1874687"} 
-      ]
-    },
-    {
-      "@type": ["Thing","prov:Entity","sosa:Sample"],
-      "@id":"_:BigProject_belgium_water_10m_1000um_r2_3um",
-      "name": "BigProject_belgium_water_10m_1000um_r2_3um",
-      "description": "water sample collected from 10m depth and filtered at 1000um and again 3um",
-      "keywords": [
-        {"@id":"http://purl.obolibrary.org/obo/ENVO_00002150"}, 
-        {"@id":"_:NCBI_txid1874687"} 
-      ]
-    },
-
-    {
-      "@type":["Thing","prov:Entity","CreativeWork"],
+      "@type":["Thing","prov:Entity","CreativeWork","Howto"],
       "@id":"_:BigProject_WaterSamples",
       "name":"BigProject_WaterSamples",
       "description":"Collecting and pre-filtering (removal of larger particles) of water samples to be used later for FlowCam and eDNA work",
       "url":"https://www.protocols.io/BigProject_WaterSamples.pdf"
     },
-    {
-      "@type":["Thing","prov:Entity","CreativeWork"],
+	{
+      "@type":["Thing","prov:Entity","CreativeWork","Howto"],
       "@id":"_:CTD_standard_procedure_2",
       "name":"CTD_standard_procedure_2",
       "description":"instructions for using the CTD",
       "url":"https://www.mylab.eu/CTDinstructions.pdf"
     },
-    {
-      "@type":["Thing","prov:Entity","CreativeWork"],
-      "@id":"_:BigProject_eDNAfiltering",
-      "name":"BigProject_eDNAfiltering",
-      "description":"instructions for water samples filtering - to capture the biological material on the filter membrane which will be used for DNA extraction",
-      "url":"https://www.protocols.io/BigProject_eDNAfiltering.pdf"
-    },
 
     {
-      "@type": ["Thing","prov:Entity"],
+      "@type": ["Thing","prov:Entity","sosa:Sampler"],
       "@id": "_:NiceMarineStation_rosette#1",
       "name": "NiceMarineStation rosette#1",
       "dct:type": "Niskin bottles on a Rosette sampler",
       "sosa:isHostedBy": {"@id":"_:IMO_1234567"}
     },
     {
-      "@type": ["Thing","prov:Entity"],
+      "@type": ["Thing","prov:Entity","sosa:Sensor"],
       "@id":"_:BigHappyOrganization_CTD#23",
       "name": "BigHappyOrganization CTD#23",
       "dct:type": "https://vocab.nerc.ac.uk/collection/L05/current/130",
-      "sosa:isHostedBy": {"@id":"_:IMO_1234567"}
-    },
-    {
-      "@type": ["Thing","prov:Entity"],
-      "@id":"_:Johnson_Fridge_type_XYZ",
-      "name": "Johnson Fridge type XYZ",
-      "dct:type": "samples fridge",
-      "sosa:isHostedBy": {"@id":"_:IMO_1234567"}
-    },
-    {
-      "@type": ["Thing","prov:Entity"],
-      "@id":"_:Johnson_Freezer_type_XYZ",
-      "name": "Johnson Freezer type XYZ",
-      "dct:type": "samples freezer",
       "sosa:isHostedBy": {"@id":"_:IMO_1234567"}
     },
 
@@ -145,7 +88,7 @@
     },
 
     {
-      "@type": ["Thing","prov:Entity","CreativeWork","Permit"],
+      "@type": ["Thing","prov:Entity","CreativeWork","Permit"],  
       "@id":"_:ABSPermit_ircc2345678",
       "name": "ABS permit",
       "description": "Samples of sea water from the Belgian EEZ collected over the period 2021-01-01 to 2022-01-01; processed for environmental DNA for taxonomic classification purposes",
@@ -164,12 +107,31 @@
       },
       "validFrom": "2021-01-01",
       "validUntil": "2022-01-01",
-      "prov:wasInfluencedBy": {"@id":"_:BigProject_belgium_water_10m"}
-    },
+      "prov:wasInfluencedBy": {"@id":"_:BigProject_belgium_water_10m"} 
+    }, 	
+	
+	{
+      "@type":"DefinedTerm",  
+      "@id":"http://purl.obolibrary.org/obo/ENVO_00002150",
+      "name": "coastal sea water",
+      "termCode":"ENVO_00002150"
+    }, 
+    {
+      "@type":"DefinedTerm",
+      "@id":"_:NCBI_txid1874687",
+      "name": "marine plankton metagenome",
+      "termCode":"NCBI:txid1874687"
+    },	
+
+
+
+
 
     {
       "@type": ["Action","prov:Activity","sosa:Sampling"],
-      "dct:type":"Sampling, water sampling from 10m depth",
+      "dct:type":"sampling",  
+	  "identifier":"sampling_water",
+	  "name": "water sampling Jan 2021",
       "prov:location": {"@id":"http://marineregions.org/mrgid/3293"},
       "startTime": "2021-01-01",
       "endTime": "2021-01-01",
@@ -184,11 +146,14 @@
         {"@id":"_:ABSPermit_ircc2345678"}
       ],
       "prov:generated": {"@id":"_:BigProject_belgium_water_10m"},
-      "sosa:madeBySampler": {"@id":"_:BigHappyOrganization_rosette#1"}
+      "sosa:madeBySampler": {"@id":"_:NiceMarineStation rosette#1"}
     },
+	
     {
       "@type": ["Action","prov:Activity"],
-      "dct:type":"Observing, in-situ measurement of water properties",
+	  "identifier":"observing_water",
+      "dct:type":"observing",
+	  "name": "Observing, in-situ measurement of water properties Jan 2021",
       "prov:location": {"@id":"http://marineregions.org/mrgid/3293"},
       "startTime": "2021-01-01",
       "endTime": "2021-01-01",
@@ -199,7 +164,8 @@
         "dcat:hadRole":  "field and laboratory technician"
       },
       "prov:used": {"@id":"_:CTD_standard_procedure_2"},
-      "prov:generated": [
+      "sosa:madeBySampler": {"@id":"_:NiceMarineStation CTD#23"}
+	  "prov:generated": [
         {
           "@type":"sosa:Observation",
           "sosa:hasFeatureOfInterest":"http://vocab.nerc.ac.uk/collection/P02/current/TEMP"
@@ -209,113 +175,6 @@
           "sosa:hasFeatureOfInterest":"http://vocab.nerc.ac.uk/collection/A05/current/EV_SALIN"
         }
       ]
-    },
-    {
-      "@type": ["Action","prov:Activity"],
-      "dct:type":"Material processing, pre-filtering",
-      "prov:location": {
-        "@type": ["Place", "prov:Location"],
-        "name":"RV OurBigShip on-board lab"
-      },
-      "startTime": "2021-01-01",
-      "endTime": "2021-01-01",
-      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0002"},
-      "prov:qualifiedAssociation":{
-        "@type": "prov:Association",
-        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
-        "dcat:hadRole":  "field and laboratory technician"
-      },
-      "prov:used": [
-        {"@id":"_:BigProject_WaterSamples"},
-        {
-          "@type":["Thing","prov:Entity"],
-          "name":"1000 mesh",
-          "dct:type":"nylon mesh of 1000 um pore size"
-        }
-      ],
-      "object":{"@id":"_:BigProject_belgium_water_10m"},
-      "result": [
-        {"@id":"_:BigProject_belgium_water_10m_1000um_r1"},
-        {"@id":"_:BigProject_belgium_water_10m_1000um_r2"}
-      ]
-    },
-    {
-      "@type": ["Action","prov:Activity"],
-      "dct:type":"Material processing, fine filtering",
-      "prov:location": {
-        "@type": ["Place", "prov:Location"],
-        "name":"RV OurBigShip on-board lab"
-      },
-      "startTime": "2021-01-01",
-      "endTime": "2021-01-01",
-      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0002"},
-      "prov:qualifiedAssociation":{
-        "@type": "prov:Association",
-        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
-        "dcat:hadRole":  "field and laboratory technician"
-      },
-      "prov:used": [
-        {"@id":"_:BigProject_eDNAfiltering"},
-        {
-          "@type":["Thing","prov:Entity"],
-          "name":"Peristaltic pump (including pump heads, appropriate silicone tubes, stainless steel filter holders)",
-          "dct:type":"Masterflex - EW-07522-20"
-        }
-      ],
-      "object":{"@id":"_:BigProject_belgium_water_10m_1000um_r2"},
-      "result":{"@id":"_:BigProject_belgium_water_10m_1000um_r2_3um"}
-    },
-    {
-      "@type": ["Action","prov:Activity"],
-      "dct:type":"Storing; cold storage subsample 1",
-      "additionalType": "short-term storage",
-      "prov:location": {
-        "@type": ["Place", "prov:Location"],
-        "name":"RV OurBigShip on-board lab"
-      },
-      "startTime": "2021-01-01",
-      "endTime": "2021-01-01",
-      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0002"},
-      "prov:qualifiedAssociation":{
-        "@type": "prov:Association",
-        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
-        "dcat:hadRole":  "field and laboratory technician"
-      },
-      "description":"+4 C",
-      "prov:used": {"@id":"_:Johnson_Fridge_type_XYZ"},
-      "object": {"@id":"_:BigProject_belgium_water_10m_1000um_r1"}
-    },
-    {
-      "@type": ["Action","prov:Activity"],
-      "dct:type":"Storing, short term; cold storage subsample 2",
-      "prov:location": {
-        "@type": ["Place", "prov:Location"],
-        "name":"RV OurBigShip on-board lab"
-      },
-      "startTime": "2021-01-01",
-      "endTime": "2021-01-01",
-      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0002"},
-      "prov:qualifiedAssociation":{
-        "@type": "prov:Association",
-        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
-        "dcat:hadRole":  "field and laboratory technician"
-      },
-      "description":"-20 C",
-      "prov:used": {"@id":"_:Johnson_Freezer_type_XYZ"},
-      "object": {"@id":"_:BigProject_belgium_water_10m_1000um_r2_3um"}
-    },
-
-    {
-      "@type":"DefinedTerm",
-      "@id":"http://purl.obolibrary.org/obo/ENVO_00002150",
-      "name": "coastal sea water",
-      "termCode":"ENVO_00002150"
-    }, 
-    {
-      "@type":"DefinedTerm",
-      "@id":"_:NCBI_txid1874687",
-      "name": "marine plaknton metagenome",
-      "termCode":"NCBI:txid1874687"
-    } 
+    }
   ]
 }

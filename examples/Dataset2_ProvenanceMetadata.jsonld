@@ -15,20 +15,42 @@
       "email": "jg@somewhere.com",
       "affiliation": {"@id":"https://edmo.seadatanet.org/report/00000"}
     },
+	{
+      "@type": "Person",
+      "@id": "https://orcid.org/0000-0001-0001-0003",
+      "name": "F. Lee",
+      "identifier": "https://orcid.org/0000-0001-0001-0003",
+      "email": "f.lee@somewhere.com",
+      "affiliation": { "@id": "https://edmo.seadatanet.org/report/00000" }
+    },
     {
       "@type": "Organization",
       "@id":"https://edmo.seadatanet.org/report/00000",
       "name": "Nice Marine Station",
       "mainEntityOfPage":"https://NiceMarineStation.eu",
       "email":"info@nicemarinestation.eu",
-      "identifier": "https://edmo.seadatanet.org/report/00000"
+      "identifier": "https://edmo.seadatanet.org/report/00000",
+	  "address": {"@type": "PostalAddress",   
+	    "addressLocality": "Ostend, Belgium",
+	    "streetAddress": "NiceMarineStation Rd"
+	  }
     },
 
     {
-      "@type": ["Thing", "prov:Entity", "sosa:Sample"],
-      "@id": "_:BigProject_belgium_water_10m_1000um_r1",
+      "@type": ["Thing","prov:Entity","sosa:Sample"],
+      "@id":"_:BigProject_belgium_water_10m",
+      "name": "BigProject_belgium_water_10m",
+      "description": "Water sample to determine plankton community and extract DNA",
+      "keywords": [
+        {"@id":"http://purl.obolibrary.org/obo/ENVO_00002150"}, 
+        {"@id":"_:NCBI_txid1874687"} 
+      ]
+    },
+	{
+      "@type": ["Thing","prov:Entity","sosa:Sample"],
+      "@id":"_:BigProject_belgium_water_10m_1000um_r1",
       "name": "BigProject_belgium_water_10m_1000um_r1",
-      "description": "Water sample collected from 10m depth and filtered at 1000um",
+      "description": "water sample collected from 10m depth and filtered at 1000um",
       "keywords": [
         {"@id":"http://purl.obolibrary.org/obo/ENVO_00002150"}, 
         {"@id":"_:NCBI_txid1874687"} 
@@ -36,38 +58,136 @@
     },
 
     {
-      "@type": ["Thing", "prov:Entity", "CreativeWork"],
-      "@id": "_:FlowCam_seawater_sop",
-      "name": "FlowCam_seawater_sop",
-      "description": "Instructions for using FlowCam with seawater, including camera settings",
+      "@type": ["Thing", "prov:Entity", "CreativeWork","Howto"], 
+      "@id": "_:FlowCam_1000um",
+      "name": "FlowCam_1000um",
+      "description": "Full instructions and settings for using FlowCam with water filtered at 1000um",
       "accessibilitySummary": "see file FlowCam_seawaterSOP.pdf which is part of this data package"
     },
 
     {
+      "@type":["Thing","prov:Entity","CreativeWork","Howto"],
+      "@id":"_:BigProject_WaterSamples",
+      "name":"BigProject_WaterSamples",
+      "description":"Collecting and pre-filtering (removal of larger particles) of water samples to be used later for FlowCam and eDNA work",
+      "url":"https://www.protocols.io/BigProject_WaterSamples.pdf"
+    },
+	{
+      "@type":["Thing","prov:Entity","CreativeWork","Howto"],
+      "@id":"_:classification_QC",
+      "name":"classification QC",
+      "description":"Manual filtering of the flowcam outputs, to remove misidentifications. Method steps: (1) visual inspection of the classified images by a first plankton expert, who suggested reclassifications or removal of the images from the dataset (2) visual inspection and confirmation/rejection of suggestions by a second export (3) reclassification in the image metadata and the spreadsheet for those that both experts agreed on, and agreed rejected results removed from the dataset."
+	},  
+	
+    {
       "@type": ["Thing", "prov:Entity", "SoftwareApplication"],
       "@id": "_:VisualSpreadsheet_FlowCam",
       "name": "VisualSpreadsheet FlowCam Micro software",
+	  "version" : "from 2021",
       "description": "The software that comes with this FlowCam, bought in 2010",
       "accessibilitySummary": "see file flowcam-settings.txt which is part of the data package"
     },
 
     {
-      "@type": ["Thing", "prov:Entity"],
+      "@type": ["Thing", "prov:Entity", "ssn:System"], 
       "@id": "_:NMS_flowcam_2010",
       "identifier": "NMS_flowcam_2010",
       "name": "FlowCam Micro from CoolLabInstruments Corp., 2010",
       "dct:type": "https://vocab.nerc.ac.uk/collection/L05/current/LAB27",
-      "description": "see file flowcam-settings.txt for software and hardware settings",
+      "description": "see file flowcam-settings.tNMS_flowcam_2010xt for software and hardware settings",
       "prov:wasInfluencedBy": {
         "@id": "_:VisualSpreadsheet_FlowCam",
         "accessibilitySummary": "see file flowcam-settings.txt for software and hardware settings"
       }
     },
+    {
+      "@type": ["Thing","prov:Entity","ssn:System"],
+      "@id":"_:Johnson_Fridge_onboard",
+      "name": "Johnson Samples Fridge (on-board)",
+      "sosa:isHostedBy": {"@id":"_:IMO_1234567"}
+    },
+	
+    {
+      "@type": ["Thing","prov:Entity","sosa:Platform"],
+      "@id":"_:IMO_1234567",
+      "identifier": "IMO:1234567",
+      "dct:type": "https://vocab.nerc.ac.uk/collection/L05/31",
+      "name": "RV OurBigShip"
+    },
+	
+    {
+      "@type":"DefinedTerm",  
+      "@id":"http://purl.obolibrary.org/obo/ENVO_00002150",
+      "name": "coastal sea water",
+      "termCode":"ENVO_00002150"
+    }, 
+    {
+      "@type":"DefinedTerm",
+      "@id":"_:NCBI_txid1874687",
+      "name": "marine plankton metagenome",
+      "termCode":"NCBI:txid1874687"
+    },	
+
+
+
+
 
     {
+      "@type": ["Action","prov:Activity"],
+	  "identifier": "prefiltering_1",
+      "dct:type":"material processing",
+	  "name":"pre-filtering Jan 2021 water samples",
+      "prov:location": {
+        "@type": ["Place", "prov:Location"],
+        "name":"RV OurBigShip on-board lab"
+      },
+      "startTime": "2021-01-01",
+      "endTime": "2021-01-01",
+      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0002"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        "dcat:hadRole":  "field and laboratory technician"
+      },
+      "prov:used": [
+        {"@id":"_:BigProject_WaterSamples"},
+        {
+          "@type":["Thing","prov:Entity"],
+          "name":"1000 mesh",
+          "dct:type":"nylon mesh of 1000 um pore size"
+        }
+      ],
+      "object":{"@id":"_:BigProject_belgium_water_10m"},
+      "generated": {"@id":"_:BigProject_belgium_water_10m_1000um_r1"}
+    },
+	
+    {
+      "@type": ["Action","prov:Activity"],
+	  "identifier": "storing_onboard_1",
+      "dct:type":"storing",
+      "additionalType": "short-term storage",
+      "prov:location": {
+        "@type": ["Place", "prov:Location"],
+        "name":"RV OurBigShip on-board lab"
+      },
+      "startTime": "2021-01-01",
+      "endTime": "2021-01-01",
+      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0002"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        "dcat:hadRole":  "field and laboratory technician"
+      },
+      "description":"+4 C",
+      "prov:used": {"@id":"_:Johnson_Fridge_onboard"},
+      "object": {"@id":"_:BigProject_belgium_water_10m_1000um_r1"}
+    },
+
+	{
       "@type": ["Action", "prov:Activity"],
-      "@id": "_:MaterialProcessing",
-      "dct:type": "Material Processing; FlowCam imaging",
+	  "identifier": "flowcam_imaging",
+      "dct:type": "material processing",
+	  "name": "FlowCam imaging Jan 2021 samples",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
         "name": "Nice Marine Station",
@@ -82,27 +202,65 @@
         "dcat:hadRole":  "lab technician"
       },
       "prov:used": [
-        {"@id": "_:FlowCam_seawater_sop"},
+        {"@id": "_:FlowCam_1000um"},  
         {"@id": "_:NMS_flowcam_2010"}
       ],
       "object":  {"@id": "_:BigProject_belgium_water_10m_1000um_r1"},
-      "result": {
+      "generated": {
         "@type": ["Thing", "Dataset"],
-        "description": "the first set of images taken by the flowcam are stored in /Users/NMSlab/flowcam/20210101/BigProject/raw"
-      }
+        "description": "The images and species list stored locally in /Users/NMSlab/flowcam/20210101/BigProject/"
+      },
+	  
+	  {
+      "@type": ["Action", "prov:Activity"],
+	  "identifier": "flowcam_speciesidentification",
+      "dct:type": "data processing",
+      "name": "FlowCam species identification Jan 2021 samples",
+      "description": "Identification of species on images from the FlowCam, using the FlowCam software",
+      "startTime": "2021-01-01",
+      "prov:wasAssociatedWith": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        "dcat:hadRole":  "lab technician"
+      },
+      "object":{
+        "@type":"MediaObject",
+        "description":"The images stored locally in /Users/NMSlab/flowcam/20210101/BigProject/. The settings are included in the file flowcam-software-settings.txt in this dataset. The reference library used was FlowCam_ReferenceLibrary_2021"
+      },
+      "generated":{
+        "@type":"MediaObject",
+        "description":"The species list stored locally in /Users/NMSlab/flowcam/20210101/BigProject/ "
+      },
+      "prov:used": [
+        {"@id": "_:VisualSpreadsheet_FlowCam"}
+      ]
     },
-
-    {
-      "@type":"DefinedTerm",
-      "@id":"http://purl.obolibrary.org/obo/ENVO_00002150",
-      "name": "coastal sea water",
-      "termCode":"ENVO_00002150"
-    }, 
-    {
-      "@type":"DefinedTerm",
-      "@id":"_:NCBI_txid1874687",
-      "name": "marine plaknton metagenome",
-      "termCode":"NCBI:txid1874687"
-    } 
+	
+	{
+	  "@type": ["Action", "prov:Activity"],
+	  "identifier": "flowcam_speciesQC",
+      "dct:type": "data processing",
+      "name": "FlowCam species identification QC Jan 2021 samples",
+      "description": "Manual QC on the species identification performed by the FlowCam software, and putting the approved species information and images in files to be published", 
+      "startTime": "2021-01-01",
+      "prov:wasAssociatedWith": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        "dcat:hadRole":  "lab technician"
+      },
+      "object":{
+        "@type":"MediaObject",
+        "description":"Images and species list from /Users/NMSlab/flowcam/20210101/BigProject/"
+      },
+      "generated":{
+        "@type":"MediaObject",
+        "description":"Images in flowcam_images_jan2021.zip, species results in flowcam_species_jan2021.csv"
+      },
+      "prov:used": [
+        {"@id":"_:classification_QC"}
+      ]
+	}
   ]
 }

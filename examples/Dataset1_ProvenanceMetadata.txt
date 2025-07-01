@@ -2,21 +2,20 @@
 Explanation
 
 Example provenance metadata file for Dataset 1, which is described in the document 
-  https://github.com/vliz-be-opsci/embrc-prov-model/blob/main/docs/ProvenanceOfBiologicalMaterial_main.pdf
-  Please see that document to understand the context of these metadata
-Dataset 1 consists of the logsheets in which data related to and collected during a 
- sampling event are recorded.
-This example uses the EMBRC provenance model to describe the activities and material that 
- lead to Dataset 1. This file can then be used to provide the provenance metadata for the
- logsheets, for any material samples that still exist (e.g. replicates), and for any data 
- or scientific results that are derived from that material and from the logsheets.  
+  https://github.com/vliz-be-opsci/embrc-prov-model/blob/main/docs/ProvenanceOfBiologicalMaterial_4paper.pdf
+  This example uses the conceptual model (CM) of provenance presented there. 
+  Please see that document to understand the context of these metadata.
+Dataset 1 consists of logsheets in which data related to and collected during a 
+ sampling event are recorded. This metadata file describes the provenance of that logsheet
+ and the activities and people involved in the sampling event. 
 This file is one of three examples we provide for Dataset 1: this is a plain text version, 
  written for humans rather than machines to read; a version in Turtle, which is written for
- machines; and a version using the EML metadata schema, which biodiversity databases use. 
+ machines; and a version using the EML metadata schema, which biodiversity databases use as their 
+ catalogue metadata schema. 
 
-To make this file more compact and easier to read, we will first list the metadata for entities 
- that occurr more than once or which have to be described with more than one value. We will 
- then refer to them by their name or identifier when the activities are described.
+To make this file more compact and easier to read, we will first list the metadata for objects  
+ that occurr more than once in this record, or which have to be described with more than one value. 
+ We will then refer to them by their name or identifier within the rest of the metadata.
 ###############################
 
 
@@ -25,26 +24,14 @@ name: Jane Smith
 identifier: https://orcid.org/0000-0001-0001-0001
 email: jane.smith@somewhere.com
 role: field and laboratory technician
-organization: 
-  name: Nice Marine Station
-  identifier: https://edmo.seadatanet.org/report/00000
-  website: https://NiceMarineStation.eu
-  email: info@nicemarinestation.eu
-
-name: F. Lee
-identifier: https://orcid.org/0000-0001-0001-0002
-email: f.lee@somewhere.com
-role: field and laboratory technician
-organization:   
-  name: Nice Marine Station
-  identifier: https://edmo.seadatanet.org/report/00000
-  website: https://NiceMarineStation.eu
-  email: info@nicemarinestation.eu
+organization: see Nice Marine Station
 
 name: NiceMarineStation
 identifier: https://edmo.seadatanet.org/report/00000
 website: https://NiceMarineStation.eu
 email: info@nicemarinestation.eu
+address: NiceMarineStation Rd, Ostend, Belgium
+
 
 ## Locations
 name: Belgian EEZ
@@ -55,72 +42,41 @@ geography: latitude: 51.249995, longitude: 2.85327
 ## Samples
 identifier: BigProject_belgium_water_10m
 description: water sample to determine plankton community and extract DNA
-keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
+keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plankton metagenome - NCBI:txid1874687
 
-identifier: BigProject_belgium_water_10m_1000um_r1 
-description: water sample collected from 10m depth and filtered at 1000um
-keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
-
-identifier: BigProject_belgium_water_10m_1000um_r2 
-description: water sample collected from 10m depth and filtered at 1000um
-keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
-
-identifier: BigProject_belgium_water_10m_1000um_r2_3um 
-description: water sample collected from 10m depth and filtered at 1000um and again 3um
-keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plaknton metagenome - NCBI:txid1874687 
 
 ## Protocols
 name: BigProject_WaterSamples 
 description: Collecting and pre-filtering (removal of larger particles) of water samples to be used later for FlowCam and eDNA work 
-distribution: https://www.protocols.io/BigProject_WaterSamples.pdf 
+distribution: https://www.protocols.io/BigProject_WaterSamples.pdf
 
-name: CTD_standard_procedure_2 
-description: instructions for using the CTD 
-distribution: https://www.mylab.eu/CTDinstructions.pdf 
-
-name: BigProject_eDNAfiltering 
-description: instructions for water samples filtering - to capture the biological material on the filter membrane which will be used for DNA extraction
-distribution: https://www.protocols.io/BigProject_eDNAfiltering.pdf 
+name: CTD_standard_procedure_2
+description: instructions for using the CTD
+distribution: https://www.mylab.eu/CTDinstructions.pdf
 
 
 ## Devices 
 name: NiceMarineStation rosette#1
 type: Niskin bottles on a Rosette sampler 
-platform: 
-  identifier: IMO:1234567
-  type: research vessel - https://vocab.nerc.ac.uk/collection/L05/31 
-  name:  RV OurBigShip
+platform: see IMO:1234567
 
 name: NiceMarineStation CTD#23
 type: CTD - https://vocab.nerc.ac.uk/collection/L05/current/130 
-platform: 
-  identifier IMO: 1234567
-  type: research vessel - https://vocab.nerc.ac.uk/collection/L05/31 
-  name: RV OurBigShip
+platform: see IMO:1234567
 
-name: Johnson Fridge type XYZ
-type: samples fridge
-platform: 
-  identifier IMO: 1234567
-  type: research vessel - https://vocab.nerc.ac.uk/collection/L05/31 
-  name: RV OurBigShip 
 
-name: Johnson Freezer type XYZ
-type: samples freezer
-platform: 
-  identifier IMO: 1234567
-  type: research vessel - https://vocab.nerc.ac.uk/collection/L05/31 
-  name: RV OurBigShip 
-
+## Platform  
+identifier: IMO:1234567
+type: research vessel - https://vocab.nerc.ac.uk/collection/L05/31 
+name:  RV OurBigShip
+  
 
 ## Permits
 name: ABS permit
-scope:  Samples of sea water from the Belgian EEZ collected over the period 2021-01-01 to 2022-01-01; processed for environmental DNA for taxonomic classification purposes
+scope: Samples of sea water from the Belgian EEZ collected over the period 2021-01-01 to 2022-01-01; processed for environmental DNA for taxonomic classification purposes
 permit-code: ircc2345678
-spatial-coverage: 
-  identifier: see Belgian EEZ 
-receiving-agent:  
-  identifier: see NiceMarineStation
+spatial-coverage: see Belgian EEZ 
+receiving-agent: NiceMarineStation
 issuer: 
   name: Belgium ABS National Focal Point
   website: https://absch.cbd.int/en/countries/BE
@@ -132,7 +88,7 @@ sample: see BigProject_belgium_water_10m
 
 ## The provenance metadata for the sampling activity (Step 1)
 <Sampling>
-name: water sampling
+name: water sampling Jan 2021
 activity-type: sampling
 spatial-coverage: see Belgian EEZ 
 temporal-coverage: 2021-01-01
@@ -144,62 +100,12 @@ permit: see ABS permit
 
 ## The provenance metadata for the observing activity (Step 2)
 <Observing>
-name: in-situ measurement of water properties
+name: in-situ measurement of water properties Jan 2021
 activity-type: observing
 spatial-coverage: see Belgian EEZ 
 temporal-coverage: 2021-01-01
 agent: see Jane Smith
 protocol: see CTD_standard_procedure_2 
+device: see NiceMarineStation CTD#23
 result: http://vocab.nerc.ac.uk/collection/P02/current/TEMP, http://vocab.nerc.ac.uk/collection/A05/current/EV_SALIN
 
-## The provenance metadata for the material processing activity (Step 3)
-<MaterialProcessing>
-name: pre-filtering
-activity-type: material processing
-spatial-coverage: RV OurBigShip on-board lab
-temporal-coverage: 2021-01-01
-agent: see F. Lee
-protocol: see BigProject_WaterSamples 
-sample: see BigProject_belgium_water_10m
-result: see BigProject_belgium_water_10m_1000um_r1, BigProject_belgium_water_10m_1000um_r2 
-device: 
-  name: 1000 mesh
-  type: nylon mesh of 1000 um pore size 
-
-## The provenance metadata for the material processing activity (Step 3)
-<MaterialProcessing>
-name: fine filtering
-activity-type: material processing
-spaitla-coverage: RV OurBigShip on-board lab
-temporal-coverage: 2021-01-01
-agent: see F. Lee
-protocol: see BigProject_eDNAfiltering
-sample: see BigProject_belgium_water_10m_1000um_r2
-result: see BigProject_belgium_water_10m_1000um_r2_3um 
-device: 
-  name: Peristaltic pump (including pump heads, appropriate silicone tubes, stainless steel filter holders)
-  type: Masterflex - EW-07522-20
-
-## The provenance metadata for the storing activity (Step 3)
-<Storing>
-name: cold storage subsample 1
-activity-type: storing
-spatial-coverage: RV OurBigShip on-board lab
-temporal-coverage: 2021-01-01
-agent: see F. Lee
-sample: see BigProject_belgium_water_10m_1000um_r1 
-storage-device: see Johnson Fridge type XYZ
-storage-conditions: +4 C
-type: short-term
-
-## The provenance metadata for the storing activity (Step 3)
-<Storing>
-name: cold storage subsample 2
-activity-type: storing
-spatial-coverage: RV OurBigShip on-board lab
-temporal-coverage: 2021-01-01
-agent: see F. Lee
-sample: see BigProject_belgium_water_10m_1000um_r2_3um 
-storage-device: see Johnson Freezer type XYZ
-storage-conditions: -20 C
-type: short-term
