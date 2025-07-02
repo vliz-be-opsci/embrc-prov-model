@@ -224,10 +224,15 @@
         "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
         "dcat:hadRole":  "lab technician"
       },
-      "object":{
+      "object":[{
         "@type":"MediaObject",
-        "description":"The images stored locally in /Users/NMSlab/flowcam/20210101/BigProject/. The settings are included in the file flowcam-software-settings.txt in this dataset. The reference library used was FlowCam_ReferenceLibrary_2021"
-      },
+        "description":"The images stored locally in /Users/NMSlab/flowcam/20210101/BigProject/. The settings are included in the file flowcam-software-settings.txt in this dataset"
+        },
+	{"type":"MediaObject",
+	 "@id":"https://BioImages.eu/reference/D-5462",
+	 "description":"The reference library used"
+	}
+      ],
       "generated":{
         "@type":"MediaObject",
         "description":"The species list stored locally in /Users/NMSlab/flowcam/20210101/BigProject/ "
