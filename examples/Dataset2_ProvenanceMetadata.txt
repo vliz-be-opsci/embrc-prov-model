@@ -67,7 +67,7 @@ description: Manual filtering of the flowcam outputs, to remove misidentificatio
 ## Software
 name: VisualSpreadsheet FlowCam Micro software
 description: the software that comes with this FlowCam, bought in 2010
-settings: see file flowcam-software-settings.txt. The image reference library used was FlowCam_ReferenceLibrary_2021
+settings: see file flowcam-software-settings.txt. 
 version: from 2010 
 
 
@@ -137,7 +137,7 @@ activity-type: data processing
 description: identification of species on images from the FlowCam, using the FlowCam image-recognition software 
 temporal-coverage: 2021-01-01
 agent: see J. Gerschwin
-input: the images stored locally in /Users/NMSlab/flowcam/20210101/BigProject/. The settings are included in the file flowcam-software-settings.txt in this dataset. The reference library used was FlowCam_ReferenceLibrary_2021  
+input: the images stored locally in /Users/NMSlab/flowcam/20210101/BigProject/. The settings are included in the file flowcam-software-settings.txt in this dataset. The reference library used was FlowCam_ReferenceLibrary_2021 which is published on https://BioImages.eu/reference/D-5462  
 output: the species list stored locally in /Users/NMSlab/flowcam/20210101/BigProject/ 
 software: see VisualSpreadsheet FlowCam Micro software
 
