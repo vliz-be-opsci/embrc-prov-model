@@ -25,8 +25,7 @@
     },
     {
       "@type": "Person",
-      "@id": "_:DNATechnicianPerson",
-      "name": "DNA technician",
+      "@id": "_:DNATechnician",
       "affiliation": {"@id": "_:SequencingIsUsHQ"}
     },
     {
@@ -280,7 +279,7 @@
       "description": "dry ice, -80 C",
       "prov:wasAssociatedWith": [
         {"@id": "https://orcid.org/0000-0001-0001-0002"},
-        {"@id": "_:DNATechnicianPerson"}
+        {"@id": "_:DNATechnician"}
       ],
       "prov:qualifiedAssociation":[
         {
@@ -295,7 +294,7 @@
         },
         {
         "@type": "prov:Association",
-        "prov:agent": {"@id": "_:DNATechnicianPerson"},
+        "prov:agent": {"@id": "_:DNATechnician"},
         "dcat:hadRole":  "receiving agent"
         }
       ],
@@ -317,7 +316,7 @@
       "object": {"@id": "_:BigProject_belgium_water_10m_1000um_r2_3um"},
       "prov:wasAssociatedWith": [
         {"@id": "https://orcid.org/0000-0001-0001-0002"},
-        {"@id": "_:DNATechnicianPerson"}
+        {"@id": "_:DNATechnician"}
       ],
       "prov:qualifiedAssociation":[
         {
@@ -327,7 +326,7 @@
         },
         {
         "@type": "prov:Association",
-        "prov:agent": {"@id": "_:DNATechnicianPerson"},
+        "prov:agent": {"@id": "_:DNATechnician"},
         "dcat:hadRole":  "receiving agent"
         }
       ]
@@ -342,10 +341,10 @@
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-01-01",
       "endTime": "2021-10-08",
-      "prov:wasAssociatedWith": {"@id": "_:DNATechnicianPerson"},
+      "prov:wasAssociatedWith": {"@id": "_:DNATechnician"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
-        "prov:agent": {"@id": "_:DNATechnicianPerson"},
+        "prov:agent": {"@id": "_:DNATechnician"},
         "dcat:hadRole":  "laboratory technician"
       },
       "prov:used": {
@@ -368,10 +367,10 @@
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-10-08",
       "endTime": "2021-10-08",
-      "prov:wasAssociatedWith": {"@id": "_:DNATechnicianPerson"},
+      "prov:wasAssociatedWith": {"@id": "_:DNATechnician"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
-        "prov:agent": {"@id": "_:DNATechnicianPerson"},
+        "prov:agent": {"@id": "_:DNATechnician"},
         "dcat:hadRole":  "laboratory technician"
       },
       "prov:used": [{
@@ -400,10 +399,10 @@
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-10-08",
       "endTime": "2021-10-08",
-      "prov:wasAssociatedWith": {"@id": "_:DNATechnicianPerson"},
+      "prov:wasAssociatedWith": {"@id": "_:DNATechnician"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
-        "prov:agent": {"@id": "_:DNATechnicianPerson"},
+        "prov:agent": {"@id": "_:DNATechnician"},
         "dcat:hadRole":  "laboratory technician"
       },
       "prov:used": [{
@@ -428,10 +427,10 @@
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-10-08",
       "endTime": "2021-10-08",
-      "prov:wasAssociatedWith": {"@id": "_:DNATechnicianPerson"},
+      "prov:wasAssociatedWith": {"@id": "_:DNATechnician"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
-        "prov:agent": {"@id": "_:DNATechnicianPerson"},
+        "prov:agent": {"@id": "_:DNATechnician"},
         "dcat:hadRole":  "laboratory technician"
       },
       "prov:used": [{
@@ -457,10 +456,10 @@
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-10-08",
       "endTime": "2021-10-08",
-      "prov:wasAssociatedWith": {"@id": "_:DNATechnicianPerson"},
+      "prov:wasAssociatedWith": {"@id": "_:DNATechnician"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
-        "prov:agent": {"@id": "_:DNATechnicianPerson"},
+        "prov:agent": {"@id": "_:DNATechnician"},
         "dcat:hadRole":  "laboratory technician"
       },
       "prov:used": [{
@@ -493,10 +492,10 @@
       "description": "QC: filtering of raw data to remove unwanted clusters and produce the final 18s sequences",
       "startTime": "2021-10-12",
       "endTime": "2021-10-12",
-      "prov:wasAssociatedWith": {"@id": "_:DNATechnicianPerson"},
+      "prov:wasAssociatedWith": {"@id": "_:DNATechnician"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
-        "prov:agent": {"@id": "_:DNATechnicianPerson"},
+        "prov:agent": {"@id": "_:DNATechnician"},
         "dcat:hadRole":  "laboratory technician"
       },
       "prov:used": {
