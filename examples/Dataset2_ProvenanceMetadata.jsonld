@@ -15,7 +15,7 @@
       "email": "jg@somewhere.com",
       "affiliation": {"@id":"https://edmo.seadatanet.org/report/00000"}
     },
-	{
+  {
       "@type": "Person",
       "@id": "https://orcid.org/0000-0001-0001-0003",
       "name": "F. Lee",
@@ -30,10 +30,10 @@
       "mainEntityOfPage":"https://NiceMarineStation.eu",
       "email":"info@nicemarinestation.eu",
       "identifier": "https://edmo.seadatanet.org/report/00000",
-	  "address": {"@type": "PostalAddress",   
-	    "addressLocality": "Ostend, Belgium",
-	    "streetAddress": "NiceMarineStation Rd"
-	  }
+      "address": {"@type": "PostalAddress",   
+      "addressLocality": "Ostend, Belgium",
+      "streetAddress": "NiceMarineStation Rd"
+      }
     },
 
     {
@@ -46,7 +46,7 @@
         {"@id":"_:NCBI_txid1874687"} 
       ]
     },
-	{
+  {
       "@type": ["Thing","prov:Entity","sosa:Sample"],
       "@id":"_:BigProject_belgium_water_10m_1000um_r1",
       "name": "BigProject_belgium_water_10m_1000um_r1",
@@ -64,7 +64,6 @@
       "description": "Full instructions and settings for using FlowCam with water filtered at 1000um",
       "accessibilitySummary": "see file FlowCam_seawaterSOP.pdf which is part of this data package"
     },
-
     {
       "@type":["Thing","prov:Entity","CreativeWork","Howto"],
       "@id":"_:BigProject_WaterSamples",
@@ -72,18 +71,25 @@
       "description":"Collecting and pre-filtering (removal of larger particles) of water samples to be used later for FlowCam and eDNA work",
       "url":"https://www.protocols.io/BigProject_WaterSamples.pdf"
     },
-	{
+    {
       "@type":["Thing","prov:Entity","CreativeWork","Howto"],
       "@id":"_:classification_QC",
       "name":"classification QC",
       "description":"Manual filtering of the flowcam outputs, to remove misidentifications. Method steps: (1) visual inspection of the classified images by a first plankton expert, who suggested reclassifications or removal of the images from the dataset (2) visual inspection and confirmation/rejection of suggestions by a second export (3) reclassification in the image metadata and the spreadsheet for those that both experts agreed on, and agreed rejected results removed from the dataset."
-	},  
-	
+    },
+    {
+      "@type":["Thing","prov:Entity","CreativeWork","Howto"],
+      "@id":"_:BigProject_eDNAfiltering",
+      "name":"BigProject_eDNAfiltering",
+      "description":"instructions for water samples filtering - to capture the biological material on the filter membrane which will be used for DNA extraction",
+      "url":"https://www.protocols.io/BigProject_eDNAfiltering.pdf"
+    },
+
     {
       "@type": ["Thing", "prov:Entity", "SoftwareApplication"],
       "@id": "_:VisualSpreadsheet_FlowCam",
       "name": "VisualSpreadsheet FlowCam Micro software",
-	  "version" : "from 2021",
+      "version" : "from 2021",
       "description": "The software that comes with this FlowCam, bought in 2010",
       "accessibilitySummary": "see file flowcam-settings.txt which is part of the data package"
     },
@@ -106,7 +112,7 @@
       "name": "Johnson Samples Fridge (on-board)",
       "sosa:isHostedBy": {"@id":"_:IMO_1234567"}
     },
-	
+  
     {
       "@type": ["Thing","prov:Entity","sosa:Platform"],
       "@id":"_:IMO_1234567",
@@ -114,7 +120,7 @@
       "dct:type": "https://vocab.nerc.ac.uk/collection/L05/31",
       "name": "RV OurBigShip"
     },
-	
+  
     {
       "@type":"DefinedTerm",  
       "@id":"http://purl.obolibrary.org/obo/ENVO_00002150",
@@ -126,27 +132,24 @@
       "@id":"_:NCBI_txid1874687",
       "name": "marine plankton metagenome",
       "termCode":"NCBI:txid1874687"
-    },	
-
-
-
+    },
 
 
     {
       "@type": ["Action","prov:Activity"],
-	  "identifier": "prefiltering_1",
+      "identifier": "prefiltering_1",
       "dct:type":"material processing",
-	  "name":"pre-filtering Jan 2021 water samples",
+      "name":"pre-filtering Jan 2021 water samples",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
         "name":"RV OurBigShip on-board lab"
       },
       "startTime": "2021-01-01",
       "endTime": "2021-01-01",
-      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0002"},
+      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0003"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
-        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0003"},
         "dcat:hadRole":  "field and laboratory technician"
       },
       "prov:used": [
@@ -160,11 +163,12 @@
       "object":{"@id":"_:BigProject_belgium_water_10m"},
       "generated": {"@id":"_:BigProject_belgium_water_10m_1000um_r1"}
     },
-	
+  
     {
       "@type": ["Action","prov:Activity"],
-	  "identifier": "storing_onboard_1",
-      "dct:type":"storing",
+      "identifier": "storing_onboard_1",
+      "dct:type": ["storing", "short-term"],
+      "name": "cold storage subsample 1 (Jan 2021 for flowcam)",
       "additionalType": "short-term storage",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
@@ -172,10 +176,10 @@
       },
       "startTime": "2021-01-01",
       "endTime": "2021-01-01",
-      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0002"},
+      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0003"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
-        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0003"},
         "dcat:hadRole":  "field and laboratory technician"
       },
       "description":"+4 C",
@@ -183,11 +187,11 @@
       "object": {"@id":"_:BigProject_belgium_water_10m_1000um_r1"}
     },
 
-	{
+  {
       "@type": ["Action", "prov:Activity"],
-	  "identifier": "flowcam_imaging",
+      "identifier": "flowcam_imaging",
       "dct:type": "material processing",
-	  "name": "FlowCam imaging Jan 2021 samples",
+      "name": "FlowCam imaging Jan 2021 samples",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
         "name": "Nice Marine Station",
@@ -210,14 +214,15 @@
         "@type": ["Thing", "Dataset"],
         "description": "The images and species list stored locally in /Users/NMSlab/flowcam/20210101/BigProject/"
       }
-  },
-	  {
+    },
+    {
       "@type": ["Action", "prov:Activity"],
-	  "identifier": "flowcam_speciesidentification",
+    "identifier": "flowcam_speciesidentification",
       "dct:type": "data processing",
       "name": "FlowCam species identification Jan 2021 samples",
       "description": "Identification of species on images from the FlowCam, using the FlowCam software",
       "startTime": "2021-01-01",
+      "endTime": "2021-01-01",
       "prov:wasAssociatedWith": {"@id": "https://orcid.org/0000-0001-0001-0002"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
@@ -228,10 +233,10 @@
         "@type":"MediaObject",
         "description":"The images stored locally in /Users/NMSlab/flowcam/20210101/BigProject/. The settings are included in the file flowcam-software-settings.txt in this dataset"
         },
-	{"type":"MediaObject",
-	 "@id":"https://BioImages.eu/reference/D-5462",
-	 "description":"The reference library used"
-	}
+        {"type":"MediaObject",
+        "@id":"https://BioImages.eu/reference/D-5462",
+        "description":"The reference library used"
+        }
       ],
       "generated":{
         "@type":"MediaObject",
@@ -241,14 +246,15 @@
         {"@id": "_:VisualSpreadsheet_FlowCam"}
       ]
     },
-	
-	{
-	  "@type": ["Action", "prov:Activity"],
-	  "identifier": "flowcam_speciesQC",
+  
+  {
+    "@type": ["Action", "prov:Activity"],
+    "identifier": "flowcam_speciesQC",
       "dct:type": "data processing",
-      "name": "FlowCam species identification QC Jan 2021 samples",
+      "name": "QC on FlowCam species identification Jan 2021 samples",
       "description": "Manual QC on the species identification performed by the FlowCam software, and putting the approved species information and images in files to be published", 
       "startTime": "2021-01-01",
+      "endTime": "2021-01-01",
       "prov:wasAssociatedWith": {"@id": "https://orcid.org/0000-0001-0001-0002"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
@@ -266,6 +272,6 @@
       "prov:used": [
         {"@id":"_:classification_QC"}
       ]
-	}
+  }
   ]
 }
