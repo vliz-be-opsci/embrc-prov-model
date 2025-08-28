@@ -18,15 +18,22 @@
     {
       "@type": "Organization",
       "@id":"https://edmo.seadatanet.org/report/00000",
-      "name": "Nice Marine Station",
+      "name": "NiceMarineStation",
       "mainEntityOfPage":"https://NiceMarineStation.eu",
       "email":"info@nicemarinestation.eu",
       "identifier": "https://edmo.seadatanet.org/report/00000",
-	  "address": {"@type": "PostalAddress",
-	    "addressLocality": "Ostend, Belgium",
-	    "streetAddress": "NiceMarineStation Rd"
-	  }
-	},
+	    "address": 
+        {"@type": "PostalAddress",
+	      "addressLocality": "Ostend, Belgium",
+	      "streetAddress": "NiceMarineStation Rd"
+	      }
+	  },
+    {
+      "@type": "Organization",
+      "@id":"_:Belgium_ABS_National_Focal_Point",
+      "name": "Belgium ABS National Focal Point",
+      "mainEntityOfPage": "https://absch.cbd.int/en/countries/BE"
+    },
     {
       "@type": "Place",
       "@id": "http://marineregions.org/mrgid/3293",
@@ -56,7 +63,7 @@
       "description":"Collecting and pre-filtering (removal of larger particles) of water samples to be used later for FlowCam and eDNA work",
       "url":"https://www.protocols.io/BigProject_WaterSamples.pdf"
     },
-	{
+    {
       "@type":["Thing","prov:Entity","CreativeWork","Howto"],
       "@id":"_:CTD_standard_procedure_2",
       "name":"CTD_standard_procedure_2",
@@ -73,12 +80,11 @@
     },
     {
       "@type": ["Thing","prov:Entity","sosa:Sensor"],
-      "@id":"_:BigHappyOrganization_CTD#23",
-      "name": "BigHappyOrganization CTD#23",
+      "@id":"_:NiceMarineStation_CTD#23",
+      "name": "NiceMarineStation CTD#23",
       "dct:type": "https://vocab.nerc.ac.uk/collection/L05/current/130",
       "sosa:isHostedBy": {"@id":"_:IMO_1234567"}
     },
-
     {
       "@type": ["Thing","prov:Entity","sosa:Platform"],
       "@id":"_:IMO_1234567",
@@ -100,15 +106,11 @@
         "prov:agent": {"@id": "https://edmo.seadatanet.org/report/00000"},
         "dcat:hadRole": "receiving agent"
       },
-      "issuer": {
-        "@type": "Organization",
-        "name": "Belgium ABS National Focal Point",
-        "mainEntityOfPage": "https://absch.cbd.int/en/countries/BE"
-      },
+      "issuer": {"@id":"_:Belgium_ABS_National_Focal_Point"},
       "validFrom": "2021-01-01",
       "validUntil": "2022-01-01",
       "prov:wasInfluencedBy": {"@id":"_:BigProject_belgium_water_10m"} 
-    }, 	
+    }, 
 	
 	{
       "@type":"DefinedTerm",  
@@ -121,17 +123,14 @@
       "@id":"_:NCBI_txid1874687",
       "name": "marine plankton metagenome",
       "termCode":"NCBI:txid1874687"
-    },	
-
-
-
+    },
 
 
     {
       "@type": ["Action","prov:Activity","sosa:Sampling"],
+      "@id":"_:water_sampling_Jan2021",
       "dct:type":"sampling",  
-	  "identifier":"sampling_water",
-	  "name": "water sampling Jan 2021",
+      "name": "water sampling Jan 2021",
       "prov:location": {"@id":"http://marineregions.org/mrgid/3293"},
       "startTime": "2021-01-01",
       "endTime": "2021-01-01",
@@ -146,14 +145,14 @@
         {"@id":"_:ABSPermit_ircc2345678"}
       ],
       "prov:generated": {"@id":"_:BigProject_belgium_water_10m"},
-      "sosa:madeBySampler": {"@id":"_:NiceMarineStation rosette#1"}
+      "sosa:madeBySampler": {"@id":"_:NiceMarineStation_rosette#1"}
     },
 	
     {
       "@type": ["Action","prov:Activity"],
-	  "identifier":"observing_water",
+	    "@id":"_:observing_water_Jan2021",
       "dct:type":"observing",
-	  "name": "Observing, in-situ measurement of water properties Jan 2021",
+	    "name": "in-situ measurement of water properties Jan 2021",
       "prov:location": {"@id":"http://marineregions.org/mrgid/3293"},
       "startTime": "2021-01-01",
       "endTime": "2021-01-01",
@@ -164,7 +163,7 @@
         "dcat:hadRole":  "field and laboratory technician"
       },
       "prov:used": {"@id":"_:CTD_standard_procedure_2"},
-      "sosa:madeBySampler": {"@id":"_:NiceMarineStation CTD#23"},
+      "sosa:madeBySampler": {"@id":"_:NiceMarineStation_CTD#23"},
       "prov:generated": [
         {
           "@type":"sosa:Observation",
