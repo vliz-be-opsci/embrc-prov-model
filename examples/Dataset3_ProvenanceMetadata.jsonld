@@ -44,9 +44,11 @@
       "@type": "Organization",
       "@id": "_:SequencingIsUsHQ",
       "name": "SequencingIsUs HQ",
-      "address": "@type": "PostalAddress",
-	    "addressLocality": "Paris, France",
-	    "streetAddress": "Rue DNA 3311"
+      "address": {
+        "@type": "PostalAddress",
+	      "addressLocality": "Paris, France",
+	      "streetAddress": "Rue DNA 3311"
+      }
     },
 	
     {
@@ -123,12 +125,14 @@
       "@type": ["Place", "prov:Location"],
       "@id": "_:SequencingIsUsPlace",
       "name": "SequencingIsUs",
-      "address": "@type": "PostalAddress",
-	    "addressLocality": "Paris, France",
-	    "streetAddress": "Rue DNA 3311"
-    },    },
+      "address": {
+        "@type": "PostalAddress",
+	      "addressLocality": "Paris, France",
+	      "streetAddress": "Rue DNA 3311"
+      }
+    },
 	
-	{
+	  {
       "@type":"DefinedTerm",  
       "@id":"http://purl.obolibrary.org/obo/ENVO_00002150",
       "name": "coastal sea water",
@@ -149,7 +153,7 @@
 	{
       "@type": ["Thing","prov:Entity","ssn:System"],
       "@id":"_:Johnson_Freezer_lab",
-      "name": Johnson Samples Freezer (lab)",
+      "name": "Johnson Samples Freezer (lab)"
     },	
 	
 	
@@ -243,7 +247,7 @@
       "@type": ["Action", "prov:Activity"],
       "identifier": "storing_lab",
       "dct:type": "storing",
-	  "name":"cold storage at Nice Marine Station Jan 2021 samples",
+      "name":"cold storage at Nice Marine Station Jan 2021 samples",
       "additionalType":"medium-term storage",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
@@ -258,14 +262,16 @@
         "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
         "dcat:hadRole":  "laboratory technician"
       },
-      "prov:used": {
+      "prov:used": [ 
+        {
           "@type": ["Thing","prov:Entity","CreativeWork","Howto"],
           "name":"BigProject_eDNAstorage",
           "description": "protocol for filters to be stored in tubes at -80"
         },
+        {"@id":"_:Johnson_Freezer_lab"}
+      ],
       "object": {"@id": "_:BigProject_belgium_water_10m_1000um_r2_3um"},
-      "descriptions": "-80 C",
-      "prov:used": {"@id":"_:Johnson_Freezer_lab"},
+      "descriptions": "-80 C" 
     },
 	
     {
@@ -285,7 +291,7 @@
         {
           "@type": "prov:Association",
           "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
-          "dcat:hadRole":  laboratory technician"
+          "dcat:hadRole":  "laboratory technician"
         },
         {
         "@type": "prov:Association",
@@ -310,7 +316,7 @@
       "@type": ["Action", "prov:Activity"],
       "identifier": "transferring_DNAfilter",
       "dct:type": "material acquiring",
-	  "name":" Transferring ownership of DNA filter Jan 2021 samples"
+	  "name":" Transferring ownership of DNA filter Jan 2021 samples",
       "startTime": "2021-06-01",
       "endTime": "2021-06-01",
       "object": {"@id": "_:BigProject_belgium_water_10m_1000um_r2_3um"},
@@ -336,7 +342,7 @@
       "@type": ["Action", "prov:Activity"],
       "identifier": "storing_sequenceingcentre",
       "dct:type": "storing",
-	  "name":"Cold storage at SequencingIsUs Jan 2021 samples"
+	  "name":"Cold storage at SequencingIsUs Jan 2021 samples",
       "additionalType": "medium-term storage",
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-01-01",
@@ -362,7 +368,7 @@
     {
       "@type": ["Action", "prov:Activity"],
       "identifier": "DNA_extraction",
-      "dct:type": "material processing"
+      "dct:type": "material processing",
 	  "name":"DNA extraction 2021 samples",
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-10-08",
@@ -439,7 +445,7 @@
           "description": "BID strategy, as described in Belser et al. (2023)"
         },
         {
-          "@type": ["Thing", "prov:Entity, "ssn:System""],
+          "@type": ["Thing", "prov:Entity", "ssn:System"],
           "name": "T100 Thermal Cycler (BIORAD)",
           "dct:type": "https://vocab.nerc.ac.uk/collection/L05/current/LAB50/"
         }
@@ -450,9 +456,9 @@
 	
     {
       "@type": ["Action", "prov:Activity"],
-      "identifier: "sequencing",
+      "identifier": "sequencing",
       "dct:type": "material processing", 
-	  "name":"sequencing Jan 2021 samples",
+      "name":"sequencing Jan 2021 samples",
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-10-08",
       "endTime": "2021-10-08",

@@ -164,8 +164,8 @@
         "dcat:hadRole":  "field and laboratory technician"
       },
       "prov:used": {"@id":"_:CTD_standard_procedure_2"},
-      "sosa:madeBySampler": {"@id":"_:NiceMarineStation CTD#23"}
-	  "prov:generated": [
+      "sosa:madeBySampler": {"@id":"_:NiceMarineStation CTD#23"},
+      "prov:generated": [
         {
           "@type":"sosa:Observation",
           "sosa:hasFeatureOfInterest":"http://vocab.nerc.ac.uk/collection/P02/current/TEMP"

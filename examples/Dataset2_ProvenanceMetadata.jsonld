@@ -209,8 +209,8 @@
       "generated": {
         "@type": ["Thing", "Dataset"],
         "description": "The images and species list stored locally in /Users/NMSlab/flowcam/20210101/BigProject/"
-      },
-	  
+      }
+  },
 	  {
       "@type": ["Action", "prov:Activity"],
 	  "identifier": "flowcam_speciesidentification",
