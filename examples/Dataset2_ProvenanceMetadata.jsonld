@@ -167,9 +167,9 @@
     {
       "@type": ["Action","prov:Activity"],
       "identifier": "storing_onboard_1",
-      "dct:type": ["storing", "short-term"],
+      "dct:type": "storing",
+      "additionalType": "short-term",
       "name": "cold storage subsample 1 (Jan 2021 for flowcam)",
-      "additionalType": "short-term storage",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
         "name":"RV OurBigShip on-board lab"

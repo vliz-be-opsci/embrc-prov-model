@@ -17,7 +17,7 @@
     },
     {
       "@type": "Person",
-      "@id": "https://orcid.org/0000-0001-0001-0002",
+      "@id": "https://orcid.org/0000-0001-0001-0003",
       "name": "F. Lee",
       "identifier": "https://orcid.org/0000-0001-0001-0003",
       "email": "f.lee@somewhere.com",
@@ -31,14 +31,14 @@
     {
       "@type": "Organization",
       "@id":"https://edmo.seadatanet.org/report/00000",
-      "name": "Nice Marine Station",
+      "name": "NiceMarineStation",
       "mainEntityOfPage":"https://NiceMarineStation.eu",
       "email":"info@nicemarinestation.eu",
-      "identifier": "https://edmo.seadatanet.org/report/00000",	 
-	  "address": {"@type": "PostalAddress",
-	    "addressLocality": "Ostend, Belgium",
-	    "streetAddress": "NiceMarineStation Rd"
-	  }
+      "identifier": "https://edmo.seadatanet.org/report/00000",   
+      "address": {"@type": "PostalAddress",
+        "addressLocality": "Ostend, Belgium",
+        "streetAddress": "NiceMarineStation Rd"
+      }
     },
     {
       "@type": "Organization",
@@ -46,22 +46,13 @@
       "name": "SequencingIsUs HQ",
       "address": {
         "@type": "PostalAddress",
-	      "addressLocality": "Paris, France",
-	      "streetAddress": "Rue DNA 3311"
+        "addressLocality": "Paris, France",
+        "streetAddress": "Rue DNA 3311"
       }
     },
-	
+  
+
     {
-      "@type": ["Thing","prov:Entity","sosa:Sample"],
-      "@id":"_:BigProject_belgium_water_10m",
-      "name": "BigProject_belgium_water_10m",
-      "description": "Water sample to determine plankton community and extract DNA",
-      "keywords": [
-        {"@id":"http://purl.obolibrary.org/obo/ENVO_00002150"}, 
-        {"@id":"_:NCBI_txid1874687"} 
-      ]
-    },
-	{
       "@type": ["Thing","prov:Entity","sosa:Sample"],
       "@id":"_:BigProject_belgium_water_10m_1000um_r2",
       "name": "BigProject_belgium_water_10m_1000um_r2",
@@ -79,13 +70,18 @@
       "keywords": [
         {"@id":"http://purl.obolibrary.org/obo/ENVO_00002150"}, 
         {"@id":"_:NCBI_txid1874687"} 
+      ]
+    },
+    {
+      "@type": ["Thing", "prov:Entity", "sosa:Sample"],
+      "@id": "_:SiU_BP_0001",
+      "name": "SiU_BP_0001",
+      "description": "water sample collected from 10m depth and filtered between 3-1000um. Note: is same as BigProject_belgium_water_10m_1000um_r2_3um",
+      "keywords": [
+        {"@id":"http://purl.obolibrary.org/obo/ENVO_00002150"}, 
+        {"@id":"_:NCBI_txid1874687"} 
       ],
-	  "identifier" : {
-	    "@id": "_:SiU_BP_0001",
-		"@type": "PropertyValue",
-		"propertyID" : "SequencingIsUs.localSampleID",
-		"value" : "SiU_BP_0001"
-	  }
+      "sameAs" : {"@id": "_:BigProject_belgium_water_10m_1000um_r2_3um"}
     },
     {
       "@type": ["Thing", "prov:Entity", "sosa:Sample"],
@@ -105,34 +101,19 @@
       "name": "SiU_BP_0001_c",
       "description": "DNA prepared for sequencing platform"
     },
-	
-    {
-      "@type":["Thing","prov:Entity","CreativeWork","Howto"],
-      "@id":"_:BigProject_WaterSamples",
-      "name":"BigProject_WaterSamples",
-      "description":"Collecting and pre-filtering (removal of larger particles) of water samples to be used later for FlowCam and eDNA work",
-      "url":"https://www.protocols.io/BigProject_WaterSamples.pdf"
-    },	
-    {
-      "@type":["Thing","prov:Entity","CreativeWork","Howto"],
-      "@id":"_:BigProject_eDNAfiltering",
-      "name":"BigProject_eDNAfiltering",
-      "description":"instructions for water samples filtering - to capture the biological material on the filter membrane which will be used for DNA extraction",
-      "url":"https://www.protocols.io/BigProject_eDNAfiltering.pdf"
-    },
-	
+  
     {
       "@type": ["Place", "prov:Location"],
       "@id": "_:SequencingIsUsPlace",
-      "name": "SequencingIsUs",
+      "name": "SequencingIsUs HQ",
       "address": {
         "@type": "PostalAddress",
-	      "addressLocality": "Paris, France",
-	      "streetAddress": "Rue DNA 3311"
+        "addressLocality": "Paris, France",
+        "streetAddress": "Rue DNA 3311"
       }
     },
-	
-	  {
+  
+    {
       "@type":"DefinedTerm",  
       "@id":"http://purl.obolibrary.org/obo/ENVO_00002150",
       "name": "coastal sea water",
@@ -143,37 +124,60 @@
       "@id":"_:NCBI_txid1874687",
       "name": "marine plankton metagenome",
       "termCode":"NCBI:txid1874687"
-    },	
-	{
+    },  
+  {
       "@type": ["Thing","prov:Entity","ssn:System"],
       "@id":"_:Johnson_Freezer_onboard",
       "name": "Johnson Samples Freezer (on-board)",
       "sosa:isHostedBy": {"@id":"_:IMO_1234567"}
     },
-	{
+  {
       "@type": ["Thing","prov:Entity","ssn:System"],
       "@id":"_:Johnson_Freezer_lab",
       "name": "Johnson Samples Freezer (lab)"
-    },	
-	
-	
-	
-	
+    },  
+  
+    {
+      "@type": ["Thing","prov:Entity","sosa:Platform"],
+      "@id":"_:IMO_1234567",
+      "identifier": "IMO:1234567",
+      "dct:type": "https://vocab.nerc.ac.uk/collection/L05/31",
+      "name": "RV OurBigShip"
+    },
+  
+    {
+      "@type":["Thing","prov:Entity","CreativeWork","Howto"],
+      "@id":"_:BigProject_WaterSamples",
+      "name":"BigProject_WaterSamples",
+      "description":"Collecting and pre-filtering (removal of larger particles) of water samples to be used later for FlowCam and eDNA work",
+      "url":"https://www.protocols.io/BigProject_WaterSamples.pdf"
+    },  
+    {
+      "@type":["Thing","prov:Entity","CreativeWork","Howto"],
+      "@id":"_:BigProject_eDNAfiltering",
+      "name":"BigProject_eDNAfiltering",
+      "description":"instructions for water samples filtering - to capture the biological material on the filter membrane which will be used for DNA extraction",
+      "url":"https://www.protocols.io/BigProject_eDNAfiltering.pdf"
+    },
+
+
+
+  
     {
       "@type": ["Action","prov:Activity"],
-	  "identifier": "prefiltering_2",
+      "@id": "_:pre_filtering_Jan_2021_water_samples",
       "dct:type":"material processing",
-	  "name":"pre-filtering Jan 2021 water samples",
+      "name":"pre-filtering Jan 2021 water samples",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
         "name":"RV OurBigShip on-board lab"
       },
       "startTime": "2021-01-01",
       "endTime": "2021-01-01",
-      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0002"},
+      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0003"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
-        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0003"},
         "dcat:hadRole":  "field and laboratory technician"
       },
       "prov:used": [
@@ -186,32 +190,32 @@
       ],
       "object":{"@id":"_:BigProject_belgium_water_10m"},
       "generated": {"@id":"_:BigProject_belgium_water_10m_1000um_r2"}
-    },	
-	
+    },  
+  
     {
       "@type": ["Action","prov:Activity"],
-	  "identifier": "finefiltering",
+      "@id": "_:fine_filtering_Jan_2021_water_for_sequencing",
       "dct:type":"material processing",
-	  "name":"second, fine filtering Jan 2021 water for sequencing",
+      "name":"fine filtering Jan 2021 water for sequencing",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
         "name":"RV OurBigShip on-board lab"
       },
       "startTime": "2021-01-01",
       "endTime": "2021-01-01",
-      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0002"},
+      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0003"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
-        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0003"},
         "dcat:hadRole":  "field and laboratory technician"
       },
       "prov:used": [
         {"@id":"_:BigProject_eDNAfiltering"},
-		{
+        {
           "@type":["Thing","prov:Entity","ssn:System"],
           "name":"Peristaltic pump (including pump heads, appropriate silicone tubes, stainless steel filter holders)",
           "dct:type":"Masterflex - EW-07522-20"
-		},
+        },
         {
           "@type":["Thing","prov:Entity","ssn:System"],
           "name":"membrane filter",
@@ -220,35 +224,37 @@
       ],
       "object":{"@id":"_:BigProject_belgium_water_10m_1000um_r2"},
       "generated":{"@id":"_:BigProject_belgium_water_10m_1000um_r2_3um"}
-    },	
-	
+    },  
+  
     {
       "@type": ["Action","prov:Activity"],
-	  "identifier":"storing_onboard_2",
-      "dct:type":"storing",
+      "@id":"_:cold_storage_subsample_2_Jan_2021",
+      "dct:type": "storing",
+      "additionalType":"short-term",
+      "name":"cold storage subsample 2 Jan 2021 (for sequencing)",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
         "name":"RV OurBigShip on-board lab"
       },
       "startTime": "2021-01-01",
       "endTime": "2021-01-01",
-      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0002"},
+      "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0003"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
-        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0003"},
         "dcat:hadRole":  "field and laboratory technician"
       },
       "description":"-20 C",
       "prov:used": {"@id":"_:Johnson_Freezer_onboard"},
       "object": {"@id":"_:BigProject_belgium_water_10m_1000um_r2_3um"}
-    },	
+    },  
 
     {
       "@type": ["Action", "prov:Activity"],
-      "identifier": "storing_lab",
+      "@id": "_:cold storage_at_Nice_Marine_Station_Jan_2021_samples",
       "dct:type": "storing",
       "name":"cold storage at Nice Marine Station Jan 2021 samples",
-      "additionalType":"medium-term storage",
+      "additionalType":"medium-term",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
         "name": "Nice Marine Station",
@@ -256,43 +262,38 @@
       },
       "startTime": "2021-01-01",
       "endTime": "2021-06-01",
-      "prov:wasAssociatedWith": {"@id": "https://orcid.org/0000-0001-0001-0002"},
+      "prov:wasAssociatedWith": {"@id": "https://orcid.org/0000-0001-0001-0003"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
-        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
-        "dcat:hadRole":  "laboratory technician"
+        "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0003"},
+        "dcat:hadRole":  "field and laboratory technician"
       },
       "prov:used": [ 
         {
           "@type": ["Thing","prov:Entity","CreativeWork","Howto"],
           "name":"BigProject_eDNAstorage",
-          "description": "protocol for filters to be stored in tubes at -80"
+          "description": "filters to be stored in tubes at -80"
         },
         {"@id":"_:Johnson_Freezer_lab"}
       ],
       "object": {"@id": "_:BigProject_belgium_water_10m_1000um_r2_3um"},
       "descriptions": "-80 C" 
     },
-	
+  
     {
       "@type": ["Action", "prov:Activity"],
-      "identifier": "transporting_DNAfilter",
+      "@id": "transporting_DNA_filters_from_Jan_2021_samples",
       "dct:type": "transporting",
-	  "name":"transporting DNA filters from Jan 2021 samples",
+      "name":"transporting DNA filters from Jan 2021 samples",
       "startTime": "2021-06-01",
       "endTime": "2021-06-01",
       "object": {"@id": "_:BigProject_belgium_water_10m_1000um_r2_3um"},
       "description": "dry ice, -80 C",
       "prov:wasAssociatedWith": [
-        {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        {"@id": "https://orcid.org/0000-0001-0001-0003"},
         {"@id": "_:DNATechnician"}
       ],
       "prov:qualifiedAssociation":[
-        {
-          "@type": "prov:Association",
-          "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
-          "dcat:hadRole":  "laboratory technician"
-        },
         {
         "@type": "prov:Association",
         "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0002"},
@@ -311,17 +312,17 @@
       },
       "toLocation": {"@id": "_:SequencingIsUsPlace"}
     },
-	
+  
     {
       "@type": ["Action", "prov:Activity"],
-      "identifier": "transferring_DNAfilter",
+      "@id": "transferring_ownership_of_DNA_filter_Jan_2021_samples",
       "dct:type": "material acquiring",
-	  "name":" Transferring ownership of DNA filter Jan 2021 samples",
+      "name":" Transferring ownership of DNA filter Jan 2021 samples",
       "startTime": "2021-06-01",
       "endTime": "2021-06-01",
       "object": {"@id": "_:BigProject_belgium_water_10m_1000um_r2_3um"},
       "prov:wasAssociatedWith": [
-        {"@id": "https://orcid.org/0000-0001-0001-0002"},
+        {"@id": "https://orcid.org/0000-0001-0001-0003"},
         {"@id": "_:DNATechnician"}
       ],
       "prov:qualifiedAssociation":[
@@ -337,13 +338,13 @@
         }
       ]
     },
-	
+  
     {
       "@type": ["Action", "prov:Activity"],
-      "identifier": "storing_sequenceingcentre",
+      "@id": "cold_storage_at_SequencingIsUs_Jan_2021_samples",
       "dct:type": "storing",
-	  "name":"Cold storage at SequencingIsUs Jan 2021 samples",
-      "additionalType": "medium-term storage",
+      "additionalType": "medium-term",
+      "name":"Cold storage at SequencingIsUs Jan 2021 samples",
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-01-01",
       "endTime": "2021-10-08",
@@ -357,19 +358,19 @@
           "@type": ["Thing","prov:Entity","CreativeWork","Howto"],
           "description": "storing filter membranes in dry freezer at -80C until further processing "
         },
-      "object": {"@id": "_:BigProject_belgium_water_10m_1000um_r2_3um"},
+      "object": {"@id": "_:SiU_BP_0001"},
       "descriptions": "-80 C",
       "storageDevice": {
         "name": "SiU samples freezer #1", 
         "type": "freezer"
       }
     },
-	
+  
     {
       "@type": ["Action", "prov:Activity"],
-      "identifier": "DNA_extraction",
+      "@id": "DNA_extraction_Jan_2021_samples",
       "dct:type": "material processing",
-	  "name":"DNA extraction 2021 samples",
+      "name":"DNA extraction Jan 2021 samples",
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-10-08",
       "endTime": "2021-10-08",
@@ -386,7 +387,7 @@
         {
           "@type": ["Thing", "prov:Entity","ssn:System"],
           "name": "centrifuge",
-		  "dct:type":"https://vocab.nerc.ac.uk/collection/L05/current/83/"
+      "dct:type":"https://vocab.nerc.ac.uk/collection/L05/current/83/"
         },
         {
           "@type": ["Thing", "prov:Entity"],
@@ -396,12 +397,12 @@
       "object": {"@id": "_:SiU_BP_0001"},
       "generated": {"@id": "_:SiU_BP_0001_a"}
     },
-	
+  
     {
       "@type": ["Action", "prov:Activity"],
-      "identifier": "DNA_quantification",
+      "@id": "DNA_quantification_Jan_2021_samples",
       "dct:type": "material processing",
-	  "name":"DNA quantification Jan 2021 samples",
+      "name":"DNA quantification Jan 2021 samples",
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-10-08",
       "endTime": "2021-10-08",
@@ -424,12 +425,12 @@
       "object": {"@id": "_:SiU_BP_0001_a"},
       "generated": {"@id": "_:SiU_BP_0001_b"}
     },
-	
+  
     {
       "@type": ["Action", "prov:Activity"],
-      "identifier": "library_preparation",
+      "@id": "Library_preparation_(18SrRNA)_Jan_2021_samples",
       "dct:type": "material processing", 
-	  "name":"Library preparation (18S rRNA) Jan 2021 samples",
+      "name":"Library preparation (18S rRNA) Jan 2021 samples",
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-10-08",
       "endTime": "2021-10-08",
@@ -453,10 +454,10 @@
       "object": {"@id": "_:SiU_BP_0001_b"},
       "generated": {"@id": "_:SiU_BP_0001_c"}
     },
-	
+  
     {
       "@type": ["Action", "prov:Activity"],
-      "identifier": "sequencing",
+      "@id": "sequencing_Jan_2021_samples",
       "dct:type": "material processing", 
       "name":"sequencing Jan 2021 samples",
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
@@ -487,12 +488,15 @@
         }
       ],
       "object": {"@id": "_:SiU_BP_0001_c"},
-      "generated": "SiU_BP_0001_c_data. Digital sequences, ready for QC. Data available upon request to BigProject (in folder BigProject_2021/fromSequencer)"
+      "generated": {
+        "@type": ["Thing", "Dataset"],
+        "description": "SiU_BP_0001_c_data. Digital sequences, ready for QC. Data available upon request to BigProject (in folder BigProject_2021/fromSequencer)"
+      }
     },
-	
+  
     {
       "@type": ["Action", "prov:Activity"],
-      "identifier": "illumina_filter",
+      "@id": "Illumina_filter_Jan_2021_samples",
       "dct:type": "data processing",
       "name": "Illumina filter Jan 2021 samples",
       "description": "QC: filtering of raw data to remove unwanted clusters and produce the final 18s sequences",
@@ -509,8 +513,14 @@
           "name": "Illumina filtering with proprietary software",
           "description": "Filtering of raw data to remove clusters that have 'too much' intensity corresponding to bases other than the called base. By default, the purity of the signal from each cluster is examined over the first 25 cycles and calculated as Chastity = Highest_Intensity / (Highest_Intensity + Next_Highest_Intensity) for each cycle. The default filtering implemented at the base calling stage allows at most one cycle that is less than the Chastity threshold (0,6)."
         },
-      "object": "Raw digital sequences produced by the sequencing step. See SEQUENCING. Data available upon request to BigProject (in folder BigProject_2021/fromSequencer)",
-      "generated": "Filtered digital sequences produced by the filtering step. Data available upon request to BigProject (in folder BigProject_2021/QC/fromIllumina)"
+      "object": {
+        "@type": ["Thing", "Dataset"],
+        "description": "Raw digital sequences produced by the sequencing step. See SEQUENCING. Data available upon request to BigProject (in folder BigProject_2021/fromSequencer)"
+      },
+      "generated": {
+        "@type": ["Thing", "Dataset"],
+        "description": "Filtered digital sequences produced by the filtering step. Data available upon request to BigProject (in folder BigProject_2021/QC/fromIllumina)"
+      }
     }
   ]
 }
