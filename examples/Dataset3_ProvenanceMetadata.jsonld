@@ -173,7 +173,9 @@
         "name":"RV OurBigShip on-board lab"
       },
       "startTime": "2021-01-01",
+      "prov:startTime": "2021-01-01",
       "endTime": "2021-01-01",
+      "prov:endTime": "2021-01-01",
       "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0003"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
@@ -202,7 +204,9 @@
         "name":"RV OurBigShip on-board lab"
       },
       "startTime": "2021-01-01",
+      "prov:startTime": "2021-01-01",
       "endTime": "2021-01-01",
+      "prov:endTime": "2021-01-01",
       "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0003"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
@@ -237,7 +241,9 @@
         "name":"RV OurBigShip on-board lab"
       },
       "startTime": "2021-01-01",
+      "prov:startTime": "2021-01-01",
       "endTime": "2021-01-01",
+      "prov:endTime": "2021-01-01",
       "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0003"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
@@ -261,7 +267,9 @@
         "address": "NiceMarineStation Rd, Ostend, Belgium"
       },
       "startTime": "2021-01-01",
+      "prov:startTime": "2021-01-01",
       "endTime": "2021-06-01",
+      "prov:endTime": "2021-06-01",
       "prov:wasAssociatedWith": {"@id": "https://orcid.org/0000-0001-0001-0003"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
@@ -286,7 +294,9 @@
       "dct:type": "transporting",
       "name":"transporting DNA filters from Jan 2021 samples",
       "startTime": "2021-06-01",
+      "prov:startTime": "2021-06-01",
       "endTime": "2021-06-01",
+      "prov:endTime": "2021-06-01",
       "object": {"@id": "_:BigProject_belgium_water_10m_1000um_r2_3um"},
       "description": "dry ice, -80 C",
       "prov:wasAssociatedWith": [
@@ -319,7 +329,9 @@
       "dct:type": "material acquiring",
       "name":" Transferring ownership of DNA filter Jan 2021 samples",
       "startTime": "2021-06-01",
+      "prov:startTime": "2021-06-01",
       "endTime": "2021-06-01",
+      "prov:endTime": "2021-06-01",
       "object": {"@id": "_:BigProject_belgium_water_10m_1000um_r2_3um"},
       "prov:wasAssociatedWith": [
         {"@id": "https://orcid.org/0000-0001-0001-0003"},
@@ -347,7 +359,9 @@
       "name":"Cold storage at SequencingIsUs Jan 2021 samples",
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-01-01",
+      "prov:startTime": "2021-01-01",
       "endTime": "2021-10-08",
+      "prov:endTime": "2021-10-08",
       "prov:wasAssociatedWith": {"@id": "_:DNATechnician"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
@@ -373,7 +387,9 @@
       "name":"DNA extraction Jan 2021 samples",
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-10-08",
+      "prov:startTime": "2021-10-08",
       "endTime": "2021-10-08",
+      "prov:endTime": "2021-10-08",
       "prov:wasAssociatedWith": {"@id": "_:DNATechnician"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
@@ -405,7 +421,9 @@
       "name":"DNA quantification Jan 2021 samples",
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-10-08",
+      "prov:startTime": "2021-10-08",
       "endTime": "2021-10-08",
+      "prov:endTime": "2021-10-08",
       "prov:wasAssociatedWith": {"@id": "_:DNATechnician"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
@@ -433,7 +451,9 @@
       "name":"Library preparation (18S rRNA) Jan 2021 samples",
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-10-08",
+      "prov:startTime": "2021-10-08",
       "endTime": "2021-10-08",
+      "prov:endTime": "2021-10-08",
       "prov:wasAssociatedWith": {"@id": "_:DNATechnician"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
@@ -462,7 +482,9 @@
       "name":"sequencing Jan 2021 samples",
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-10-08",
+      "prov:startTime": "2021-10-08",
       "endTime": "2021-10-08",
+      "prov:endTime": "2021-10-08",
       "prov:wasAssociatedWith": {"@id": "_:DNATechnician"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
@@ -501,7 +523,9 @@
       "name": "Illumina filter Jan 2021 samples",
       "description": "QC: filtering of raw data to remove unwanted clusters and produce the final 18s sequences",
       "startTime": "2021-10-12",
+      "prov:startTime": "2021-10-12",
       "endTime": "2021-10-12",
+      "prov:endTime": "2021-10-12",
       "prov:wasAssociatedWith": {"@id": "_:DNATechnician"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",

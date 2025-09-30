@@ -133,7 +133,9 @@
       "name": "water sampling Jan 2021",
       "prov:location": {"@id":"http://marineregions.org/mrgid/3293"},
       "startTime": "2021-01-01",
+      "prov:startTime": "2021-01-01",
       "endTime": "2021-01-01",
+      "prov:endTime": "2021-01-01",
       "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0001"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
@@ -155,7 +157,9 @@
 	    "name": "in-situ measurement of water properties Jan 2021",
       "prov:location": {"@id":"http://marineregions.org/mrgid/3293"},
       "startTime": "2021-01-01",
+      "prov:startTime": "2021-01-01",
       "endTime": "2021-01-01",
+      "prov:endTime": "2021-01-01",
       "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0001"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",

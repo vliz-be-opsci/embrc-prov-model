@@ -145,7 +145,9 @@
         "name":"RV OurBigShip on-board lab"
       },
       "startTime": "2021-01-01",
+      "prov:startTime": "2021-01-01",
       "endTime": "2021-01-01",
+      "prov:endTime": "2021-01-01",
       "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0003"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
@@ -175,7 +177,9 @@
         "name":"RV OurBigShip on-board lab"
       },
       "startTime": "2021-01-01",
+      "prov:startTime": "2021-01-01",
       "endTime": "2021-01-01",
+      "prov:endTime": "2021-01-01",
       "prov:wasAssociatedWith": {"@id":"https://orcid.org/0000-0001-0001-0003"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
@@ -198,7 +202,9 @@
         "address": "NiceMarineStation Rd, Ostend, Belgium"
       },
       "startTime": "2021-01-01",
+      "prov:startTime": "2021-01-01",
       "endTime": "2021-01-01",
+      "prov:endTime": "2021-01-01",
       "prov:wasAssociatedWith": {"@id": "https://orcid.org/0000-0001-0001-0002"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
@@ -222,7 +228,9 @@
       "name": "FlowCam species identification Jan 2021 samples",
       "description": "Identification of species on images from the FlowCam, using the FlowCam software",
       "startTime": "2021-01-01",
+      "prov:startTime": "2021-01-01",
       "endTime": "2021-01-01",
+      "prov:endTime": "2021-01-01",
       "prov:wasAssociatedWith": {"@id": "https://orcid.org/0000-0001-0001-0002"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
@@ -254,7 +262,9 @@
       "name": "QC on FlowCam species identification Jan 2021 samples",
       "description": "Manual QC on the species identification performed by the FlowCam software, and putting the approved species information and images in files to be published", 
       "startTime": "2021-01-01",
+      "prov:startTime": "2021-01-01",
       "endTime": "2021-01-01",
+      "prov:endTime": "2021-01-01",
       "prov:wasAssociatedWith": {"@id": "https://orcid.org/0000-0001-0001-0002"},
       "prov:qualifiedAssociation":{
         "@type": "prov:Association",
