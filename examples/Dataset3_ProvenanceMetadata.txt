@@ -271,7 +271,7 @@ device:
 ## The provenance metadata for the final data processing activity (Step 6)
 <DataProcessing>
 name: Illumina filtering Jan 2021 samples 
-activity-type: material processing
+activity-type: digital processing
 description: QC: filtering of raw data to remove unwanted clusters and produce the final 18s sequences
 spatial-coverage: 2021-10-12
 agent: see DNA technician
