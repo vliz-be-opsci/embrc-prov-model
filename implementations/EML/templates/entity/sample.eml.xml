@@ -1,8 +1,9 @@
 <!-- Sample entity -->
-<sample id=”...”>
-    <identifier>{{the identifier of the sample}}</identifier>
-    <name>{{the name of the sample}}</name>
-    <taxonomicName>{{taxonomic name associated with the sample}}</taxonomicName>
-    <envoTerm>{{envo term associated with the sample}}</envoTerm>
-    <volume>{{the size (volume, weight, …) of the sample}}</volume>
+<sample id=”{{identifier of the sample}}”>
+    <title>{{the name of the sample}}</title>
+    <abstract>{{short description of the sample, including e.g. its size, volume, weight, ...}}</abstract>
+    <scientificName>{{scientific taxonomic name associated with the sample}}</scientificName>
+    <taxonID>{{taxonID of the taxonomic name associated with the sample}}</taxonID>
+    <taxonRank>{{taxon rank of the taxonomic name associated with the sample}}</taxonRank>
+    <keywords>{{the keyword(s) associated with the sample}}</keywords>
 </sample>

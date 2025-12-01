@@ -1,15 +1,14 @@
 <!-- Software entity -->
-<software>
+<software id="{{identifier of the software, being a URL or code}}">
     <title>{{name of the software used in the activity}}</title>
     <abstract>{{description of the software used in the activity}}</abstract>
     <version>{{version number of the software used in the activity}}</version>
+    <dependency>{{dependency info of the software}}</dependency>
+    <implementation>{{implementation info of the software}}</implementation>
     <distribution>
         <online>
             <url>{{endpoint to gain access to the software used in the activity }}</url>
         </online>
     <distribution>
-    <! -- Depending on the Software, it can be described with different properties -->
-    <dependency>{{dependency info of the software}}</dependency>
-    <implementation>{{implementation info of the software}}</implementation>
 </software>
 

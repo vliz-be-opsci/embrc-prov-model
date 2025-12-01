@@ -1,47 +1,14 @@
 <!-- Permit entity --> 
-<permit id=”...”>
-    <identifier>{{an identifier/code of the permit}}</identifier>
-    <name>{{Name of the permit}}</name>
-    <description>{{A short description of the scope of the permit}}</description>
-    <temporalCoverage>
-        <rangeOfDates>
-            <beginDate>{{start date of the applicability of the permit}}</beginDate>
-            <endDate>{{end date of the applicability of the permit}}</endDate>
-        </rangeOfDates>
-    </temporalCoverage>
+<permit id=”{{an identifier/code of the permit}}”>
+    <title>{{Name of the permit}}</title>
+    <scope>{{A short description of the scope of the permit}}</scope>
+    <dueDiligence>{{A description of the due diligence of the permit}}</dueDiligence>
+    <validIn>{{reference to the Location where the permit is valid}}</validIn>
+    <validFor>{{datetime range during which the permit is valid}}</validFor>
+    <validFrom>{{Start datetime from when the permit is valid}}</validFrom>
+    <validUntil>{{End datetime until the permit is valid}}</validUntil>
+    <associatedParty>{{description/reference to the associatedParty(s) associated with this permit}}</associatedParty>
+    <issuer>{{description/reference to the organization responsible for issuing the permit}}</issuer>
+    <associatedSample>{{reference to the sample(s) associated with this permit}}</associatedSample>
 </permit>
 
-
-<!-- ABS permit entity --> 
-<absPermit id=”...”>
-    <identifier>{{an identifier/code of the permit}}</identifier>
-    <alternateIdentifier>{{the IRCC code}}</alternateIdentifier>
-    <name>{{Name of the permit}}</name>
-    <description>
-    {{A short description of the scope of the permit 
-    + due-diligence in case of missing IRCC code}}
-    </description>
-    <temporalCoverage>
-        <rangeOfDates>
-            <beginDate>{{start date of the applicability of the permit}}</beginDate>
-            <endDate>{{end date of the applicability of the permit}}</endDate>
-        </rangeOfDates>
-    </temporalCoverage>
-    <geographicCoverage>
-    {{spatial coverage describing the spatial applicability of the permit}}
-    </geographicCoverage>
-
-    <associatedParty>
-    {{the agent that serves as the contact-point of the permit}} 
-        <role>contact</role>
-    </associatedParty>
-
-    <associatedParty>
-    {{the agent that serves as the authorizing agent of the permit}} 
-        <role>authorizing agent</role>
-    </associatedParty>
-
-    <sample>
-    {{a sample that is associated with this permit}}
-    </sample>
-</absPermit>
