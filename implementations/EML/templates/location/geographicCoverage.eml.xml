@@ -1,0 +1,6 @@
+<geographicCoverage id=”...”>
+    <geographicDescription>{{A short description of the geographic area}}</geographicDescription>
+    <boundingCoordinates>{{EML element to reference the bounding coordinates that cover the geographic area}}</boundingCoordinates>
+    <datasetGPolygon>{{EML element to reference the doughnut shaped spatial ring that covers the geographic area}}
+    </datasetGPolygon>
+</geographicCoverage>

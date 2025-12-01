@@ -1,9 +1,7 @@
 <!-- Organization agent -->
-<associatedParty id=”...”>
-    <userId>{{Identifier(s) of the organization and/or people agent(s)}}<userId>
+<associatedParty id=”{{Identifier(s) of the organization and/or people agent(s)}}”>
     <organizationName>{{The name of the agent}}</organizationName>
     <role>{{The role of the agent with respect to the activity / entity}}</role>
-    <expertise>{{The domains of expertise of the agent}}</expertise>
     <onlineUrl>{{A link to information about the agent, usually a (personal) website}}</onlineUrl>
     <electronicMailAddress>{{The email address of the agent}}</electronicMailAddress>
     <address>{{The address of the agent}}</address>

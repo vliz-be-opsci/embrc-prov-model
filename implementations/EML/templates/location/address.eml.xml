@@ -1,0 +1,7 @@
+<address id=”{{identifier(s) of the address}}”>
+    <deliveryPoint>{{location address mentioned in single string, e.g. for postal deliveries}}</deliveryPoint>
+    <city>{{city name}}</city>
+    <administrativeArea>{{name of administrative area}}</administrativeArea>
+    <postalCode>{{postalcode}}</postalCode>
+    <country>{{country name}}</country>
+</address>
