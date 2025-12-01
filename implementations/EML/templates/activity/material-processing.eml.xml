@@ -1,0 +1,15 @@
+<!-- Processing activity -->
+<methods>
+    <methodStep id="{{identifier of the material processing activity}}">
+        <type>Material processing</type>
+        <title>{{name of the material processing activity}}</title>
+        <description>{{description of the material processing activity}}</description>
+        <associatedParty>{{description/reference to the agent(s) associated with the activity}}</associatedParty>
+        <startTime>{{start datetime of the activity}}</startTime>
+        <endTime>{{end datetime of the activity}}</endTime>
+        <dataSource>{{Reference to the sample that served as the source in the material processing activity}}</dataSource>
+        <dataResult>{{Description/reference to the result of the material processing activity}}</dataResult>
+        <instrumentation>{{Reference to the device(s) used in the processing activity}}<instrumentation>
+        <protocol>{{Reference to the protocol/SOP(s) associated with the activity}}</protocol>
+    </methodStep>
+</methods>

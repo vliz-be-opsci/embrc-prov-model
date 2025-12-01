@@ -1,0 +1,14 @@
+<!-- data acquiring activity --> 
+<methods>
+    <methodStep id="{{identifier of the data acquiring activity}}">
+        <type>Data acquiring</type>
+        <title>{{Name of the data acquiring activity}}</title>
+        <associatedParty>{{description/reference to the agent(s) associated with the activity}}</associatedParty>
+        <startTime>{{start datetime of the data acquiring activity}}</startTime>
+        <endTime>{{end datetime of the data acquiring activity}}</endTime>
+
+        <metadataSource>{{A reference to the metadata of the data acquiring activity}}</metadataSource>
+        <dataSource>{{A reference to the input used in the data acquiring activity}}</dataSource>
+    </methodStep>
+</methods>
+

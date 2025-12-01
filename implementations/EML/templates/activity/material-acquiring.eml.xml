@@ -1,0 +1,11 @@
+<!-- Acquiring activity -->
+<methods>
+    <methodStep id="{{identifier of the material acquiring activity}}">
+        <type>Material acquiring</type>
+        <title>{{name of the material acquiring activity}}</title>
+        <associatedParty>{{description/reference to the agent(s) associated with the activity}}</associatedParty>
+        <startTime>{{start datetime of the activity}}</startTime>
+        <endTime>{{end datetime of the activity}}</endTime>
+        <dataSource>{{Reference to the sample that served as the source in the acquiring activity}}</dataSource>
+    </methodStep>
+</methods>

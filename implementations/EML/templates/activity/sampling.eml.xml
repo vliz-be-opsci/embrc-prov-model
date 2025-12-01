@@ -1,34 +1,14 @@
 <!-- Sampling activity --> 
 <methods>
-    <sampling>
-        <samplingDescription>
-            {{description of the sampling activity}}
-            {{+optionally any other type of information that needs to be included}}
-        </samplingDescription>
-        <studyExtent></studyExtent>
-
-        <geographicCoverage>
-            {{Reference to the location or geographicCoverage of the physical activity}}
-        </geographicCoverage>
-
-        <temporalCoverage>
-            {{Reference to the temporal range of the physical activity, note: can be either <rangeOfDates> or <singleDateTime>}}
-        </temporalCoverage>
-
-        <associatedParty>
-            {{the agent that is associated with the activity}}
-        </associatedParty>
-
-        <permit>
-            {{Reference to the permit that is associated with the sampling activity}}
-        </permit>
-
-        <sample>
-            {{Reference to the sample that is generated in the sampling activity}}
-        </sample>
-
-        <samplingInstrumentation>
-            {{Reference to the device that is used in the sampling activity}}
-        </samplingInstrumentation>
-    </sampling>
+    <methodStep id="{{identifier of the sampling activity}}">
+        <type>Sampling</type>
+        <title>{{name of the sampling activity}}</title>
+        <associatedParty>{{description/reference to the agent(s) associated with the activity}}</associatedParty>
+        <startTime>{{start datetime of the activity}}</startTime>
+        <endTime>{{end datetime of the activity}}</endTime>
+        <instrumentation>{{Reference to the device(s) used in the sampling activity}}</instrumentation>
+        <permit>{{Reference to the permit associated with the sampling activity}}</permit>
+        <dataResult>{{Reference to the sample(s) generated in the sampling activity}}</dataResult>
+        <protocol>{{Reference to the protocol associated with the sampling activity}}</protocol>
+    </methodStep>
 </methods>

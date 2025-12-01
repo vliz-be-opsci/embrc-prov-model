@@ -1,39 +1,14 @@
-<!-- Observing activity -->
+<!-- Observing activity --> 
 <methods>
-    <methodStep>
-        <description>
-            OBSERVING 
-            {{description of the observing activity}}
-            {{+optionally any other type of information that needs to be included}}
-        </description>
-
-        <geographicCoverage>
-        {{Reference to the location or geographicCoverage of the physical activity}}
-        </geographicCoverage>
-
-        <temporalCoverage>
-        {{Reference to the temporal range of the physical activity
-        note: can be either <rangeOfDates> or <singleDateTime>}}
-        </temporalCoverage>
-
-        <associatedParty>
-        {{the agent that is associated with the activity}}
-        </associatedParty>
-
-        <protocol>
-        {{A protocol or SOP that is associated with the activity}}
-        </protocol>
-
-        <permit>
-        {{Reference to the permit that is associated with the observing activity}}
-        </permit>
-
-        <result>
-        {{Reference to the result that is generated in the observing activity}}
-        </result>
-
-        <observingInstrumentation>
-        {{Reference to the device used in the observing activity}}
-        </observingInstrumentation>
+    <methodStep id="{{identifier of the observering activity}}">
+        <type>Observing</type>
+        <title>{{name of the observering activity}}</title>
+        <associatedParty>{{description/reference to the agent(s) associated with the activity}}</associatedParty>
+        <startTime>{{start datetime of the activity}}</startTime>
+        <endTime>{{end datetime of the activity}}</endTime>
+        <instrumentation>{{Reference to the device(s) used in the observing activity}}</instrumentation>
+        <permit>{{Reference to the permit associated with the observing activity}}</permit>
+        <dataResult>{{Description/reference to the result(s) from the observing activity}}</dataResult>
+        <protocol>{{Reference to the protocol associated with the observing activity}}</protocol>
     </methodStep>
 </methods>

@@ -1,0 +1,20 @@
+<!-- data processing activity --> 
+<methods>
+    <methodStep id="{{identifier of the data processing activity}}">
+        <type>Data processing</type>
+        <title>{{Name of the data processing activity}}</title>
+        <associatedParty>{{description/reference to the agent(s) associated with the activity}}</associatedParty>
+        <startTime>{{start datetime of the data processing activity}}</startTime>
+        <endTime>{{end datetime of the data processing activity}}</endTime>
+
+        <description>
+            {{description of the data processing activity}}
+            {{+optionally any other type of information that needs to be included}}
+        </description>
+        <dataSource>{{A reference to the input used in the data processing activity.}}</dataSource>
+        <dataResult>{{A description/reference to the output generated in the data processing activity.}}</dataResult>
+        <protocol>{{A protocol or SOP that is associated with the activity}}</protocol>
+        <data>{{A reference to the data used in the data processing activity}}<data>
+    </methodStep>
+</methods>
+

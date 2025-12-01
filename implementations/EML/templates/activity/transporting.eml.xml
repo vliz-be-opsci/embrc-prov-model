@@ -1,30 +1,14 @@
-<!-- Transporting activity --> 
+<!-- Transporting activity -->
 <methods>
-    <methodStep>
-        <description>
-            TRANSPORTING 
-            {{description of the transporting activity, including the the stored-conditions during the transporting activity}}
-            {{+optionally any other type of information that needs to be included}}
-        </description>
-
-        <geographicCoverage>
-            {{Reference to the location or geographicCoverage of the physical activity}}
-        </geographicCoverage>
-        
-        <temporalCoverage>
-            {{Reference to the temporal range of the physical activity, note: can be either <rangeOfDates> or <singleDateTime>}}
-        </temporalCoverage>
-
-        <associatedParty>
-            {{the agent that is associated with the activity}}
-        </associatedParty>
-
-        <protocol>
-            {{A protocol or SOP that is associated with the activity}}
-        </protocol>
-
-        <sample>
-            {{Reference to the sample that served as the source in the transporting activity}}
-        </sample>
+    <methodStep id="{{identifier of the transporting activity}}">
+        <type>Transporting</type>
+        <title>{{name of the transporting activity}}</title>
+        <description>{{description of the transporting activity}}</description>
+        <startTime>{{start datetime of the activity}}</startTime>
+        <endTime>{{end datetime of the activity}}</endTime>
+        <dataSource>{{Reference to the sample that served as the source in the transporting activity}}</dataSource>
+        <from>{{reference to the location that is the starting point of the transporting activity}}</from>
+        <to>{{reference to the location that is the destination of the transporting activity}}</to>
+        <associatedParty>{{description/reference to the agent(s) associated with the activity}}</associatedParty>
     </methodStep>
 </methods>
