@@ -1,10 +1,12 @@
 ###############################
 Explanation
 
-Example provenance metadata file for Dataset 1. The metadata fields here follow the classes 
-and properties of the EMBRC conceptual model. See https://github.com/vliz-be-opsci/embrc-prov-model/tree/main/docs 
-for more detail on this model. Note that in this example we may not have used every 
-single property of every single class. 
+Example provenance metadata file for Dataset 1. Dataset 1 has two versions: this one in text 
+and another in JSON-LD. The same explanation applies to both (but cannot be added to the JSON-LD  
+version without messing it up).
+The metadata fields here follow the classes and properties of the EMBRC conceptual model. 
+See https://github.com/vliz-be-opsci/embrc-prov-model/tree/main/docs for more detail on this model. 
+Note that in this example we may not have used every single property of every single class. 
 
 Dataset 1 consists of logsheets in which data related to and collected during a 
  sampling event are recorded. This metadata file describes the provenance of that logsheet
