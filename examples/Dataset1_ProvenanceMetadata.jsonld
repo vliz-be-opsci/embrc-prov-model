@@ -134,8 +134,8 @@
     {
       "@type": ["Action","prov:Activity","sosa:Sampling"],
       "@id":"_:water_sampling_Jan2021",
-      "description":"sampling",  
-      "name": "water sampling Jan 2021",
+      "name":"sampling",  
+      "description": "water sampling Jan 2021",
       "prov:location": {"@id":"http://marineregions.org/mrgid/3293"},
       "startTime": "2021-01-01",
       "prov:startTime": "2021-01-01",
@@ -158,8 +158,8 @@
     {
       "@type": ["Action","prov:Activity"],
 	    "@id":"_:observing_water_Jan2021",
-      "description":"observing",
-	  "name": "in-situ measurement of water properties Jan 2021",
+      "name":"observing",
+	  "description": "in-situ measurement of water properties Jan 2021",
       "prov:location": {"@id":"http://marineregions.org/mrgid/3293"},
       "startTime": "2021-01-01",
       "prov:startTime": "2021-01-01",
