@@ -2,7 +2,8 @@
 Explanation
 
 Example provenance metadata file for Dataset 2, which consists of the outputs of the FlowCam: images 
-and a file of species identifications, additionally a protocol document and a software settings file.
+and a file of species identifications created from the sample collected during the event described by 
+Dataset 1, additionally a protocol document and a software settings file.
 This metadata file describes the provenance of those and the activities and people involved in the work.
 Dataset 2 has two versions: this one in text and another in JSON-LD. The same explanation applies 
 to both (but cannot be added to the JSON-LD version without messing it up). 
