@@ -1,23 +1,25 @@
 ###############################
 Explanation
 
-Example provenance metadata file for Dataset 1. Dataset 1 has two versions: this one in text 
-and another in JSON-LD. The same explanation applies to both (but cannot be added to the JSON-LD  
-version without messing it up).
+Example provenance metadata file for Dataset 1, which consists of log sheets in which data 
+related to and collected during a sampling event are recorded. This metadata file describes the 
+provenance of that logsheet and the activities and people involved in the sampling event.
+Dataset 1 has two versions: this one in text and another in JSON-LD. The same explanation applies 
+to both (but cannot be added to the JSON-LD version without messing it up). 
+See https://github.com/vliz-be-opsci/embrc-prov-model/tree/main/examples for more detail on the 
+experiment that this dataset is created from.
+
 The metadata fields here follow the classes and properties of the EMBRC conceptual model. 
 See https://github.com/vliz-be-opsci/embrc-prov-model/tree/main/docs for more detail on this model. 
 Note that in this example we may not have used every single property of every single class. 
 
-Dataset 1 consists of logsheets in which data related to and collected during a 
- sampling event are recorded. This metadata file describes the provenance of that logsheet
- and the activities and people involved in the sampling event. This file is written in 
- plain text, which could be something that an individual researcher would feel more 
- comfortable with creating themselves for their own research data, especially if they do 
- not have any data managers to help them out.
+This file is written in plain text, which could be something that an individual researcher would likely 
+feel more comfortable with creating themselves for their own research data, especially if they do 
+not have any data managers to help them out.
 
 To make this file more compact and easier to read, we first list the metadata for objects  
- that occurr more than once in this record, or which have to be described with more than one value. 
- We will then refer to them by their name or identifier within the rest of the metadata.
+that occurr more than once in this record, or which have to be described with more than one value. 
+We will then refer to them by their name or identifier within the rest of the metadata.
 ###############################
 
 
@@ -43,7 +45,7 @@ geography: latitude: 51.249995, longitude: 2.85327
 
 ## Samples
 identifier: BigProject_belgium_water_10m 
-name: sample1 
+name: BigProject_belgium_water_10m  
 description: water sample to determine plankton community and extract DNA
 keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plankton metagenome - NCBI:txid1874687
 
