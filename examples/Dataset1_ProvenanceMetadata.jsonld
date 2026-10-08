@@ -106,7 +106,12 @@
         "prov:agent": {"@id": "https://edmo.seadatanet.org/report/00000"},
         "dcat:hadRole": "receiving agent"
       },
-      "issuer": {"@id":"_:Belgium_ABS_National_Focal_Point"},
+      "issuedBy": {"@id":"_:Belgium_ABS_National_Focal_Point"},
+	  "prov:qualifiedAttribution": {
+        "@type": "prov:Attribution",
+        "prov:agent": {"@id":"_:Belgium_ABS_National_Focal_Point"},
+        "dcat:hadRole": "issuing agent"
+      },
       "validFrom": "2021-01-01",
       "validUntil": "2022-01-01",
       "prov:wasInfluencedBy": {"@id":"_:BigProject_belgium_water_10m"} 
@@ -129,7 +134,7 @@
     {
       "@type": ["Action","prov:Activity","sosa:Sampling"],
       "@id":"_:water_sampling_Jan2021",
-      "dct:type":"sampling",  
+      "description":"sampling",  
       "name": "water sampling Jan 2021",
       "prov:location": {"@id":"http://marineregions.org/mrgid/3293"},
       "startTime": "2021-01-01",
@@ -153,8 +158,8 @@
     {
       "@type": ["Action","prov:Activity"],
 	    "@id":"_:observing_water_Jan2021",
-      "dct:type":"observing",
-	    "name": "in-situ measurement of water properties Jan 2021",
+      "description":"observing",
+	  "name": "in-situ measurement of water properties Jan 2021",
       "prov:location": {"@id":"http://marineregions.org/mrgid/3293"},
       "startTime": "2021-01-01",
       "prov:startTime": "2021-01-01",
