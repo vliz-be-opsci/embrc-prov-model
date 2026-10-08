@@ -1,19 +1,25 @@
 ###############################
 Explanation
 
-Example provenance metadata file for Dataset 2, which is described in the document 
-  https://github.com/vliz-be-opsci/embrc-prov-model/blob/main/docs/ProvenanceOfBiologicalMaterial_4paper.pdf
-  This example uses the conceptual model (CM) of provenance presented there. 
-  Please see that document to understand the context of these metadata.
-Dataset 2 consists of the outputs of the FlowCam: images and a file of species identifications.  
-  It also includes a protocol document and a software settings file.
-This file is one of three examples we provide for Dataset 2: this is a plain text version, 
- written for humans rather than machines to read; a version in Turtle, which is written for
- machines, and a version using the EML metadata schema, which biodiversity databases use. 
+Example provenance metadata file for Dataset 2, which consists of the outputs of the FlowCam: images 
+and a file of species identifications, additionally a protocol document and a software settings file.
+This metadata file describes the provenance of those and the activities and people involved in the work.
+Dataset 2 has two versions: this one in text and another in JSON-LD. The same explanation applies 
+to both (but cannot be added to the JSON-LD version without messing it up). 
+See https://github.com/vliz-be-opsci/embrc-prov-model/tree/main/examples for more detail on the 
+experiment that this dataset is created from.
 
-To make this file more compact and easier to read, we will first list the metadata for entities 
- that occurr more than once or which have to be described with more than one value. We will 
- then refer to them by their name or identifier when the activities are described.
+The metadata fields here follow the classes and properties of the EMBRC conceptual model. 
+See https://github.com/vliz-be-opsci/embrc-prov-model/tree/main/docs for more detail on this model. 
+Note that in this example we may not have used every single property of every single class. 
+
+This file is written in plain text, which could be something that an individual researcher would likely 
+feel more comfortable with creating themselves for their own research data, especially if they do 
+not have any data managers to help them out.
+
+To make this file more compact and easier to read, we first list the metadata for objects  
+that occurr more than once in this record, or which have to be described with more than one value. 
+We will then refer to them by their name or identifier within the rest of the metadata.
 ###############################
 
 
@@ -39,10 +45,12 @@ organization: see Nice Marine Station
   
 ## Samples
 identifier: BigProject_belgium_water_10m
+name: BigProject_belgium_water_10m
 description: water sample to determine plankton community and extract DNA
 keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plankton metagenome - NCBI:txid1874687
 
 identifier: BigProject_belgium_water_10m_1000um_r1
+name: BigProject_belgium_water_10m_1000um_r1
 description: water sample collected from 10m depth and filtered at 1000um
 keyword: coastal sea water - http://purl.obolibrary.org/obo/ENVO_00002150, marine plankton metagenome - NCBI:txid1874687
 
@@ -92,8 +100,8 @@ name: RV OurBigShip
 
 ## The provenance metadata for the material processing activity (Step 3)
 <MaterialProcessing>
-name: pre-filtering Jan 2021 water samples
-activity-type: material processing
+description: pre-filtering Jan 2021 water samples
+name: material processing
 spatial-coverage: 
   name: RV OurBigShip on-board lab
 temporal-coverage: 2021-01-01
@@ -107,8 +115,8 @@ device:
 
 ## The provenance metadata for the storing activity (Step 3)
 <Storing>
-name: cold storage subsample 1 (Jan 2021 for flowcam)
-activity-type: storing
+description: cold storage subsample 1 (Jan 2021 for flowcam)
+name: storing
 spatial-coverage: 
   name: RV OurBigShip on-board lab
 temporal-coverage: 2021-01-01
@@ -116,12 +124,11 @@ agent: see F. Lee
 sample: see BigProject_belgium_water_10m_1000um_r1 
 storage-device: see Johnson Samples Fridge (on-board)
 storage-conditions: +4 C
-type: short-term
 
 ## The provenance metadata for the material processing activity (Step 4)
 <MaterialProcessing>
-name: FlowCam imaging Jan 2021 samples 
-activity-type: material processing
+description: FlowCam imaging Jan 2021 samples 
+name: material processing
 spatial-coverage: see Nice Marine Station
 temporal-coverage: 2021-01-01
 agent: see J. Gerschwin
@@ -132,9 +139,8 @@ device: see NMS_flowcam_2010
 
 ## The provenance metadata for the data processing activity (Step 4)
 <DataProcessing>
-name: FlowCam species identification Jan 2021 samples 
-activity-type: data processing
-description: identification of species on images from the FlowCam, using the FlowCam image-recognition software 
+description: FlowCam species identification Jan 2021 samples 
+name: data processing
 temporal-coverage: 2021-01-01
 agent: see J. Gerschwin
 input: the images stored locally in /Users/NMSlab/flowcam/20210101/BigProject/. The settings are included in the file flowcam-software-settings.txt in this dataset. The reference library used was FlowCam_ReferenceLibrary_2021 which is published on https://BioImages.eu/reference/D-5462  
@@ -143,9 +149,8 @@ software: see VisualSpreadsheet FlowCam Micro software
 
 ## The provenance metadata for the data processing activity (Step 4)
 <DataProcessing>
-name: QC on FlowCam species identification Jan 2021 samples
-activity-type: data processing
-description: manual QC on the species identification performed by the FlowCam software, and putting the approved species information and images in files to be published
+description: QC on FlowCam species identification Jan 2021 samples
+name: data processing
 temporal-coverage: 2021-01-01
 agent: see J. Gerschwin
 input: images and species list from /Users/NMSlab/flowcam/20210101/BigProject/
