@@ -8,3 +8,5 @@ provides detailed explanations of the conceptual provenance model.
 demonstrates how the provenance model can be applied, based on an example project and its three datasets.
 - **[./implementations](https://github.com/vliz-be-opsci/embrc-prov-model/tree/main/implementations)**  
 implmentations of the conceptual provenenance model following various syntaxes.
+- **[./for-fair-course](https://github.com/vliz-be-opsci/embrc-prov-model/tree/main/for-fair-course)**  
+parts of the model where included in the EMBRC FAIR course of 2025 and 2026
