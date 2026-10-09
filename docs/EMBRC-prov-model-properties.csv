@@ -1,0 +1,87 @@
+Class,Is a type of ,Property,Recommended data type,Description,RDF implementation
+Entity,Entity,identifier,"string, URI","An identifier of the entity, ideally a URI (URL, DOI, etc), failing that a locally-meaningful PID",schema:identifier
+Entity,Entity,name,string,"The name of the entity, to provide human understandability to the identifier, and to be used if no identifier can be assigned",schema:name
+"Device, ObservingDevice, SamplingDevice",Entity,type,"string, URI","The type of device, ideally as a term (as a URI) from a controlled vocabulary, failing that a string",dct:type | schema:description
+"Device, ObservingDevice, SamplingDevice",Entity,settings,"string, URI","The settings on the device that were relevant for the activity. Can be text that contains the settings, or a URI or file name with that information",schema:description
+"Device, ObservingDevice, SamplingDevice",Entity,software,Software (class),A reference to the software that is used by the device. This property points to an entity that is of the class Software,prov:wasInfluencedBy
+"Device, ObservingDevice, SamplingDevice",Entity,platform,Platform (class),The platform on which the device is mounted or hosted. This property points to an entity that is of the class Platform,sosa:isHostedBy
+Permit,Entity,scope,string,"A description of the type and scope of the permit, e.g. “ABS for Naoya” with the type of material to be collected, locations etc",schema:description
+Permit,Entity,spatial-coverage,Location (class),The geographical area covered by the permit. This property points to an entity that is of the class Location,schema:validIn
+Permit,Entity,temporal-coverage,dateTime,The date or date range allowed by the permit,"schema:validFor, schema:validFrom, schema:validUntil | schema:temporalCoverage"
+Permit,Entity,permit-code,string,"The code given to the permit by the issuer. For example, in the case of Access and Benefit Sharing permits: the ‘Internationally-Recognised Certificate of Compliance’ IRCC number. For others it may be a name",schema:identifier
+Permit,Entity,due-diligence,"string, URI","A description of due diligence, where that information is required by the permit issuer. Can be a string or a URI to a copy of the due diligence email/screenshot/PDF etc. Especially important for Access and Benefit Sharing",schema:about
+Permit,Entity,receiver-agent,Agent (class),The agent that was granted the permit. This property points to an entity that is of the class Agent,prov:wasAttributedTo
+Permit,Entity,receiver-agent role,N/A,Only for the RDF implementation,prov:qualifiedAttribution
+Permit,Entity,issuing-agent,Agent (class),The agent that has authorised the permit. This property points to an entity that is of the class Agent,schema:issuedBy
+Permit,Entity,issuing-agent role,N/A,Only for the RDF implementation,prov:qualifiedAttribution
+Permit,Entity,sample,Sample (class),"The sample(s) / material(s) associated with this permit, which can be any sample type or the specific sample collected during a specific event. This property points to an entity that is of the class Sample",prov:wasInfluencedBy
+Platform,Entity,type,"string, URI","The type of platform, ideally as a term (as a URI) from a controlled vocabulary, failing that a string",dct:type | schema: description
+Protocol,Entity,description,string,"A description of the protocol: short where the protocol document is provided via distribution, otherwise an actual description of the methodology, i.e. the steps followed",schema:description | schema:step
+Protocol,Entity,deviations,string,A description of any deviations from or additions to the protocol,rdfs:comment
+Protocol,Entity,distribution,"URI, string","A description of where the protocol can be found and/or accessed, preferably a URI, failing that the name of a file included in the dataset, failing that (if not open access) the protocol name",schema:url | schema:accessibilitySummary
+Sample,Entity,description,string,A description of the sample,schema:description
+Sample,Entity,taxonomic-name,"string, URI","Any taxonomic name(s) associated with the sample; depending on how this is implemented, it can be a string (taxon name + taxonomic backbone used) or URI (taxon-ID), could include the taxon-rank","dwc:scientificName. dwc:taxonID, dwc:taxonRank, sosa:isSampleOf, schema:about"
+Sample,Entity,keyword,"URI, string","Any keywords useful for describing the sample e.g. body part, processed level (e.g. unprocessed, blended and filtered), type of sample (e.g. plankton), etc",schema:keywords
+Software,Entity,description,string,"A description of the software application / source code: at a minimum its name. If the software does not have a URI (endpoint – see below), an explanation of where the software is and how it can be requested/used can be added here",schema:description
+Software,Entity,settings,"string, URI","The settings of the software that are of relevance to the use made of that software in the particular work being described. Can be text that contains the settings, or a URI or file name identifying a file with those settings","schema:softwareRequirements, schema:abstract, schema:releaseNotes, …"
+Software,Entity,version,string,"A version of the software application / source code. Can be a number, a date, etc",schema:version
+Software,Entity,endpoint,URI,"A URI pointing to the software. Depending on the type of software, this can be for software download or (direct) software use","schema:url, schema:downloadUrl, schema:featureList, schema:codeRepository"
+"Agent, Organization",Agent,identifier,"string, URI",An identifier of the agent. We strongly recommend using ORCIDs for people and ROR/EDMO identifiers for Organizations,schema:identifier
+"Agent, Organization",Agent,name,string,The name of the agent,schema:name
+"Agent, Organization",Agent,role,string,The role of the agent (for the particular activity or entity),N/A
+"Agent, Organization",Agent,website,URI,A website of the agent,schema:mainEntityOfPage
+"Agent, Organization",Agent,email,string,The email address of the agent,schema:email
+"Agent, Organization",Agent,address,string,The physical address of the agent,schema:address
+"Agent, Organization",Agent,telephone,"number, string",A telephone number of the agent (ideally full international code),schema:telephone
+Person,Agent,organization,Organization (class),The organisation that the person is affiliated with. This property points to an entity that is of the class Organization,schema:affiliation
+Location,Location,identifier,"URI, string","An identifier of the location, being a URI (e.g a Marine Region URI) or a PID (e.g. the MarineRegion MRGID number)",schema:identifier
+Location,Location,name,string,"A name for the location, especially to use where an identifier does not exist",schema:name
+Location,Location,geography,"number, string, URI","The geography of the location, e.g. geographic coordinates (latitude, longitude), a bounding box or geoshape, a geographic ID (e.g. Marine Regions) etc",schema:geo
+Location,Location,address,string,The physical address of the location,schema:address
+"Activity, DigitalActivity",Activity,Identifier,"string, URI",An identifier of the activity,schema:identifier
+"Activity, DigitalActivity",Activity,name,string,"The name of the entity, to provide human understandability to the identifier, and to be used if no identifier is assigned",schema:name
+"Activity, DigitalActivity",Activity,description,string,A short description of the activity carried out,dct:type | schema:description
+"Activity, DigitalActivity",Activity,agent,Agent (class),The agent that is associated with the activity. This property points to an entity that is of the class Agent,prov:wasAssociatedWith
+"Activity, DigitalActivity",Activity,agent role,N/A,Only for the RDF implementation,prov:qualifiedAssociation
+"Activity, DigitalActivity",Activity,temporal-coverage,dateTime,The date or date range during which the activity took place,"schema:endTime | prov:endedAtTime, 
+schema:startTime | prov:startedAtTime"
+PhysicalActivity,Activity,spatial-coverage,Location (class),The location where the physical activity took place. This property points to an entity that is of the class Location,prov:location
+Transporting,PhysicalActivity,sample,Sample (class),The sample that is transported. This property points to an entity that is of the class Sample,schema:object
+Transporting,PhysicalActivity,providing-location,Location (class),The location from where the sample was transported. This property points to an entity that is of class Location,schema:fromLocation
+Transporting,PhysicalActivity,receiving-location,Location (class),The location to where the material was transported. This property points to an entity that is of class Location,schema:toLocation
+Transporting,PhysicalActivity,providing-agent,Agent (class),The agent that provides the material being transported. This property points to an entity that is of class Agent,prov:wasAssociatedWith
+Transporting,PhysicalActivity,providing-agent role,N/A,Only for the RDF implementation,prov:qualifiedAttribution
+Transporting,PhysicalActivity,receiving-agent,Agent (class),The agent that receives the material being transported. This property points to an entity that is of class Agent,prov:wasAssociatedWith
+Transporting,PhysicalActivity,receiving-agent role,N/A,Only for the RDF implementation,prov:qualifiedAttribution
+Transporting,PhysicalActivity,storage-conditions,"string, URI, Protocol (class)","A description of the storage conditions during the transporting activity, the name of the file containing that information, or a link to such a document. Can also be the protocol followed, in which case this property points to an entity of class Protocol. Note that it is intended that the actual storage conditions are recorded, rather than the initial ones (i.e. including any unexpected changes in condition during transportation)",schema:description | prov:used | schema:URL
+MaterialAcquiring,PhysicalActivity,sample,Sample (class),The sample that is acquired (i.e. which changes ownership). This property points to an entity that is of class Sample,schema:object
+MaterialAcquiring,PhysicalActivity,providing-agent,Agent (class),The agent that had (owned) the material that was acquired. This property points to an entity that is of class Agent,prov:wasAssociatedWith
+MaterialAcquiring,PhysicalActivity,providing-agent role,N/A,Only for the RDF implementation,prov:qualifiedAttribution
+MaterialAcquiring,PhysicalActivity,receiving-agent,Agent (class),The agent that receives (i.e. requested/ordered) the material that was acquired. This property points to an entity that is of class Agent,prov:wasAssociatedWith
+MaterialAcquiring,PhysicalActivity,receiving-agent role,N/A,Only for the RDF implementation,prov:qualifiedAttribution
+MaterialProcessing,PhysicalActivity,sample,Sample (class),The sample that is processed. This property points to an entity that is of the class Sample,schema:object
+MaterialProcessing,PhysicalActivity,result,"Sample (class), URI, string","The resulting entity that is generated from the sample during the processing activity. This entity can either be physical ‒- a sample (instance of the Sample class) ‒ or digital ‒ a file or dataset (instance of a class representing digital results, such as DigitalDocument, Dataset, etc.)",schema:result
+MaterialProcessing,PhysicalActivity,materials,string,"A description of the materials that were used in the processing activity (e.g. chemicals, etc.)",schema:description | schema:URL
+MaterialProcessing,PhysicalActivity,protocol,Protocol (class),A protocol or (standard) operating procedure that is associated with the activity. This property points to an entity that is of the class Protocol,prov:used
+MaterialProcessing,PhysicalActivity,device,Device (class),The device that was used in the processing activity. This property points to an entity that is of the class Device,prov:used
+Observing,PhysicalActivity,device,ObservingDevice (class),"The device used to carry out the observing activity 
+This property points to an entity that is of the class ObservingDevice",sosa:madeBySensor
+Observing,PhysicalActivity,protocol,Protocol (class),A protocol or (standard) operating procedure that is associated with the activity. This property points to an entity that is of the class Protocol,prov:used
+Observing,PhysicalActivity,permit,Permit (class),A permit that was used in relation to the observing activity. This property points to an entity that is of the class Permit,prov:used
+Observing,PhysicalActivity,result,"URI, string","The result of the observing activity (e.g. a measured parameter, occurrences, etc)","prov:generated, sosa:hasResult"
+Sampling,PhysicalActivity,device,SamplingDevice (class),"The device used to carry out the observing activity 
+This property points to an entity that is of the class SamplingDevice",sosa:madeBySampler
+Sampling,PhysicalActivity,protocol,Protocol (class),A protocol or (standard) operating procedure that is associated with the activity. This property points to an entity that is of the class Protocol,prov:used
+Sampling,PhysicalActivity,permit,Permit (class),A permit that was used in relation to the sampling activity. This property points to an entity that is of the class Permit,prov:used
+Sampling,PhysicalActivity,result,Sample (class),The sample that resulted from the sampling activity.  This property points to an entity that is of the class Sample,"prov:generated, sosa:hasResult"
+Storing,PhysicalActivity,sample,Sample (class),The sample that was stored in the storing activity. This property points to an entity that is of the class Sample,schema:object
+Storing,PhysicalActivity,protocol,Protocol (class),"A protocol or (standard) operating procedure that is associated with the activity, where that is more detailed that can be provided by storage-conditions alone. This property points to an entity that is of the class Protocol",prov:used
+Storing,PhysicalActivity,storage-conditions,"string, URI","A description of the storage conditions during the storage, the name of the file containing that information, or a link to such a document. Note that it is intended that the actual storage conditions are recorded, rather than the initial ones (i.e. including any unexpected changes in condition during storage)",schema:description | prov:used
+Storing,PhysicalActivity,device,Device (class),The device that was used in the storing activity. This property points to an entity that is of the class Device,prov:used
+Biobanking,Storing,biomaterial-id,"String, URI","The biosample ID of the material that was stored in the storing activity, as is assigned by the biobanking facility from where the material was obtained",schema:object
+DataAcquiring,DigitalActivity,endpoint-metadata,URI,"A link to the metadata description of the data acquired. Where no endpoint (for data nor metadata) exists, details of the data (from where acquired, what was requested, etc) should be included in the description",schema:url
+DataAcquiring,DigitalActivity,endpoint-data,URI,The entrypoint / link to access the data.,schema:target
+DataProcessing,DigitalActivity,input,"string, URI",A reference to or description of the inputs,schema:object
+DataProcessing,DigitalActivity,output,"string, URI",A reference to or description of the outputs,prov:generated
+DataProcessing,DigitalActivity,software,Software (class),The software used during the data processing activity. To be used whenever software is employed. This property points to an entity that is of the class Software.,prov:used
+DataProcessing,DigitalActivity,protocol,Protocol (class),The protocol used during the data processing activity. To be used either when software is not employed or other type of data processing (e.g. manual QC) is also done. This property points to an entity that is of the class Protocol,prov:used

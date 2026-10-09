@@ -1,0 +1,30 @@
+Class,Is a type of…,Description,RDF Implementation
+Entity,,"An abstract class representing any entity, which is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary","prov:Entity, schema:Thing"
+Device,Entity,"A class representing devices that are used to carry out an activity: instruments, sensors, containers, also any human-operated devices used in manual observations","prov:Entity, schema:Thing"
+SamplingDevice,Device,For types of devices used specifically in field sampling activities,"prov:Entity, schema:Thing, sosa:Sampler"
+ObservingDevice,Device,For types of devices used specifically to make observations and measurements (in the field or in the lab),"prov:Entity, schema:Thing, sosa:Sensor"
+Permit,Entity,"A class representing permits, which describe the authorisation to carry out an activity, often needing to be approved by a legal/regulatory entity","prov:Entity, schema:Thing, schema:CreativeWork, schema:Permit"
+Platform,Entity,"A class representing platforms, which are entities on/from which a device is deployed (e.g. a ship, a buoy, a CTD carousel, an ROV, etc.)","prov:Entity, schema:Thing, sosa:Platform, schema:Vehicle"
+Protocol,Entity,"A class representing protocols, which describe how an activity was done, including the design, methodology, method steps, materials, statistical considerations, etc. Sometimes also called Standard Operating Procedure (SOP)","prov:Entity, schema:Thing, schema:CreativeWork, schema:HowTo"
+Sample,Entity,"A class representing samples, which consist of biological or environmental material, or any extracts of that material","prov:Entity, schema:Thing, sosa:Sample"
+Software,Entity,"A class representing software, being software applications or computer programming source code, but can also be computational workflows, notebooks, and even simple processes such as basic arithmetical calculations","prov:Entity, schema:Thing, schema:creativeWork, schema:SoftwareApplication | schema:SoftwareSourceCode"
+Agent, ,An abstract class representing the agent responsible for an activity. This can be a Person or Organization,prov:Agent
+Organization,Agent,"A class to represent agents which are social or legal organisations such as a company, project, society, etc","prov:Organization, schema:Organization"
+Person,Agent,A class to represent agents which are people,"prov:Person, schema:Person"
+Location, ,The place at which an activity occurs.,"prov:Location, schema:Place"
+Activity,,"An abstract class representing any activity, which is something that occurs over a period of time, is performed by an agent, and acts upon or with objects/entities","prov:Activity, schema:Action"
+PhysicalActivity,Activity,An abstract class representing any activity that deals with physical material,"prov:Activity, schema:Action"
+MaterialAcquiring,PhysicalActivity,A class representing activities where physical material is acquired from an agent (e.g. ordered from a biobank),"prov:Activity, schema:Action, schema:TransferAction ; 
+dct:type “Material acquiring”"
+Transporting,PhysicalActivity,"A class representing activities where the physical material is moved, posted, shipped","prov:Activity, schema:Action | schema:TransferAction ; 
+dct:type “Transporting”"
+MaterialProcessing,PhysicalActivity,"A class representing physical activities where the work done on the physical material transforms that material, e.g. adding preservatives, filtering, centrifuging, extracting, etc","prov:Activity, schema:Action ; dct:type “Material processing”"
+Observing,PhysicalActivity,"A class representing physical activities where measurements are made from or of physical material (such as water, organisms, media, laboratory, etc)","prov:Activity, schema:Action ; dct:type “Observing”"
+Sampling,PhysicalActivity,A class representing acquiring activities where material is collected from the field,"prov:Activity, schema:Action | sosa:Sampling ; dct:type “Sampling”"
+Storing,PhysicalActivity,"A class representing physical activities where material is retained in a specific location (e.g. storage facility, freezer, etc.), for some length of time","prov:Activity, schema:Action ; dct:type “Storing”"
+Biobanking,Storing,A class representing storing activities where the physical material is stored in a long-term storage facility (such as a biobank or culture collection facility) specifically to make it available for others to use,"prov:Activity, schema:Action ; dct:type “Biobanking”"
+DigitalActivity,,An abstract class representing any activity that has a digital nature,"prov:Activity, schema:Action"
+DataAcquiring,DigitalActivity,"A class representing digital activities where the digital objects are obtained from another digital source, e.g. an online catalogue, a colleague’s spreadsheet","prov:Activity, schema:Action ; dct:type “Data acquiring”"
+DataProcessing,DigitalActivity,A class representing digital activities where the digital objects are processed;  ‘processing’ can range from simple calculations to complete workflows,"prov:Activity, schema:Action ; dct:type “Data processing”"
+Association,N/A,Only for the RDF implementation,prov:Association
+Attribution,N/A,Only for the RDF implementation,prov:Attribution
