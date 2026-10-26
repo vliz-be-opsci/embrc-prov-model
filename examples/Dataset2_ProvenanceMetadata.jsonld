@@ -138,8 +138,8 @@
     {
       "@type": ["Action","prov:Activity"],
       "identifier": "prefiltering_1",
-      "name":"material processing",
-      "description":"pre-filtering Jan 2021 water samples",
+      "name":"sampling filtering",
+      "description":"pre-filtering Belgian Jan 2021 water samples for BigProject",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
         "name":"RV OurBigShip on-board lab"
@@ -170,7 +170,7 @@
       "@type": ["Action","prov:Activity"],
       "identifier": "storing_onboard_1",
       "name": "storing",
-      "description": "cold storage subsample 1 (Jan 2021 for flowcam)",
+      "description": "cold storage Belgian Jan 2021 subsample 1 (for flowcam)",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
         "name":"RV OurBigShip on-board lab"
@@ -193,8 +193,8 @@
   {
       "@type": ["Action", "prov:Activity"],
       "identifier": "flowcam_imaging",
-      "name": "material processing",
-      "description": "FlowCam imaging Jan 2021 samples",
+      "name": "flowcam processing",
+      "description": "FlowCam imaging Belgian Jan 2021 samples",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
         "name": "Nice Marine Station",
@@ -223,7 +223,7 @@
     {
       "@type": ["Action", "prov:Activity"],
     "identifier": "flowcam_speciesidentification",
-      "name": "data processing",
+      "name": "FlowCam data processing",
       "description": "FlowCam species identification Jan 2021 samples",
       "startTime": "2021-01-01",
       "prov:startTime": "2021-01-01",
@@ -256,7 +256,7 @@
   {
     "@type": ["Action", "prov:Activity"],
     "identifier": "flowcam_speciesQC",
-      "name": "data processing",
+      "name": "Flowcam QC",
       "description": "QC on FlowCam species identification Jan 2021 samples",
       "startTime": "2021-01-01",
       "prov:startTime": "2021-01-01",
