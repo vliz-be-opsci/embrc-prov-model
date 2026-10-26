@@ -93,8 +93,9 @@ sample: see BigProject_belgium_water_10m
 
 ## The provenance metadata for the sampling activity (Step 1)
 <Sampling>
-name: sampling 
-description: water sampling Jan 2021
+name: water sampling 
+activity-type: Sampling
+description: water sampling Jan 2021 in Belgian EEZ for BigProject
 spatial-coverage: see Belgian EEZ 
 temporal-coverage: 2021-01-01
 agent: see Jane Smith
@@ -106,7 +107,8 @@ permit: see ABS permit
 ## The provenance metadata for the observing activity (Step 2)
 <Observing>
 name: observing
-description: in-situ measurement of water properties Jan 2021
+activity-type: Observing 
+description: in-situ measurement of water properties Jan 2021 in Belgian EEZ for BigProject
 spatial-coverage: see Belgian EEZ 
 temporal-coverage: 2021-01-01
 agent: see Jane Smith
