@@ -134,7 +134,7 @@
     {
       "@type": ["Action","prov:Activity","sosa:Sampling"],
       "@id":"_:water_sampling_Jan2021",
-      "name":"sampling", 
+      "name":"water sampling", 
       "description": "water sampling Jan 2021 in Belgian EEZ for BigProject",
       "prov:location": {"@id":"http://marineregions.org/mrgid/3293"},
       "startTime": "2021-01-01",
