@@ -101,8 +101,9 @@ name: RV OurBigShip
 
 ## The provenance metadata for the material processing activity (Step 3)
 <MaterialProcessing>
-description: pre-filtering Jan 2021 water samples
-name: material processing
+description: pre-filtering Belgian Jan 2021 water samples for BigProject
+activity-type: MaterialProcessing
+name: sample filtering 
 spatial-coverage: 
   name: RV OurBigShip on-board lab
 temporal-coverage: 2021-01-01
@@ -116,8 +117,9 @@ device:
 
 ## The provenance metadata for the storing activity (Step 3)
 <Storing>
-description: cold storage subsample 1 (Jan 2021 for flowcam)
-name: storing
+description: cold storage Belgian Jan 2021 subsample 1 (for flowcam)
+activity-type: Storing 
+name: sample storing
 spatial-coverage: 
   name: RV OurBigShip on-board lab
 temporal-coverage: 2021-01-01
@@ -128,8 +130,9 @@ storage-conditions: +4 C
 
 ## The provenance metadata for the material processing activity (Step 4)
 <MaterialProcessing>
-description: FlowCam imaging Jan 2021 samples 
-name: material processing
+description: FlowCam imaging Belgian Jan 2021 samples 
+activity-type: MaterialProcessing
+name: flowcam processing
 spatial-coverage: see Nice Marine Station
 temporal-coverage: 2021-01-01
 agent: see J. Gerschwin
@@ -141,7 +144,8 @@ device: see NMS_flowcam_2010
 ## The provenance metadata for the data processing activity (Step 4)
 <DataProcessing>
 description: FlowCam species identification Jan 2021 samples 
-name: data processing
+activity-type: DataProcessing
+name: FlowCam data processing
 temporal-coverage: 2021-01-01
 agent: see J. Gerschwin
 input: the images stored locally in /Users/NMSlab/flowcam/20210101/BigProject/. The settings are included in the file flowcam-software-settings.txt in this dataset. The reference library used was FlowCam_ReferenceLibrary_2021 which is published on https://BioImages.eu/reference/D-5462  
@@ -151,7 +155,8 @@ software: see VisualSpreadsheet FlowCam Micro software
 ## The provenance metadata for the data processing activity (Step 4)
 <DataProcessing>
 description: QC on FlowCam species identification Jan 2021 samples
-name: data processing
+activity-type: DataProcessing
+name: Flowcam QC 
 temporal-coverage: 2021-01-01
 agent: see J. Gerschwin
 input: images and species list from /Users/NMSlab/flowcam/20210101/BigProject/
