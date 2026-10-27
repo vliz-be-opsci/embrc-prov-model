@@ -114,7 +114,8 @@ distribution: https://www.protocols.io/BigProject_eDNAfiltering.pdf
 ## The provenance metadata for the material processing activity (Step 3)
 <MaterialProcessing>
 description: pre-filtering Jan 2021 water samples
-name: material processing
+activity-type: MaterialProcessing
+name: pre-filtering
 spatial-coverage: 
   name: RV OurBigShip on-board lab
 temporal-coverage: 2021-01-01
@@ -128,7 +129,8 @@ device:
   
 <MaterialProcessing>
 description: fine filtering Jan 2021 water for sequencing 
-name: material processing
+activity-type: MaterialProcessing
+name: fine filtering
 spatial-coverage: 
   name: RV OurBigShip on-board lab
 temporal-coverage: 2021-01-01
@@ -145,8 +147,9 @@ device:
   
 ## The provenance metadata for the storing activity on board (Step 3)
 <Storing>
-description: cold storage subsample 2 Jan 2021 (for sequencing) 
-name: storing
+description: cold storage subsample 2 Jan 2021 (for sequencing)
+activity-type: Storing
+name: on-board storing
 spatial-coverage: 
   Name: RV OurBigShip on-board lab
 temporal-coverage: 2021-01-01
@@ -160,7 +163,8 @@ type: short-term
 ## The provenance metadata for the storing activity in the lab (Step 5)
 <Storing>
 description: cold storage at Nice Marine Station Jan 2021 samples 
-name: storing 
+activity-type: Storing
+name: lab storing 
 spatial-coverage: see Nice Marine Station
 temporal-coverage: start: 2021-01-01, end: 2021-06-01 
 agent: see F. Lee
@@ -174,8 +178,9 @@ storage-device: see Johnson Samples Fridge (lab)
 
 ## The provenance metadata for the transporting activity (Step 5)
 <Transporting>
-description: transporting DNA filters from Jan 2021 samples 
-name: transporting
+description: transporting DNA filters from Jan 2021 samples to the sequencing centre
+activity-type: Transporting
+name: transporting samples to SequencingIsUs
 temporal-coverage: 2021-06-01 
 storage-conditions: dry ice, -80 C
 sample: see BigProject_belgium_water_10m_1000um_r2_3um 
@@ -188,7 +193,8 @@ receiving-agent: see DNA technician
 ## The provenance metadata for the material aquiring activity (Step 6)
 <MaterialAcquiring>
 description: transferring ownership of DNA filter Jan 2021 samples 
-name: material acquiring
+activity-type: Material Acquiring
+name: SequencingIsUs receiving the material 
 temporal-coverage: 2021-06-01 
 sample: see BigProject_belgium_water_10m_1000um_r2_3um 
 providing-agent: see F. Lee 
@@ -199,7 +205,8 @@ receiving-agent: see DNA technician
 ## The provenance metadata for the storing activity (Step 6)
 <Storing>
 description: cold storage at SequencingIsUs Jan 2021 samples 
-name: storing 
+activity-type: Storing
+name: storing at SequencingIsUs
 spatial-coverage: see SequencingIsUs 
 temporal-coverage: start: 2021-06-01, end: 2021-10-08 
 agent: see DNA technician
@@ -214,7 +221,8 @@ storage-device:
 ## The provenance metadata for a series of four material processing activities (Step 6)
 <MaterialProcessing>
 description: DNA extraction Jan 2021 samples 
-name: material processing
+activity-type: Material Processing
+name: DNA extraction
 spatial-coverage: see SequencingIsUs
 temporal-coverage: 2021-10-08
 agent: see DNA technician
@@ -230,7 +238,8 @@ device:
 
 <MaterialProcessing>
 description: DNA quantification Jan 2021 samples 
-name: material processing
+activity-type: Material Processing
+name: DNA quantification
 spatial-coverage: see SequencingIsUs
 temporal-coverage: 2021-10-08
 agent: see DNA technician
@@ -244,7 +253,8 @@ device:
 
 <MaterialProcessing>
 description: Library preparation (18S rRNA) Jan 2021 samples 
-name: material processing
+activity-type: Material Processing
+name: Library prep
 spatial-coverage: see SequencingIsUs
 temporal-coverage: 2021-10-08
 agent: see DNA technician
@@ -259,7 +269,8 @@ device:
 
 <MaterialProcessing> 
 description: sequencing Jan 2021 samples 
-name: material processing
+activity-type: Material Processing
+name: sequencing 
 spatial-coverage: see SequencingIsUs
 temporal-coverage: 2021-10-08
 agent: see DNA technician 
@@ -281,13 +292,24 @@ device:
 ## The provenance metadata for the final data processing activity (Step 6)
 <DataProcessing>
 description: Illumina filtering Jan 2021 samples 
-name: digital processing
+activity-type: Data Processing
+name: Illumina filtering
 spatial-coverage: 2021-10-12
 agent: see DNA technician
 input: Raw digital sequences SiU_BP_0001_c_data. Data available upon request to BigProject (in folder BigProject_2021/fromSequencer) 
-output: Filtered digital sequences produced by the filtering step. Data available upon request to BigProject (in folder BigProject_2021/QC/fromIllumina)
+output: Filtered digital sequences produced by the filtering step. 
 protocol:
   name: Illumina filtering with proprietary software
   description: Filtering of raw data to remove clusters that have "too much" intensity corresponding to bases other than the call-base. By default, the purity of the signal from each cluster is examined over the first 25 cycles and calculated as Chastity = Highest_Intensity / (Highest_Intensity + Next_Highest_Intensity) for each cycle. The default filtering implemented at the base calling stage allows at most one cycle that is less than the Chastity threshold (0,6).
+
+<DataProcessing>
+description: archiving sequence data in SequencingIsUs cloud 
+activity-type: Data Processing
+name: data archiving 
+spatial-coverage: 2021-10-12
+agent: see DNA technician
+input: Filtered digital sequences produced by the illumina filtering step
+output: Data available from cloud upon request to BigProject (in folder BigProject_2021/QC/fromIllumina)
+
 
 
