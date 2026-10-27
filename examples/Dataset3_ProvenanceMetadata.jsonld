@@ -166,7 +166,7 @@
     {
       "@type": ["Action","prov:Activity"],
       "@id": "_:pre_filtering_Jan_2021_water_samples",
-      "name":"material processing",
+      "name":"pre-filtering",
       "description":"pre-filtering Jan 2021 water samples",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
@@ -197,7 +197,7 @@
     {
       "@type": ["Action","prov:Activity"],
       "@id": "_:fine_filtering_Jan_2021_water_for_sequencing",
-      "name":"material processing",
+      "name":"fine filtering",
       "description":"fine filtering Jan 2021 water for sequencing",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
@@ -233,7 +233,7 @@
     {
       "@type": ["Action","prov:Activity"],
       "@id":"_:cold_storage_subsample_2_Jan_2021",
-      "name": "storing",
+      "name": "on-board storing",
       "additionalType":"short-term",
       "description":"cold storage subsample 2 Jan 2021 (for sequencing)",
       "prov:location": {
@@ -258,7 +258,7 @@
     {
       "@type": ["Action", "prov:Activity"],
       "@id": "_:cold storage_at_Nice_Marine_Station_Jan_2021_samples",
-      "name": "storing",
+      "name": "lab storing",
       "description":"cold storage at Nice Marine Station Jan 2021 samples",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
@@ -290,7 +290,7 @@
     {
       "@type": ["Action", "prov:Activity"],
       "@id": "transporting_DNA_filters_from_Jan_2021_samples",
-      "name": "transporting",
+      "name": "transporting samples to SequencingIsUs",
       "description":"transporting DNA filters from Jan 2021 samples",
       "startTime": "2021-06-01",
       "prov:startTime": "2021-06-01",
@@ -325,7 +325,7 @@
     {
       "@type": ["Action", "prov:Activity"],
       "@id": "transferring_ownership_of_DNA_filter_Jan_2021_samples",
-      "name": "material acquiring",
+      "name": "SequencingIsUs receiving the material",
       "description":" Transferring ownership of DNA filter Jan 2021 samples",
       "startTime": "2021-06-01",
       "prov:startTime": "2021-06-01",
@@ -353,7 +353,7 @@
     {
       "@type": ["Action", "prov:Activity"],
       "@id": "cold_storage_at_SequencingIsUs_Jan_2021_samples",
-      "name": "storing",
+      "name": "storing at SequencingIsUs",
       "description":"Cold storage at SequencingIsUs Jan 2021 samples",
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-01-01",
@@ -381,7 +381,7 @@
     {
       "@type": ["Action", "prov:Activity"],
       "@id": "DNA_extraction_Jan_2021_samples",
-      "name": "material processing",
+      "name": "DNA extraction",
       "description":"DNA extraction Jan 2021 samples",
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-10-08",
@@ -415,7 +415,7 @@
     {
       "@type": ["Action", "prov:Activity"],
       "@id": "DNA_quantification_Jan_2021_samples",
-      "name": "material processing",
+      "name": "DNA quantification",
       "description":"DNA quantification Jan 2021 samples",
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-10-08",
@@ -445,7 +445,7 @@
     {
       "@type": ["Action", "prov:Activity"],
       "@id": "Library_preparation_(18SrRNA)_Jan_2021_samples",
-      "name": "material processing", 
+      "name": "Library prep", 
       "description":"Library preparation (18S rRNA) Jan 2021 samples",
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-10-08",
@@ -476,7 +476,7 @@
     {
       "@type": ["Action", "prov:Activity"],
       "@id": "sequencing_Jan_2021_samples",
-      "name": "material processing", 
+      "name": "sequencing", 
       "description":"sequencing Jan 2021 samples",
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-10-08",
@@ -517,7 +517,7 @@
     {
       "@type": ["Action", "prov:Activity"],
       "@id": "Illumina_filter_Jan_2021_samples",
-      "name": "data processing",
+      "name": "Illumina filtering",
       "description": "Illumina filter Jan 2021 samples",
       "startTime": "2021-10-12",
       "prov:startTime": "2021-10-12",
@@ -540,7 +540,31 @@
       },
       "generated": {
         "@type": ["Thing", "Dataset"],
-        "description": "Filtered digital sequences produced by the filtering step. Data available upon request to BigProject (in folder BigProject_2021/QC/fromIllumina)"
+        "description": "Filtered digital sequences produced by the filtering step"
+      }
+    }
+
+    {
+      "@type": ["Action", "prov:Activity"],
+      "@id": "data_archiving_jan2021_sequences",
+      "name": "data archiving",
+      "description": "archiving sequence data in SequencingIsUs cloud ",
+      "startTime": "2021-10-12",
+      "prov:startTime": "2021-10-12",
+      "prov:endTime": "2021-10-12",
+      "prov:wasAssociatedWith": {"@id": "_:DNATechnician"},
+      "prov:qualifiedAssociation":{
+        "@type": "prov:Association",
+        "prov:agent": {"@id": "_:DNATechnician"},
+        "dcat:hadRole":  "laboratory technician"
+      },
+      "object": {
+        "@type": ["Thing", "Dataset"],
+        "description": "Filtered digital sequences produced by the illumina filtering step"
+      },
+      "generated": {
+        "@type": ["Thing", "Dataset"],
+        "description": "Data available from cloud upon request to BigProject (in folder BigProject_2021/QC/fromIllumina)"
       }
     }
   ]
