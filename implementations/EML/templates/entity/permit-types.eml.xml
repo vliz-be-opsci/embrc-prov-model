@@ -9,6 +9,5 @@
     <validUntil>{{End datetime until the permit is valid}}</validUntil>
     <associatedParty>{{description/reference to the associatedParty(s) associated with this permit}}</associatedParty>
     <issuer>{{description/reference to the organization responsible for issuing the permit}}</issuer>
-    <associatedSample>{{reference to the sample(s) associated with this permit}}</associatedSample>
 </permit>
 

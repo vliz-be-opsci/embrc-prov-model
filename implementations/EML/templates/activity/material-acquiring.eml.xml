@@ -6,6 +6,7 @@
         <associatedParty>{{description/reference to the agent(s) associated with the activity}}</associatedParty>
         <startTime>{{start datetime of the activity}}</startTime>
         <endTime>{{end datetime of the activity}}</endTime>
+        <citation>{{A reference to the permit document under which the activity took place}}</citation>
         <dataSource>{{Reference to the sample that served as the source in the acquiring activity}}</dataSource>
     </methodStep>
 </methods>

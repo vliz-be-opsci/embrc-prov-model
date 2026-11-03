@@ -6,6 +6,7 @@
         <description>{{description of the transporting activity}}</description>
         <startTime>{{start datetime of the activity}}</startTime>
         <endTime>{{end datetime of the activity}}</endTime>
+        <citation>{{A reference to the permit document under which the activity took place}}</citation>
         <dataSource>{{Reference to the sample that served as the source in the transporting activity}}</dataSource>
         <from>{{reference to the location that is the starting point of the transporting activity}}</from>
         <to>{{reference to the location that is the destination of the transporting activity}}</to>
