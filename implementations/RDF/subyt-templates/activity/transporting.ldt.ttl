@@ -13,6 +13,7 @@
     prov:qualifiedAssociation {{reference to the description of the agent' role in the Transporting activity}} ;
     schema:startTime {{start of the Transporting activity}}^^xsd:datetime ;
     schema:endTime {{end of the Transporting activity}}^^xsd:datetime ;
+    prov:wasInfluencedBy {{reference to the permit under which the activity took place}} ; 
     
     schema:object {{reference to the sample transported}} ; 
     schema:description {{description of the transporting activity}}^^xsd:string ;

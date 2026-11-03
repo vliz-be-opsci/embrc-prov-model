@@ -14,6 +14,7 @@
     prov:qualifiedAssociation {{reference to the description of the agent' role in the Storing activity}} ;
     schema:startTime {{start of the Storing activity}}^^xsd:datetime ;
     schema:endTime {{end of the Storing activity}}^^xsd:datetime ;
+    prov:wasInfluencedBy {{reference to the permit under which the activity took place}} ; 
     
     schema:object {{reference to the sample stored}} ;
     prov:used {{reference to the device used}} ;
@@ -32,6 +33,7 @@
     prov:qualifiedAssociation {{reference to the description of the agent' role in the Biobanking activity}} ;
     schema:startTime {{start of the Biobanking activity}}^^xsd:datetime ;
     schema:endTime {{end of the Biobanking activity}}^^xsd:datetime ;
+    prov:wasInfluencedBy {{reference to the permit under which the activity took place}} ; 
     
     schema:object {{reference to the sample biobanked}} ;
     prov:used {{reference to the device used}} ;

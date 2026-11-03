@@ -13,6 +13,7 @@
     prov:qualifiedAssociation {{reference to the description of the agent' role in the material acquiring activity}} ;
     schema:startTime {{start of the material acquiring activity}}^^xsd:datetime ;
     schema:endTime {{end of the material acquiring activity}}^^xsd:datetime ;
+    prov:wasInfluencedBy {{reference to the permit under which the activity took place}} ; 
     
     schema:object {{reference to the sample acquired}} ; 
 

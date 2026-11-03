@@ -12,6 +12,7 @@
     prov:qualifiedAssociation {{reference to the description of the agent' role in the data acquiring activity}} ;
     schema:startTime {{start of the data acquiring activity}}^^xsd:datetime ;
     schema:endTime {{end of the data acquiring activity}}^^xsd:datetime ;
+    prov:wasInfluencedBy {{reference to the permit under which the activity took place}} ; 
     schema:url {{url of the metadata of the data acquired}} ;
     schema:target {{endpoint of the data acquired}} ; 
 .

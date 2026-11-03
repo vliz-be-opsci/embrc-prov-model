@@ -15,5 +15,4 @@
     prov:wasAttributedTo {{reference to the associated agent}} ;  
     prov:qualifiedAssociation {{reference to the description of the Attribution}} ; 
     schema:issuedBy {{reference to the organization that issued the permit}} ;
-    prov:wasInfluencedBy {{reference to the sample associated to this permit}} ;
 .

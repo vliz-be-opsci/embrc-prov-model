@@ -14,6 +14,7 @@
     prov:qualifiedAssociation {{reference to the description of the agent' role in the observing activity}} ;
     schema:startTime {{start of the observing activity}}^^xsd:datetime ;
     schema:endTime {{end of the observing activity}}^^xsd:datetime ;
+    prov:wasInfluencedBy {{reference to the permit under which the activity took place}} ; 
     
     sosa:madeBySampler {{reference to the observing device used}} ; 
     prov:generated {{reference to the resulting sample}} ;
