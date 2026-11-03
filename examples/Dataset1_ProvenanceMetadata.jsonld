@@ -113,8 +113,7 @@
         "dcat:hadRole": "issuing agent"
       },
       "validFrom": "2021-01-01",
-      "validUntil": "2022-01-01",
-      "prov:wasInfluencedBy": {"@id":"_:BigProject_belgium_water_10m"} 
+      "validUntil": "2022-01-01"
     }, 
 	
 	{
@@ -152,14 +151,15 @@
         {"@id":"_:ABSPermit_ircc2345678"}
       ],
       "prov:generated": {"@id":"_:BigProject_belgium_water_10m"},
-      "sosa:madeBySampler": {"@id":"_:NiceMarineStation_rosette#1"}
+      "sosa:madeBySampler": {"@id":"_:NiceMarineStation_rosette#1"},
+      "prov:wasInfluencedBy": {"@id":"_:ABSPermit_ircc2345678"} 
     },
 	
     {
       "@type": ["Action","prov:Activity"],
 	    "@id":"_:observing_water_Jan2021",
       "name":"observing",
-	  "description": "in-situ measurement of water properties Jan 2021 in Belgian EEZ for BigProject",
+	    "description": "in-situ measurement of water properties Jan 2021 in Belgian EEZ for BigProject",
       "prov:location": {"@id":"http://marineregions.org/mrgid/3293"},
       "startTime": "2021-01-01",
       "prov:startTime": "2021-01-01",

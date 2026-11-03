@@ -170,7 +170,7 @@
       "@type": ["Action","prov:Activity"],
       "identifier": "storing_onboard_1",
       "name": "storing",
-      "description": "cold storage Belgian Jan 2021 subsample 1 (for flowcam)",
+      "description": "cold storage Belgian Jan 2021 subsample 1 (for flowcam), at +4°C",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
         "name":"RV OurBigShip on-board lab"
@@ -185,7 +185,6 @@
         "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0003"},
         "dcat:hadRole":  "field and laboratory technician"
       },
-      "description":"+4 C",
       "prov:used": {"@id":"_:Johnson_Fridge_onboard"},
       "object": {"@id":"_:BigProject_belgium_water_10m_1000um_r1"}
     },

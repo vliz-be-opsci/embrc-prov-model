@@ -234,8 +234,7 @@
       "@type": ["Action","prov:Activity"],
       "@id":"_:cold_storage_subsample_2_Jan_2021",
       "name": "on-board storing",
-      "additionalType":"short-term",
-      "description":"cold storage subsample 2 Jan 2021 (for sequencing)",
+      "description":"short-term, cold storage subsample 2 Jan 2021 (for sequencing), at -20°C",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
         "name":"RV OurBigShip on-board lab"
@@ -250,7 +249,6 @@
         "prov:agent": {"@id": "https://orcid.org/0000-0001-0001-0003"},
         "dcat:hadRole":  "field and laboratory technician"
       },
-      "description":"-20 C",
       "prov:used": {"@id":"_:Johnson_Freezer_onboard"},
       "object": {"@id":"_:BigProject_belgium_water_10m_1000um_r2_3um"}
     },  
@@ -259,7 +257,7 @@
       "@type": ["Action", "prov:Activity"],
       "@id": "_:cold storage_at_Nice_Marine_Station_Jan_2021_samples",
       "name": "lab storing",
-      "description":"cold storage at Nice Marine Station Jan 2021 samples",
+      "description":"cold storage at Nice Marine Station Jan 2021 samples, at -80°C",
       "prov:location": {
         "@type": ["Place", "prov:Location"],
         "name": "Nice Marine Station",
@@ -283,21 +281,19 @@
         },
         {"@id":"_:Johnson_Freezer_lab"}
       ],
-      "object": {"@id": "_:BigProject_belgium_water_10m_1000um_r2_3um"},
-      "descriptions": "-80 C" 
+      "object": {"@id": "_:BigProject_belgium_water_10m_1000um_r2_3um"}
     },
   
     {
       "@type": ["Action", "prov:Activity"],
       "@id": "transporting_DNA_filters_from_Jan_2021_samples",
       "name": "transporting samples to SequencingIsUs",
-      "description":"transporting DNA filters from Jan 2021 samples",
+      "description":"transporting DNA filters from Jan 2021 samples, on dry-ice, -80 C",
       "startTime": "2021-06-01",
       "prov:startTime": "2021-06-01",
       "endTime": "2021-06-01",
       "prov:endTime": "2021-06-01",
       "object": {"@id": "_:BigProject_belgium_water_10m_1000um_r2_3um"},
-      "description": "dry ice, -80 C",
       "prov:wasAssociatedWith": [
         {"@id": "https://orcid.org/0000-0001-0001-0003"},
         {"@id": "_:DNATechnician"}
@@ -354,7 +350,7 @@
       "@type": ["Action", "prov:Activity"],
       "@id": "cold_storage_at_SequencingIsUs_Jan_2021_samples",
       "name": "storing at SequencingIsUs",
-      "description":"Cold storage at SequencingIsUs Jan 2021 samples",
+      "description":"Cold storage at SequencingIsUs Jan 2021 samples, at -80°C",
       "prov:location": {"@id": "_:SequencingIsUsPlace"},
       "startTime": "2021-01-01",
       "prov:startTime": "2021-01-01",
@@ -371,7 +367,6 @@
           "description": "storing filter membranes in dry freezer at -80C until further processing "
         },
       "object": {"@id": "_:SiU_BP_0001"},
-      "descriptions": "-80 C",
       "storageDevice": {
         "name": "SiU samples freezer #1", 
         "type": "freezer"
@@ -542,8 +537,8 @@
         "@type": ["Thing", "Dataset"],
         "description": "Filtered digital sequences produced by the filtering step"
       }
-    }
-
+    },
+    
     {
       "@type": ["Action", "prov:Activity"],
       "@id": "data_archiving_jan2021_sequences",
