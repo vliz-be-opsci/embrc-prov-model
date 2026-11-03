@@ -107,11 +107,6 @@
         "dcat:hadRole": "receiving agent"
       },
       "issuedBy": {"@id":"_:Belgium_ABS_National_Focal_Point"},
-	  "prov:qualifiedAttribution": {
-        "@type": "prov:Attribution",
-        "prov:agent": {"@id":"_:Belgium_ABS_National_Focal_Point"},
-        "dcat:hadRole": "issuing agent"
-      },
       "validFrom": "2021-01-01",
       "validUntil": "2022-01-01"
     }, 
@@ -147,8 +142,7 @@
         "dcat:hadRole":  "field and laboratory technician"
       },
       "prov:used": [
-        {"@id":"_:BigProject_WaterSamples"},
-        {"@id":"_:ABSPermit_ircc2345678"}
+        {"@id":"_:BigProject_WaterSamples"}
       ],
       "prov:generated": {"@id":"_:BigProject_belgium_water_10m"},
       "sosa:madeBySampler": {"@id":"_:NiceMarineStation_rosette#1"},
