@@ -11,7 +11,12 @@ These are the research activities that will create the four datasets:
 * Step 5 Meanwhile, the filter is stored in the freezer in the lab, and after some time it is shipped to a genomics facility.
 * Step 6 When the genomics facility receives the filter, it is first stored and later processed to extract the DNA. The resulting sequences are stored on their cloud to be shared with others.
 
-Three datasets result from these activities: 1) the log sheet recording data about the sampling activity and including the measured values of temperature and salinity; 2) the images created by the FlowCam from the processed material (water sample), a file with FlowCam instrument and software settings used, a protocol document that is not provided online, and one spreadsheet with the identified and confirmed species listed, and 3) the sequences, stored on the cloud of the genomics facility. You now want to share these datasets by publishing them with different data repositories for anyone else to find, access, and use. What would the provenance metadata for these three datasets look like?
+Three datasets result from these activities: 
+1. The log sheet recording data about the sampling activity and including the measured values of temperature and salinity
+2. The images created by the FlowCam from the processed material (water sample), a file with FlowCam instrument and software settings used, a protocol document that is not provided online, and one spreadsheet with the identified and confirmed species listed
+3. The sequences, stored on the cloud of the genomics facility. You now want to share these datasets by publishing them with different data repositories for anyone else to find, access, and use.
+
+What would the provenance metadata for these three datasets look like?
 
 ## Content: 
 - **Plain text files**: Human-readable, providing a simplified overview of the dataset's provenance. [Dataset1_ProvenanceMetadata.txt](https://github.com/vliz-be-opsci/embrc-prov-model/blob/main/examples/Dataset1_ProvenanceMetadata.txt) describes the log sheet, [Dataset2_ProvenanceMetadata.txt](https://github.com/vliz-be-opsci/embrc-prov-model/blob/main/examples/Dataset2_ProvenanceMetadata.txt) the FlowCam images and species list, and [Dataset3_ProvenanceMetadata.txt](https://github.com/vliz-be-opsci/embrc-prov-model/blob/main/examples/Dataset3_ProvenanceMetadata.txt) the sequences. 
