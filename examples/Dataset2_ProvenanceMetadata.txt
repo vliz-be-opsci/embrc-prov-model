@@ -135,7 +135,7 @@ temporal-coverage: 2021-01-01
 agent: see J. Gerschwin
 protocol: see FlowCam_1000um
 sample: see BigProject_belgium_water_10m_1000um_r1
-result: the images and species list stored locally in /Users/NMSlab/flowcam/20210101/BigProject/
+result: the images stored locally in /Users/NMSlab/flowcam/20210101/BigProject/
 device: see NMS_flowcam_2010
 
 ## The provenance metadata for the data processing activity (Step 4)
