@@ -276,7 +276,6 @@
       "prov:used": [ 
         {
           "@type": ["Thing","prov:Entity","CreativeWork","Howto"],
-          "name":"BigProject_eDNAstorage",
           "description": "filters to be stored in tubes at -80"
         },
         {"@id":"_:Johnson_Freezer_lab"}
