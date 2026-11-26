@@ -65,10 +65,7 @@ distribution: https://www.protocols.io/BigProject_WaterSamples.pdf
 name: FlowCam_1000um 
 description: full instructions and settings for using FlowCam with water filtered at 1000um
 distribution: see file FlowCam_seawaterSOP.pdf which is part of this data package 
-
-name: BigProject_eDNAfiltering
-description: instructions for water samples filtering - to capture the biological material on the filter membrane which will be used for DNA extraction
-distribution: https://www.protocols.io/BigProject_eDNAfiltering.pdf 
+ 
 
 name: classification QC
 description: Manual filtering of the flowcam outputs, to remove misidentifications. Method steps: (1) visual inspection of the classified images by a first plankton expert, who suggested reclassifications or removal of the images from the dataset (2) visual inspection and confirmation/rejection of suggestions by a second export (3) reclassification in the image metadata and the spreadsheet for those that both experts agreed on, and agreed rejected results removed from the dataset.  
