@@ -209,7 +209,7 @@
       "object":  {"@id": "_:BigProject_belgium_water_10m_1000um_r1"},
       "generated": {
         "@type": ["Thing", "Dataset"],
-        "description": "The images and species list stored locally in /Users/NMSlab/flowcam/20210101/BigProject/"
+        "description": "The images stored locally in /Users/NMSlab/flowcam/20210101/BigProject/"
       }
     },
     {
